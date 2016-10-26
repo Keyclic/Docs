@@ -8,7 +8,9 @@
 
 ### Inscrire un nouveau compte utilisateur
 
-### Se connecter avec un utilisateur
+### Se connecter avec un compte utilisateur
+
+JSON Web Tokens [https://jwt.io](https://jwt.io)
 
 ## Feedbacks
 
@@ -16,4 +18,32 @@
 
 ### Lister les feedbacks d'un utilisateur
 
-## Organization
+#### Filtres
+
+## Organisation
+
+### Ajouter un nouveau membre
+
+### Lister les membres
+
+### Lister les rapports
+
+### Lister les operations
+
+### Assigner un membre à une opération
+
+### Changer le status d'une opération
+
+### Ajouter une nouvelle catégorie
+
+### Lister les catégories
+
+### Éditer une catégorie
+
+### Préferences
+
+## Application
+
+### Déclarer une nouvelle application
+
+### Configuration & préferences
