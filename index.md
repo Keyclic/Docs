@@ -32,7 +32,7 @@ JSON Web Tokens [https://jwt.io](https://jwt.io)
 
 ### Assigner un membre à une opération
 
-### Changer le status d'une opération
+### Changer le statut d'une opération
 
 ### Ajouter une nouvelle catégorie
 
