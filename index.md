@@ -1,5 +1,7 @@
 # API Docs
 
+Our swagger file can be downloaded here: https://api.keyclic.com/swagger.json
+
 ## Prérequis
 
 ## Vocabulaire
