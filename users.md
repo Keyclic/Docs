@@ -23,7 +23,6 @@ Tout utilisateur a la possibilité de créer une nouvelle organisation.
 
 L'utilisateur qui crée une nouvelle organisation en devient automatiquement membre et administrateur, c'est à dire qu'il se voit attribuer le rôle ORGANIZATION:ADMIN. Une organisation peut posséder plusieurs administrateurs, mais un utilisateur ne peut être membre, et par conséquent administrateur, que d'une seule organisation.
 
-
 **Attention** : Si un utilisateur est déjà membre d'une organisation et qu'il en crée une nouvelle, étant donné qu'il sera automatiquement rattaché à cette nouvelle organisation, il sera de fait retiré de la liste des membres de l'organisation à laquelle il appartenait auparavant.
 
 L'administrateur d'une organisation peut :
@@ -47,7 +46,7 @@ LIEN : Observations / Création d'une observation sans modération
 
 Notes : dans l'appli cliente Keyclic, ce fonctionnement est obtenu par l'activation du mode Pro.
 
-## Exemple
+## Ressource utilisateur
 
 La lecture d'une ressource Utilisateur permet de découvrir les rôles de cet utilisateur, et éventuellement l'organisation dont il est administrateur et/ou le domaine applicatif dont il est administrateur.
 
@@ -95,4 +94,37 @@ Ce retour indique que :
 2. Il est membre de l'organisation 84d36093-b8bc-47ad-bc8a-a043b3e301a9
 3. Il possède le rôle ORGANIZATION:ADMIN, il est donc administrateur de l'organisation 84d36093-b8bc-47ad-bc8a-a043b3e301a9
 4. Il possède le rôle APPLICATION:ADMIN, il est donc administrateur du domaine applicatif auquel est rattachée l'organisation 84d36093-b8bc-47ad-bc8a-a043b3e301a9
+
+## Récupération des membres
+
+Pour récupérer l'ensemble des utilisateurs de l'application :
+
+GET /people
+
+LIEN : pagination
+
+Pour rechercher les membres dont l'adresse email match un mot donné :
+
+GET /people?search[email]=marti
+
+Pour filtrer les membres d'une organisation :
+
+GET /people?organization={organization}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
