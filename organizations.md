@@ -15,7 +15,7 @@ POST /organizations
 ```
 
 ```
-body :
+paramètres :
     name => Nom de l'association
     billingEmailAddress => Adresse email de facturation
     notificationEmailAddress => Adresse email de notification
@@ -44,7 +44,7 @@ POST /organizations/{organization}/members
 ```
 
 ```
-body : 
+paramètres : 
     person => c7469b6b-e531-400b-8cb6-e8f9560cba7d
 ```
 
@@ -66,8 +66,8 @@ Un administrateur d'organisation peut créer des zones géographiques, correspon
 POST /organizations/{organization}/places
 ```
 
-```json
 body :
+```json
 {
     "name": "Test",
     "polygon":
@@ -133,7 +133,7 @@ POST /organizations/{organization}/categories
 ```
 
 ```
-body :
+paramètres :
     name : "Nouvelle catégorie"
     color : "#00ff00"
     icon : fa-bug
@@ -164,7 +164,7 @@ POST /organizations/{orga}/relationships
 ```
 
 ```
-body :
+paramètres :
     organization : uuid de l'organisation partenaire
 ```
 
