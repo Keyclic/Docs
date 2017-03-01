@@ -2,7 +2,7 @@
 
 Une observation est consituée d'une description, d'une position géographique, et optionnellement d'une ou plusieurs photos. Tous les utilisateurs peuvent créer des observations.
 
-Le plus souvent, l'utilisateur va aussi attacher son observation à une catégorie donnée. Par conséquent, cette observation sera également rattachée à l'organisation à laquelle appartient cette cagorie, et une fois que l'observation aura été validée, ce sont les administrateurs de ladite organisation qui pourront traiter le rapport de cette observation.
+Le plus souvent, l'utilisateur va aussi attacher son observation à une catégorie donnée. Par conséquent, cette observation sera également rattachée à l'organisation à laquelle appartient cette cagorie.
 
 ## Création d'une observation
 
@@ -10,6 +10,7 @@ Le plus souvent, l'utilisateur va aussi attacher son observation à une catégor
 POST /feedbacks/issues
 ```
 
+body :
 ```json
 {
     "geo":
@@ -28,35 +29,36 @@ POST /feedbacks/issues
 }
 ```
 
-Ce endpoint se présente sous la forme /feedbacks/issue et non pas simplement /feedbacks, car à terme, il sera possible de créer différents types d'observation. Actuellement, seul le type "issue" est disponible.
+Ce endpoint se présente sous la forme **/feedbacks/issue** et non pas simplement **/feedbacks**, car à terme, il sera possible de créer différents types d'observation. Actuellement, seul le type "issue" est disponible.
 
 Coordonnées géographiques du point : LIEN
 
-image : LIEN
+Image : LIEN
 
 L'utilisateur peut ensuite ajouter d'autres images à son observation :
 
 ```
-POST /feedbacks/ba45ab2c-1578-4be7-bb27-8ab7914f3785/images
+POST /feedbacks/{feedback}/images
 ```
 
-paramètres :
 ```
+paramètres :
     image : l'image à ajouter
 ```
 
 ## Modération et cycle de vie d'une observation
 
-Après qu'un utilisateur a créé une nouvelle observation, celle ci possède le statut PENDING_REVIEW : en attente de modération. Elle devra être validée par un administrateur du domaine applicatif.
+Après qu'un utilisateur a créé une nouvelle observation, celle-ci possède le statut PENDING_REVIEW : en attente de modération. Elle devra être validée par un administrateur du domaine applicatif.
 
 LIEN : statuts et changements de statuts
 
-Un administrateur valide une observation avec le endpoint :
+Un administrateur du domaine applicatif valide une observation avec le endpoint :
 
 ```
 POST /feedbacks/{feedback}/state
 ```
 
+body :
 ```json
 [{"op":"replace","path":"transition","value":"accept"}]
 ```
@@ -84,6 +86,7 @@ Supposons que la requête suivante est exécutée par un utilisateur membre de l
 POST /feedbacks/issues
 ```
 
+body :
 ```json
 {
     "geo":
@@ -175,8 +178,8 @@ Les utilisateurs de la communauté peuvent commenter une observation :
 POST /feedbacks/{feedback}/comments
 ```
 
-Paramètres :
 ```
+paramètres :
     text : contenu du commentaire
 ```
 
