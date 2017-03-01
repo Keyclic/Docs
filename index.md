@@ -1,51 +1,58 @@
 # API Docs
 
-Our swagger file can be downloaded here: https://api.keyclic.com/swagger.json
+Swagger file : https://api.keyclic.com/swagger.json
 
-## Prérequis
+## Apperçu général 
+Intro
+Vocabulaire (français et anglais)
+Cycle de vie
 
-## Vocabulaire
+## Considérations techniques
+Intro
+faire une requête (headers) (pas d'uriencode dans cette doc) (acolades dans uris)
+images en base 64
+pagination
+données géo
+    geojson
+    geohash
+    paramètres d'entrée
+patch
+erreurs retournées
+changements de statut
 
-## Authentification
+## Authentification / Connexion
 
-### Inscrire un nouveau compte utilisateur
+## Membres et Rôles
+Intro
+Utilisateur de base
+Administrateur d'organisation
+Administrateur de domaine applicatif
+Membres d'organisation
+Ressource utilisateur
+Récupération des membres
 
-### Se connecter avec un compte utilisateur
+## Organisations
+Intro
+Création d'une organisation
+Gestion des membres
+Gestion des zones géographiques
+Gestion des catégories
+Gestion des partenariats
 
-JSON Web Tokens [https://jwt.io](https://jwt.io)
+## Observations
+Intro
+Création d'une observation
+Modération et cycle de vie d'une observation
+Récupération des observations
+Commentaires
+Soutiens
+   
+## Rapports
+Intro
+opérations
+cycle de vie
+délégation
 
-## Feedbacks
 
-### Créer un nouveau feedback
 
-### Lister les feedbacks d'un utilisateur
 
-#### Filtres
-
-## Organisation
-
-### Ajouter un nouveau membre
-
-### Lister les membres
-
-### Lister les rapports
-
-### Lister les operations
-
-### Assigner un membre à une opération
-
-### Changer le statut d'une opération
-
-### Ajouter une nouvelle catégorie
-
-### Lister les catégories
-
-### Éditer une catégorie
-
-### Préferences
-
-## Application
-
-### Déclarer une nouvelle application
-
-### Configuration & préferences

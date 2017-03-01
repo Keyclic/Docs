@@ -176,24 +176,3 @@ GET /organizations/{{orga}}/relationships
 
 Cette requête ne peut être exécutée que par un administrateur de l'organisation.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

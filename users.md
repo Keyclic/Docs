@@ -44,7 +44,7 @@ Quand un utilisateur est membre d'une organisation, celui ne lui confère par un
 
 LIEN : Observations / Création d'une observation sans modération
 
-Notes : dans l'appli cliente Keyclic, ce fonctionnement est obtenu par l'activation du mode Pro.
+Note : dans l'appli cliente Keyclic, ce fonctionnement est obtenu par l'activation du mode Pro.
 
 ## Ressource utilisateur
 
