@@ -22,7 +22,7 @@ Swagger file : https://api.keyclic.com/swagger.json
 
 ## Authentification / Connexion
 
-## Membres et Rôles
+## Utilisateurs et Rôles
 - Intro
 - Utilisateur de base
 - Administrateur d'organisation

@@ -1,4 +1,4 @@
-# Rôles et utilisateurs
+# Utilisateurs et rôles
 
 Les utilisateurs de l'application Keyclic possèdent un ou plusieurs rôles, définissant un ensemble de permissions et de possibilités d'action. Ces rôles, qui peuvent être cumulés pour un même utilisateur, sont au nombre de trois :
 
