@@ -37,7 +37,7 @@ GET /organizations?geo_coordinates=+44.851404209987386-0.5762618780136108
 
 ## Gestion des membres
 
-Pour ajouter un nouvel utilisateur à une organisation :
+Pour ajouter un nouveau membre à une organisation :
 
 ```
 POST /organizations/{organization}/members
@@ -177,7 +177,7 @@ paramètres :
 Pour récupérer les partenaires d'une organisation :
 
 ```
-GET /organizations/{{orga}}/relationships
+GET /organizations/{orga}/relationships
 ```
 
 Cette requête ne peut être exécutée que par un administrateur de l'organisation.

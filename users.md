@@ -38,6 +38,8 @@ LIEN : rubrique organisation
 
 L'administrateur d'un domaine applicatif a la possibilité de modérer les observations.
 
+LIEN : Feedbacks / modération
+
 ## Membres d'organisation
 
 Quand un utilisateur est membre d'une organisation, celui ne lui confère par un rôle particulier, mais cette appartenance à l'organisation lui donne la possibilité de créer une nouvelle observation de façon à ce que celle-ci soit aussitôt visible par la communauté, sans passer par l'étape de modération.
@@ -46,7 +48,7 @@ LIEN : Observations / Création d'une observation sans modération
 
 Note : dans l'appli cliente Keyclic, ce fonctionnement est obtenu par l'activation du mode Pro.
 
-## Ressource utilisateur
+## Exemple de ressource utilisateur
 
 La lecture d'une ressource Utilisateur permet de découvrir les rôles de cet utilisateur, et éventuellement l'organisation dont il est administrateur et/ou le domaine applicatif dont il est administrateur.
 
@@ -99,18 +101,21 @@ Ce retour indique que :
 
 Pour récupérer l'ensemble des utilisateurs de l'application :
 
+```
 GET /people
-
-LIEN : pagination
+```
 
 Pour rechercher les membres dont l'adresse email match un mot donné :
 
+```
 GET /people?search[email]=marti
+```
 
 Pour filtrer les membres d'une organisation :
 
+```
 GET /people?organization={organization}
-
+```
 
 
 

@@ -106,7 +106,7 @@ body :
 }
 ```
 
-créera une observation qui aura automatiquement le statut ACCEPTED.
+La requête ci-dessus créera une observation qui aura automatiquement le statut ACCEPTED, et un rapport sera automatiquement généré.
 
 Si le paramère "organization" n'avait pas été passé, alors cette observation aurait suivi le cycle normal et aurait reçu le statut PENDING_REVIEW.
 
@@ -128,7 +128,7 @@ Plusieurs critères permettent de filter les observations.
 
 **Par statut : paramètre state**
 
-Par exemple, pour filtrer les observations en attente de validation, un administrateur effectuera la requête :
+Par exemple, pour filtrer les observations en attente de validation, un administrateur du domaine applicatif effectuera la requête :
 
 ```
 GET /feedbacks?state=PENDING_REVIEW
@@ -164,7 +164,7 @@ GET /feedbacks?after=2017-01-10T00:00:00+05:00&before=2017-02-22T23:59:59+05:00
 
 retournera les observations effectuées entre le 10/01/2017 et le 22/02/2017.
 
-Les dates sont écrites au format [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html)
+Les dates sont écrites au format ISO 8601 : https://www.iso.org/iso-8601-date-and-time-format.html
 
 **Note : Cas des observations sans catégorie**
 
