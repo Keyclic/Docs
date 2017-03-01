@@ -1,6 +1,8 @@
-# Feedbacks
+# Observations
 
-Une observation est consituée d'une description et optionnellement d'une ou plusieurs photos. Elle est créée par un utilisateur à un endroit donné et dans une catégorie (et donc dans une organisation) donnée.
+Une observation est consituée d'une description, d'une position géographique, et optionnellement d'une ou plusieurs photos. Tous les utilisateurs peuvent créer des observations.
+
+Le plus souvent, l'utilisateur va aussi attacher son observation à une catégorie donnée. Par conséquent, cette observation sera également rattachée à l'organisation à laquelle appartient cette cagorie, et une fois que l'observation aura été validée, ce sont les administrateurs de ladite organisation qui pourront traiter le rapport de cette observation.
 
 ## Création d'une observation
 
@@ -109,6 +111,10 @@ Si le paramère "organization" n'avait pas été passé, alors cette observation
 
 ![Cycle de vie d'une observation](images/feedback_workflow.png "Cycle de vie d'une observation")
 
+**Cas des observations sans catégorie**
+
+Si un utilisateur n'indique aucune catégorie pour son observation, celle-ci 
+
 ## Récupération des observations
 
 Pour récupérer toutes les observations :
@@ -140,10 +146,10 @@ retournera les observations situées dans un rayon de 1000 mètres autour du poi
 **Dans un geo hash : paramètre geo_hash**
 
 ```
-GET /feedbacks?geo_hash[]=ezz
+GET /feedbacks?geo_hash[]=ezzx&geo_hash[]=ezzz
 ```
 
-retournera les observations comprises dans le geo hash ezz et dans les geo hash voisins de ezz.
+retournera les observations comprises dans les geo hash ezzx et ezzz.
 
 LIEN : geo_hash
 
