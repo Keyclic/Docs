@@ -71,7 +71,7 @@ Pour refuser une observation :
 
 L'observation prend alors le statut REFUSED.
 
-** Acceptation automatique d'une observation **
+**Acceptation automatique d'une observation**
 
 Un utilisateur qui est membre d'une organisation peut créer une nouvelle observation qui sera automatiquement acceptée sans passer par l'étape de modération. À condition que cette nouvelle observation soit effectuée sur une catégorie appartenant à l'organisation dont l'utilisateur est un membre.
 
@@ -105,7 +105,7 @@ créera une observation qui aura automatiquement le statut ACCEPTED.
 
 Si le paramère "organization" n'avait pas été passé, alors cette observation aurait suivi le cycle normal et aurait reçu le statut PENDING_REVIEW.
 
-** Résumé du cycle de vie d'une observation **
+**Résumé du cycle de vie d'une observation**
 
 ![Cycle de vie d'une observation](images/feedback_workflow.png "Cycle de vie d'une observation")
 
@@ -119,7 +119,7 @@ GET /feedbacks
 
 Plusieurs critères permettent de filter cette liste.
 
-** Par statut : paramètre state **
+**Par statut : paramètre state**
 
 Par exemple, pour filtrer les observations en attente de validation, un administrateur effectuera la requête :
 
@@ -127,7 +127,7 @@ Par exemple, pour filtrer les observations en attente de validation, un administ
 GET /feedbacks?state=PENDING_REVIEW
 ```
 
-** Autour d'un point : paramètre geo_near **
+**Autour d'un point : paramètre geo_near**
 
 Exemple :
 
@@ -137,7 +137,7 @@ GET /feedbacks?geo_near[radius]=1000&geo_near[geo_coordinates]=+44.8-0.5
 
 retournera les observations situées dans un rayon de 1000 mètres autour du point de latitude +44.8 et de longitude 0.5.
 
-** Dans un geo hash : paramètre geo_hash **
+**Dans un geo hash : paramètre geo_hash**
 
 ```
 GET /feedbacks?geo_hash[]=ezz
@@ -147,7 +147,7 @@ retournera les observations comprises dans le geo hash ezz et dans les geo hash 
 
 LIEN : geo_hash
 
-** Sur une période donnée : paramètres before et after **
+**Sur une période donnée : paramètres before et after**
 
 Exemple :
 
@@ -157,7 +157,7 @@ GET /feedbacks?after=2017-01-10T00:00:00+05:00&before=2017-02-22T23:59:59+05:00
 
 retournera les observations effectuées entre le 10/01/2017 et le 22/02/2017.
 
-Les dates sont écrites au format [ISO 8601](https://fr.wikipedia.org/wiki/ISO_8601)
+Les dates sont écrites au format [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html)
 
 ## Commentaires
 
@@ -191,16 +191,3 @@ Pour récupérer tous les soutiens effectués sur une observation :
 ```
 GET /feedbacks/{feedback}/contributions
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
