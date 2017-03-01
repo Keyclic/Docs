@@ -111,19 +111,17 @@ Si le paramère "organization" n'avait pas été passé, alors cette observation
 
 ![Cycle de vie d'une observation](images/feedback_workflow.png "Cycle de vie d'une observation")
 
-**Cas des observations sans catégorie**
-
-Si un utilisateur n'indique aucune catégorie pour son observation, celle-ci 
-
 ## Récupération des observations
 
-Pour récupérer toutes les observations :
+Pour récupérer les observations :
 
 ```
 GET /feedbacks
 ```
 
-Plusieurs critères permettent de filter cette liste.
+Cette requête retourne uniquement les observations dont le statut est ACCEPTED.
+
+Plusieurs critères permettent de filter les observations.
 
 **Par statut : paramètre state**
 
@@ -164,6 +162,10 @@ GET /feedbacks?after=2017-01-10T00:00:00+05:00&before=2017-02-22T23:59:59+05:00
 retournera les observations effectuées entre le 10/01/2017 et le 22/02/2017.
 
 Les dates sont écrites au format [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html)
+
+**Note : Cas des observations sans catégorie**
+
+Les observations qui ne sont rattachées à aucune catégorie ne sont pas remontées par les requêtes ci-dessus.
 
 ## Commentaires
 

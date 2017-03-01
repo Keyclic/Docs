@@ -56,6 +56,12 @@ Pour récupérer les membres d'une organisation :
 GET /people?organization={organization}
 ```
 
+Pour retirer un membre d'une organisation, un administrateur de cette organisation exécutera la requête :
+
+```
+DELETE /organizations/{organization}/members/{member}
+```
+
 LIEN : Pour plus d'informations sur le rôle ORGANIZATION:ADMIN et ses privilèges, voir .
 
 # Gestion des zones géographiques
