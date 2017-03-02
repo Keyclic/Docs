@@ -21,6 +21,11 @@ Swagger file : https://api.keyclic.com/swagger.json
 - changements de statut
 
 ## Authentification / Connexion
+- Création d'un compte utilisateur
+- Connexion
+- Utilisation du token
+- Modification du mot de passe
+- Modification des données utilisateur
 
 ## Utilisateurs et Rôles
 - Intro

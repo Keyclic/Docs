@@ -105,6 +105,11 @@ Pour récupérer l'ensemble des utilisateurs de l'application :
 GET /people
 ```
 
+Pour récupérer un utilisateur :
+```
+GET /people/{person}
+```
+
 Pour rechercher les membres dont l'adresse email match un mot donné :
 
 ```
