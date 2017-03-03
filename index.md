@@ -54,9 +54,11 @@ Swagger file : https://api.keyclic.com/swagger.json
    
 ## Rapports
 - Intro
-- opérations
-- cycle de vie
-- délégation
+- Cycle de vie d'un rapport
+- Opérations
+- Délégation de rapports
+- Export des rapports
+
 
 
 

@@ -40,7 +40,7 @@ Par exemple, pour passer du statut NEW au statut ACCEPTED, l'administrateur de l
 ]
 ```
 
-Un rapport ne peut être clotûré (statut CLOSED) que si :
+Un rapport ne peut être clôturé (statut CLOSED) que si :
 
 - Toutes les opérations associées à ce rapport ont été clôturées ou refusées (voir ci-dessous le paragraphe Opéarations)
 - Tous les rapports délégués à d'autres organisations à partir de ce rapport ont été clôturés (voir ci-dessous le paragraphe Délégation de rapports)
@@ -55,7 +55,7 @@ Pour récupérer l'ensemble des opérations associées à un rapport :
 GET /reports/{report}/operations
 ```
 
-**Création d'une opération**
+**Création et modification d'une opération**
 
 Un administrateur d'organisation crée une opération sur un rapport en effectuant la requête :
 
@@ -72,6 +72,34 @@ Paramètres :
 
 Une opération nouvellement créée possède le statut NEW.
 
+Une ou plusieurs images peuvent être ajoutées à l'opération :
+
+```
+POST /operations/{operation}/images
+```
+
+```
+Paramètres :
+    image : image en base64
+```
+
+La description d'une opération peut être modifiée avec la requête :
+
+```
+PATCH /operations/{operation}
+``` 
+
+body :
+```json
+[
+	{
+		"op":"replace",
+		"path":"/description",
+		"value":"Nouvelle description"
+	}
+]
+``` 
+
 **Assignation**
 
 Pour assigner une opération à un membre de l'organisation, l'administrateur de l'organisation effectue la requête :
@@ -80,7 +108,7 @@ Pour assigner une opération à un membre de l'organisation, l'administrateur de
 LINK /operations/{operation}
 ```
 
-Et en passant dans les headers de la requête :
+en passant dans les headers de la requête :
 ```
 Link : /people/{user}
 ```
@@ -94,7 +122,6 @@ Une fois assignée, l'opération peut être acceptée ou refusée, soit par la p
 ```
 PATCH /operations/{operation}/state
 ```
-
 
 ```json
 [
@@ -113,6 +140,14 @@ Une fois acceptée, l'opération peut-être passée "en cours" puis "cloturée",
 **Résumé du cycle de vie d'une opération**
 
 ![Cycle de vie d'une opération](images/operation_workflow.png "Cycle de vie d'une opération")
+
+**Logs d'une opération**
+
+Un administrateur d'organisation peut consulter l'historique d'une opération avec :
+
+```
+GET /operations/{operation}/logs
+```
 
 ## Délégation de rapports
 
@@ -136,27 +171,14 @@ Déléguer un rapport ne signifie pas que ce rapport est simplement transmis. En
 
 L'organisation partenaire peut elle-même déléguer le rapport à l'une de ses partenaires et ainsi de suite. Pour qu'un rapport puisse être clôturé, il est obligatoire que le rapport enfant, s'il existe, ait été préalablement clôturé par l'organisation partenaire.
 
+## Export des rapports
 
+Un administrateur d'organisation peut exporter tous les rapports de son organisation au format Excel :
 
+```
+POST /organizations/{organization}/reports/exports
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Une archive contenant le fichier Excel listant tous les rapports et les images associées à ces rapports est alors envoyé par email à l'administrateur.
 
 
