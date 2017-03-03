@@ -131,7 +131,7 @@ PATCH /operations/{operation}/state
 		"value":"accept"
 	}
 ]
-
+```
 
 **Opération en cours et clôture**
 
