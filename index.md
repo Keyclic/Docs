@@ -5,11 +5,12 @@ Swagger file : https://api.keyclic.com/swagger.json
 ## Apperçu général 
 - Intro
 - Vocabulaire (français et anglais)
-- Cycle de vie
+- Fonctionnement général
 
 ## Considérations techniques
 - Intro
-- faire une requête (headers) (pas d'uriencode dans cette doc) (acolades dans uris)
+- Domaines applicatifs
+- faire une requête (headers) (pas d'uriencode dans cette doc) (acolades dans uris) (json)
 - images en base 64
 - pagination
 - données géo
