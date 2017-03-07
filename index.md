@@ -13,8 +13,8 @@ Swagger file : https://api.keyclic.com/swagger.json
 - Requêtes
 - Envoi de fichiers
 - Pagination
-- patch
-- erreurs retournées
+- Modification de ressources avec la méthode PATCH
+- Retours d'erreurs
 - changements de statut
 
 ## Authentification / Connexion

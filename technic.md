@@ -93,15 +93,15 @@ Tous les endpoints permettant de récupérer une collection de ressources peuven
 POST /feedbacks?page=2&limit=5
 ```
 
-Par défaut, page a la valeur 1 et limit a la valeur 10. Ainsi le endpoint 
+Par défaut, *page* a la valeur 1 et *limit* a la valeur 10. Ainsi le endpoint 
 
 ```
 POST /feedbacks
 ```
 
-retourne les 10 premières observations du domaine applicatif.
+retourne les 10 premières observations.
 
-Le retour d'une collection contient les informations et liens nécessaires pour naviguer entre les pages d'une collection. Exemple de retour de la liste des observations :
+Le retour d'une collection contient les informations et liens nécessaires pour naviguer entre les pages de cette collection. Exemple de retour de la liste des observations :
 
 ```json
 {
@@ -130,28 +130,98 @@ Le retour d'une collection contient les informations et liens nécessaires pour 
 }
 ```
 
-Dans cette documentation, nous ne rappellerons pas systématiquement qu'il est possible de paginer avec les filtres **page** et **limit**, ceux-ci étant communs à tous les endpoints retournant une collection.
+Dans cette documentation, nous ne rappellerons pas systématiquement qu'il est possible de paginer avec les filtres *page* et *limit*, ceux-ci étant communs à tous les endpoints retournant une collection.
 
+## Modification de ressources avec la méthode PATCH
 
+Dans l'API Keyclic, la modification des ressources s'effectue avec la méthode [PATCH](https://tools.ietf.org/html/rfc5789). Contrairement à la méthode [PUT](https://tools.ietf.org/html/rfc7231#section-4.3.4), la méthode [PATCH](https://tools.ietf.org/html/rfc5789) permet de modifier une seule propriété, ou une partie seulement des propriétés, d'une ressource, sans qu'il soit nécessaire d'en envoyer une représentation complète. Le format utilisé pour la description du patch est [JSON Patch](https://tools.ietf.org/html/rfc6902). La seule opération acceptée par l'API lors d'un PATCH est l'opération *replace*. 
 
+À titre d'exemple, voici la modification de la popriété *billingEmailAddress* d'une organisation :
 
+```
+PATCH /organizations/{organization}
+```
 
+```json
+[
+	{
+		"op":"replace",
+		"path":"/billingEmailAddress",
+		"value":"test@test.com"
+	}
+]
+```
 
+## Retours d'erreurs
 
+Toute erreur entraîne une réponse de code [4xx](https://tools.ietf.org/html/rfc7231#section-6.5) reflétant le type d'erreur.
 
+Quand il s'agit d'une erreur de type [400](https://tools.ietf.org/html/rfc7231#section-6.5.1) (Bad Request), les raisons de l'erreur sont retournées.
 
+## Changements de statut
 
+Plusieurs ressources manipulées par l'API ont un cycle de vie et possèdent un certain statut à un instant donné. C'est le cas des observations, des rapports et des opérations.
 
+Pour ces ressources, l'état est toujours indiqué dans la réponse avec le paramètre *state*, et les actions possibles pour faire évoluer ce statut sont toujours indiqués sous le paramètre *stateTransitions*. Exemple :
 
+```
+GET reports/{report}
+```
 
+Réponse :
+```json
+{
+  "type": "Report",
+  "id": "cb7118b5-a821-4cf2-9475-0c0d0efdb8d0",
+  "state": "NEW",
+  "_embedded": {
+    "stateTransitions": [
+      "accept",
+      "refuse"
+    ]
+  },
+  // ...
+}
+```
 
+Dans l'exemple ci-dessus, le rapport est en statut NEW et les actions possibles sur son statut sont *accept* et *refuse*.
 
+Tout changement de statut est effectué avec la méthode PATCH et l'opération *replace*, en précisant *transition* pour le path, et l'action à effectuer pour la valeur.
 
+Par exemple, pour accepter le rapport ci-dessus :
 
+```
+PATCH /reports/{report}/state
+```
 
+```json
+[
+	{
+		"op":"replace",
+		"path":"transition",
+		"value":"accept"
+		
+	}
+]
+```
 
+La réponse nous informe que le rapport possède désormais le statut ACCEPTED, et que les actions possibes sont désormais *refuse*, *hold* et *progress* :
 
+```json
+{
+  "type": "Report",
+  "id": "32219286-528a-4f97-b81e-fe7a8cb85707",
+  "state": "ACCEPTED",
+  "_embedded": {
+    "stateTransitions": [
+      "refuse",
+      "hold",
+      "progress"
+    ]
+  },
+  // ...
+}
+```
 
-
-
+Les actions et status possibles pour chaque type de ressources sont décrits dans les sections idoines de cette documentation.
 
