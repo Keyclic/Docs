@@ -63,11 +63,13 @@ Un administrateur d'organisation crée une opération sur un rapport en effectua
 POST /operations
 ```
 
-```
-Paramètres :
-    description : Description de l'opération
-    name : nom de l'opération
-    report : identifiant du rapport
+Exemple :
+```json
+{
+    "description":"Description de l'opération",
+    "name":"Nom de l'opération",
+    "report":"cb7118b5-a821-4cf2-9475-0c0d0efdb8d0"
+}
 ```
 
 Une opération nouvellement créée possède le statut NEW.
@@ -78,9 +80,11 @@ Une ou plusieurs images peuvent être ajoutées à l'opération :
 POST /operations/{operation}/images
 ```
 
-```
-Paramètres :
-    image : image en base64
+Exemple :
+```json
+{
+    "image":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAIAAAACDbGyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QIVDRUfvq7u+AAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAUSURBVAjXY3wrIcGABJgYUAGpfABZiwEnbOeFrwAAAABJRU5ErkJggg=="
+}
 ```
 
 La description d'une opération peut être modifiée avec la requête :
@@ -158,14 +162,20 @@ LIEN : organisations partenaires
 Pour déléguer un rapport, un administrateur de l'organisation effectue la requête :
 
 ```
-POST /organizations/{fromOrganization}/delegates
+POST /organizations/{organization}/delegates
 ```
 
+où {organization} est l'identifiant de l'organisation **courante** (dont l'utilisateur est administrateur).
+
+Exemple :
+```json
+{
+	"report":"cb7118b5-a821-4cf2-9475-0c0d0efdb8d0",
+	"organization":"a31d9ab7-9476-45f2-8cc7-033bf40bbcfa"
+}
 ```
-Paramètres :
-    report : identifiant du rapport
-    organization : identifiant de l'organisation à laquelle le rapport est délégué
-```
+
+où a31d9ab7-9476-45f2-8cc7-033bf40bbcfa est l'identifiant de l'organisation à laquelle le rapport est délégué.
 
 Déléguer un rapport ne signifie pas que ce rapport est simplement transmis. En effet, le rapport initial n'est pas modifié ni transféré, mais un nouveau rapport "enfant" est créé et attribué à l'organisation partenaire. Ce rapport enfant sera traité par l'organisation partenaire de la même façon que le rapport initial : changements de statuts, opérations, assignations des opérations, etc, jusqu'à sa clôture.
 

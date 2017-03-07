@@ -14,11 +14,13 @@ Tout utilisateur peut créer une nouvelle organisation :
 POST /organizations
 ```
 
-```
-paramètres :
-    name => Nom de l'association
-    billingEmailAddress => Adresse email de facturation
-    notificationEmailAddress => Adresse email de notification
+Exemple :
+```json
+{
+    "name":"Nom de l'organisation",
+    "billingEmailAddress":"test@test.com",
+    "notificationEmailAddress":"test@test.com"
+}
 ```
 
 L'utilisateur devient automatiquement membre et administrateur de cette nouvelle organisation.
@@ -43,9 +45,11 @@ Pour ajouter un nouveau membre à une organisation :
 POST /organizations/{organization}/members
 ```
 
-```
-paramètres : 
-    person => c7469b6b-e531-400b-8cb6-e8f9560cba7d
+Exemple :
+```json
+{
+    "person":"63d07fc5-f4e6-471c-a8cc-3c3f227c8c2d"
+}
 ```
 
 Ce endpoint est réservé à un utilisateur possédant le rôle ORGANIZATION:ADMIN et membre de l'organisation {organization}, et l'utilisateur ajouté ne doit être membre d'aucune organisation.
@@ -132,17 +136,18 @@ GET /places?geo_coordinates=+44.851404209987386-0.5762618780136108&organization=
 
 Les catégories sont les secteurs d'activité d'une organisation. Un administrateur d'organisation peut créer une nouvelle catégorie en lui donnant un nom, une couleur et une icône. L'icône sera choisie dans le jeu d'icônes de Font Awesome : http://fontawesome.io/icons/
 
-Exemple :
 
 ```
 POST /organizations/{organization}/categories
 ```
 
-```
-paramètres :
-    name : "Nouvelle catégorie"
-    color : "#00ff00"
-    icon : fa-bug
+Exemple :
+```json
+{
+    "name":"Nom de la catégorie",
+    "color":"#ff0000",
+    "icon":"fa-bug"
+}
 ```
 
 Les 3 propriétés name, color et icon peuvent être éditées par une requête PATCH (LIEN).
@@ -169,9 +174,11 @@ Pour ajouter un nouveau partenaire à l'organisation, un administrateur de l'org
 POST /organizations/{orga}/relationships
 ```
 
-```
-paramètres :
-    organization : uuid de l'organisation partenaire
+Exemple :
+```json
+{
+    "organization":"84d36093-b8bc-47ad-bc8a-a043b3e301a9"
+}
 ```
 
 Pour récupérer les partenaires d'une organisation :

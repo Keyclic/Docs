@@ -10,8 +10,8 @@ Swagger file : https://api.keyclic.com/swagger.json
 ## Considérations techniques
 - Intro
 - Domaines applicatifs
-- faire une requête (headers) (pas d'uriencode dans cette doc) (acolades dans uris) (json)
-- images en base 64
+- Requêtes
+- Images
 - pagination
 - données géo
     geojson

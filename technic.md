@@ -29,7 +29,7 @@ GET /feedbacks
 
 Le endpoint ci-dessus retourne toutes les observations. Son url véritable est https://api.keyclic.com/feedbacks mais pour des raisons de concision, dans cette documentation, nous ne préciserons jamais le protocole ni le nom de domaine.
 
-## Paramètres d'url
+### Paramètres d'url
 
 Dans cette documentation, les variables d'URI (exemples : identifiant d'une ressource, numéro de page, etc) seront exprimés entre accolades. Par exemple, pour récupérer une observation (feedback) donnée :
 
@@ -49,9 +49,9 @@ Par ailleurs, pour une meilleure lisibilité, les paramètres d'uri seront écri
 GET /feedbacks?before=2018-04-22T01:00:00+05:00
 ```
 
-En plus des headers conventionnels de HTTP/1.1, l'API Keyclic accepte, et même exige dans la plupart des cas, le header X-Keyclic-App, correspondant au domaine applicatif (voir ci-dessus : [Domaines applicatifs](#domaines-applicatifs)). Par exemple, pour récupérer toutes les observations sur le domaine applicatif com.keyclic.app, la requête comportera le header :
-
 ### Headers
+
+En plus des [headers conventionnels de HTTP/1.1](https://tools.ietf.org/html/rfc7231#section-5), l'API Keyclic accepte, et même exige dans la plupart des cas, le header X-Keyclic-App, correspondant au domaine applicatif (voir ci-dessus : [Domaines applicatifs](#domaines-applicatifs)). Par exemple, pour récupérer toutes les observations sur le domaine applicatif com.keyclic.app, la requête comportera le header :
 
 ```
 X-Keyclic-App : com.keyclic.app
@@ -69,7 +69,7 @@ Le seul type de contenu accepté par l'API Keyclic est JSON. Vos requêtes devro
 Content-type: application/json
 ```
 
-Et les paramètres de requêtes, hors query string, seront toujours envoyés en JSON.
+Et les paramètres de requêtes, hors query string, seront toujours envoyés en JSON. Les réponses sont également toujours retournées au format JSON.
 
 
 

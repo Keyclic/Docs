@@ -12,10 +12,12 @@ Un nouveau compte utilisateur est créé avec la requête :
 POST /security/register
 ```
 
-```
-Paramètres :
-    email : email du compte à créer
-    password : mot de passe
+Exemple :
+```json
+{
+    "email":"test@test.com",
+    "password":"test"
+}
 ```
 
 Le nouvel utilisateur se voit attribuer un identifiant unique et le rôle ROLE_USER, lui permettant d'utiliser les fonctionalités de base de l'API.
@@ -30,10 +32,12 @@ La connexion s'effectue avec la requête :
 POST /security/login
 ```
 
-```
-Paramètres :
-    login : adresse mail de l'utilisateur
-    password : mot de passe de l'utilisateur
+Exemple :
+```json
+{
+    "login":"test@test.com",
+    "password":"test"
+}
 ```
 
 Si les credentials sont reconnus par le serveur, celui-ci retourne un accessToken qui sera utilisé par l'utilisateur pour ses futures requêtes.
@@ -73,9 +77,11 @@ Il effectue d'abord une demande de changement de mot passe :
 POST /security/password/change-request
 ```
 
-```
-Paramètres :
-    email : adresse email du compte utilisateur
+Exemple :
+```json
+{
+    "email":"test@test.com"
+}
 ```
 
 Cette requête envoie un email à l'utilisateur contenant un lien se terminant par un token de vérification. Exemple de lien :
@@ -92,9 +98,11 @@ L'utilisateur peut ensuite changer son mot de passe avec :
 POST /security/password/change/-VtYMG0VnU8vHJdKUC_AqA_XpypI9kd8OmOvWj4NYMw
 ```
 
-```
-Paramètres :
-    password : nouveau mot de passe
+Exemple :
+```json
+{
+    "password":"password"
+}
 ```
 
 ## Modification des données utilisateur

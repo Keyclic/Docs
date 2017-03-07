@@ -10,7 +10,7 @@ Le plus souvent, l'utilisateur va aussi attacher son observation à une catégor
 POST /feedbacks/issues
 ```
 
-body :
+Exemple :
 ```json
 {
     "geo":
@@ -41,9 +41,11 @@ L'utilisateur peut ensuite ajouter d'autres images à son observation :
 POST /feedbacks/{feedback}/images
 ```
 
-```
-paramètres :
-    image : l'image à ajouter
+Exemple :
+```json
+{
+    "image":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAIAAAACDbGyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QIVDRUfvq7u+AAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAUSURBVAjXY3wrIcGABJgYUAGpfABZiwEnbOeFrwAAAABJRU5ErkJggg=="
+}
 ```
 
 ## Modération et cycle de vie d'une observation
@@ -58,7 +60,7 @@ Un administrateur du domaine applicatif valide une observation avec le endpoint 
 POST /feedbacks/{feedback}/state
 ```
 
-body :
+Exemple :
 ```json
 [{"op":"replace","path":"transition","value":"accept"}]
 ```
@@ -86,7 +88,6 @@ Supposons que la requête suivante est exécutée par un utilisateur membre de l
 POST /feedbacks/issues
 ```
 
-body :
 ```json
 {
     "geo":
@@ -178,9 +179,11 @@ Les utilisateurs de la communauté peuvent commenter une observation :
 POST /feedbacks/{feedback}/comments
 ```
 
+Exemple :
 ```
-paramètres :
-    text : contenu du commentaire
+{
+    "text":"Mon commentaire"
+}
 ```
 
 Pour récupérer les commentaires d'une observation :
