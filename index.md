@@ -11,12 +11,8 @@ Swagger file : https://api.keyclic.com/swagger.json
 - Intro
 - Domaines applicatifs
 - Requêtes
-- Images
-- pagination
-- données géo
-    geojson
-    geohash
-    paramètres d'entrée
+- Envoi de fichiers
+- Pagination
 - patch
 - erreurs retournées
 - changements de statut

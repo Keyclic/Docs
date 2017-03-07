@@ -145,7 +145,14 @@ GET /feedbacks?geo_near[radius]=1000&geo_near[geo_coordinates]=+44.8-0.5
 
 retournera les observations situées dans un rayon de 1000 mètres autour du point de latitude +44.8 et de longitude 0.5.
 
-**Dans un geo hash : paramètre geo_hash**
+**Dans un GeoHash : paramètre geo_hash**
+
+GeoHash est un système de géocodage [...] basé sur une fonction de hachage qui subdivise la surface terrestre selon une grille hiérarchique. (Source : [Geohash](https://fr.wikipedia.org/wiki/Geohash))
+
+Site officiel de GeoHash : http://geohash.org/
+GeoHash explorer : http://geohash.gofreerange.com/
+
+Les observations peuvent être filtrées par GeoHash de la façon suivante :
 
 ```
 GET /feedbacks?geo_hash[]=ezzx&geo_hash[]=ezzz
@@ -153,7 +160,24 @@ GET /feedbacks?geo_hash[]=ezzx&geo_hash[]=ezzz
 
 retournera les observations comprises dans les geo hash ezzx et ezzz.
 
-LIEN : geo_hash
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 **Sur une période donnée : paramètres before et after**
 
