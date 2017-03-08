@@ -2,7 +2,7 @@
 
 Swagger file : https://api.keyclic.com/swagger.json
 
-## Apperçu général 
+## Apperçu 
 - Intro
 - Vocabulaire (français et anglais)
 - Fonctionnement général
@@ -28,7 +28,7 @@ Swagger file : https://api.keyclic.com/swagger.json
 - Intro
 - Utilisateur de base
 - Administrateur d'organisation
-- Administrateur de domaine applicatif
+- Administrateur d'application
 - Membres d'organisation
 - Ressource utilisateur
 - Récupération des membres

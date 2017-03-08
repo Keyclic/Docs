@@ -50,11 +50,11 @@ Exemple :
 
 ## Modération et cycle de vie d'une observation
 
-Après qu'un utilisateur a créé une nouvelle observation, celle-ci possède le statut PENDING_REVIEW : en attente de modération. Elle devra être validée par un administrateur du domaine applicatif.
+Après qu'un utilisateur a créé une nouvelle observation, celle-ci possède le statut PENDING_REVIEW : en attente de modération. Elle devra être validée par un administrateur de l'application.
 
 LIEN : statuts et changements de statuts
 
-Un administrateur du domaine applicatif valide une observation avec le endpoint :
+Un administrateur d'application valide une observation avec le endpoint :
 
 ```
 POST /feedbacks/{feedback}/state
@@ -129,7 +129,7 @@ Plusieurs critères permettent de filter les observations.
 
 **Par statut : paramètre state**
 
-Par exemple, pour filtrer les observations en attente de validation, un administrateur du domaine applicatif effectuera la requête :
+Par exemple, pour filtrer les observations en attente de validation, un administrateur d'application effectuera la requête :
 
 ```
 GET /feedbacks?state=PENDING_REVIEW

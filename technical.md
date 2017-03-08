@@ -8,16 +8,22 @@ Le nom de domaine de l'API Keyclic est :
 api.keyclic.com
 ```
 
-La documentation technique de l'API selon la spécification Swagger peut être téléchargée ici : https://api.keyclic.com/swagger.json
+La documentation technique Swagger de l'API peut être téléchargée ici : https://api.keyclic.com/swagger.json
 
-## Domaines applicatifs
+## Applications et clés d'applications
 
-Toutes les opérations sont effectuées sur un domaine applicatif particulier. Deux domaines applicatifs sont actuellement reconnus par l'API :
+Tout client de l'API doit transmettre dans les headers de chaque requête une clé définissant l'application sur laquelle il travaille.
+
+Si vous développez un client pour travailler sur une application existante de Keyclic, vous devez connaître la clé de cette application. Si au contraire vous développez un client pour une nouvelle application, merci de vous adresser à la société Keyclic pour que celle-ci crée l'application et sa configuration et vous fournisse la clé correspondante.
+
+Deux clés d'application sont actuellement disponibles :
 
 - com.keyclic.app
 - com.keyclic.highway.vinci
 
-Tout client de l'API doit donc travailler sur l'un de ces domaines, en le précisant dans les headers de chaque requête (voir ci-desous : [Requêtes](#requêtes)). Si vous souhaitez qu'un nouveau domaine applicatif soit créé, merci d'en faire la demande à la société Keyclic.
+Chaque requête doit donc préciser, dans ses headers, la valeur du paramètre X-Keyclic-App. Voir ci-dessous le paragraphe [Requêtes](#requêtes) pour la mise en œuvre.
+
+Notez cependant que la base utilisateurs est commune à toutes les applications Keyclic. De fait, les endpoints d'inscription et de connexion (LIEN : authentification) font exception à la règle ci-dessus : ces deux endpoints n'exigent pas qu'une clé d'application leur soit fournie.
 
 ## Requêtes
 
@@ -51,7 +57,7 @@ GET /feedbacks?before=2018-04-22T01:00:00+05:00
 
 ### Headers
 
-En plus des [headers conventionnels de HTTP/1.1](https://tools.ietf.org/html/rfc7231#section-5), l'API Keyclic accepte, et même exige dans la plupart des cas, le header X-Keyclic-App, correspondant au domaine applicatif (voir ci-dessus : [Domaines applicatifs](#domaines-applicatifs)). Par exemple, pour récupérer toutes les observations sur le domaine applicatif com.keyclic.app, la requête comportera le header :
+En plus des [headers conventionnels de HTTP/1.1](https://tools.ietf.org/html/rfc7231#section-5), l'API Keyclic accepte, et même exige dans la plupart des cas, le header X-Keyclic-App, correspondant à l'application utilisée (voir ci-dessus : [Domaines applicatifs](#domaines-applicatifs)). Par exemple, pour récupérer toutes les observations sur l'application com.keyclic.app, la requête comportera le header :
 
 ```
 X-Keyclic-App : com.keyclic.app

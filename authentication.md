@@ -46,7 +46,7 @@ Si les credentials sont reconnus par le serveur, celui-ci retourne un accessToke
 
 La quasi totalité des requêtes à l'API nécessitent que l'utilisateur soit authentifié, c'est à dire qu'il fournisse son accessToken. Le token est envoyé dans l'entête Authorization de la requête, préfixé par Bearer.
 
-Par exemple, pour récupérer la liste des feedbacks du domaine applicatif com.keyclic.app, un utilisateur utilise le endpoint :
+Par exemple, pour récupérer la liste des feedbacks de l'application com.keyclic.app, un utilisateur utilise le endpoint :
 
 ```
 GET /feedbacks
@@ -90,7 +90,7 @@ Cette requête envoie un email à l'utilisateur contenant un lien se terminant p
 https://domain.com/#/password-reset/jrtVqBLxxoSA0c2hpsOBN-JQGQHGN3YXsKPMG1PWWWA
 ```
 
-Dans le lien ci-dessus, le domaine dépend du domaine applicatif (paramètre X-Keyclic-App passé en header de la requête) et jrtVqBLxxoSA0c2hpsOBN-JQGQHGN3YXsKPMG1PWWWA est le jeton de changement de mot de passe.
+Dans le lien ci-dessus, le nom de domaine dépend de la configuration de l'application et jrtVqBLxxoSA0c2hpsOBN-JQGQHGN3YXsKPMG1PWWWA est le jeton de changement de mot de passe.
 
 L'utilisateur peut ensuite changer son mot de passe avec :
 

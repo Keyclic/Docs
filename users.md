@@ -4,7 +4,7 @@ Les utilisateurs de l'application Keyclic possèdent un ou plusieurs rôles, dé
 
 - ROLE_USER : utilisateur de base
 - ORGANIZATION:ADMIN : administrateur d'une organisation
-- APPLICATION:ADMIN : administrateur d'un domaine applicatif
+- APPLICATION:ADMIN : administrateur d'application
 
 ## Utilisateur de base (rôle ROLE_USER)
 
@@ -34,9 +34,9 @@ L'administrateur d'une organisation peut :
 
 LIEN : rubrique organisation
 
-## Administrateur de domaine applicatif (rôle APPLICATION:ADMIN)
+## Administrateur d'application (rôle APPLICATION:ADMIN)
 
-L'administrateur d'un domaine applicatif a la possibilité de modérer les observations.
+L'administrateur d'une application a la possibilité de modérer les observations avant que celles-ci soient transmises, sous forme de rapport, aux organisations concernées.
 
 LIEN : Feedbacks / modération
 
@@ -50,7 +50,7 @@ Note : dans l'appli cliente Keyclic, ce fonctionnement est obtenu par l'activati
 
 ## Exemple de ressource utilisateur
 
-La lecture d'une ressource Utilisateur permet de découvrir les rôles de cet utilisateur, et éventuellement l'organisation dont il est administrateur et/ou le domaine applicatif dont il est administrateur.
+La lecture d'une ressource Utilisateur permet de découvrir les rôles de cet utilisateur, et éventuellement l'organisation dont il est administrateur et/ou l'application dont il est administrateur.
 
 ```
 GET /people/5020c6ea-ca07-42d1-994f-d90b86703b1a
@@ -95,7 +95,7 @@ Ce retour indique que :
 1. Cet utilisateur possède le rôle ROLE_USER, comme tous les utilisateurs.
 2. Il est membre de l'organisation 84d36093-b8bc-47ad-bc8a-a043b3e301a9
 3. Il possède le rôle ORGANIZATION:ADMIN, il est donc administrateur de l'organisation 84d36093-b8bc-47ad-bc8a-a043b3e301a9
-4. Il possède le rôle APPLICATION:ADMIN, il est donc administrateur du domaine applicatif auquel est rattachée l'organisation 84d36093-b8bc-47ad-bc8a-a043b3e301a9
+4. Il possède le rôle APPLICATION:ADMIN, il est donc administrateur de l'application à laquelle est rattachée l'organisation 84d36093-b8bc-47ad-bc8a-a043b3e301a9
 
 ## Récupération des membres
 

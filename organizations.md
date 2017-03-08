@@ -25,7 +25,7 @@ Exemple :
 
 L'utilisateur devient automatiquement membre et administrateur de cette nouvelle organisation.
 
-Pour récupérer toutes les organisations du domaine applicatif :
+Pour récupérer toutes les organisations de l'application :
 
 ```
 GET /organizations
@@ -120,7 +120,7 @@ body :
 }
 ```
 
-Pour récupérer toutes les zones géographiques du domaine applicatif :
+Pour récupérer toutes les zones géographiques de l'application :
 
 ```
 GET /places
@@ -152,7 +152,7 @@ Exemple :
 
 Les 3 propriétés name, color et icon peuvent être éditées par une requête PATCH (LIEN).
 
-Pour récupérer l'ensemble des catégories du domaine applicatif :
+Pour récupérer l'ensemble des catégories de l'application :
 
 ```
 GET /categories

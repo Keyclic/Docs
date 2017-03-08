@@ -1,6 +1,6 @@
 # Rapports
 
-Chaque fois qu'une observation est acceptée, soit après validation par un administrateur du domaine applicatif, soit automatiquement parce que l'utilisateur qui l'a créée était membre de l'organisation concernée par cette observation, un rapport est créé.
+Chaque fois qu'une observation est acceptée, soit après validation par un administrateur de l'application, soit automatiquement parce que l'utilisateur qui l'a créée était membre de l'organisation concernée par cette observation, un rapport est créé.
 
 Un administrateur d'organisation récupère les rapports concernant son organisation avec :
 
