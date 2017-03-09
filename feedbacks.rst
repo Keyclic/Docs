@@ -134,7 +134,8 @@ Si le paramètre "organization" n'avait pas été passé, alors cette observatio
 
 **Résumé du cycle de vie d'une observation**
 
-![Cycle de vie d'une observation](images/feedback_workflow.png "Cycle de vie d'une observation")
+.. image:: images/feedback_workflow.png
+
 
 Récupération des observations
 -----------------------------

@@ -22,7 +22,7 @@ Quand un nouveau rapport est généré à partir d'une observation, il possède 
 
 Le schéma ci-dessous montre l'évolution du statut d'un rapport en fonction des actions qui sont effectuées sur ce rapport.
 
-![Cycle de vie d'un rapport](images/report_workflow.png "Cycle de vie d'un rapport")
+.. image:: images/report_workflow.png
 
 Un endpoint unique permet de changer le statut du rapport :
 
@@ -150,7 +150,7 @@ Une fois acceptée, l'opération peut-être passée "en cours" puis "clôturée"
 
 **Résumé du cycle de vie d'une opération**
 
-![Cycle de vie d'une opération](images/operation_workflow.png "Cycle de vie d'une opération")
+.. image:: images/operation_workflow.png
 
 **Logs d'une opération**
 
