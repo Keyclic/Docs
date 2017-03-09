@@ -28,7 +28,7 @@ Swagger file : https://api.keyclic.com/swagger.json
 - [Administrateur d'organisation](users.md#administrateur-dorganisation-rôle-organizationadmin)
 - [Administrateur d'application](users.md#administrateur-dapplication-rôle-applicationadmin)
 - [Membres d'organisation](users.md#membres-dorganisation)
-- [Ressource utilisateur](users.md#exemple-de-ressource-utilisateur)
+- [Exemple de ressource utilisateur](users.md#exemple-de-ressource-utilisateur)
 - [Récupération des membres](users.md#récupération-des-membres)
 
 ## [Organisations](organizations.md)
