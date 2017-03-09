@@ -1,4 +1,5 @@
-# Organisations
+Organisations
+=============
 
 Dans l'application Keyclic, une organisation est une entité telle que club, entreprise, association, corporation, etc, à laquelle peuvent être rattachées les observations faites par les utilisateurs.
 
@@ -6,186 +7,196 @@ Les membres d'une organisation sont des utilisateurs de l'application Keyclic ra
 
 Les administrateurs d'une organisation peuvent définir les champs d'intervention de leur organisation en créant des catégories (exemple : voirie, transports, etc) et des zones géographiques. Quand un utilisateur crée une nouvelle observation, il précise toujours les coordonnées géographiques de cette observation. Ainsi, l'application est en mesure de lui retourner l'ensemble des organisations et de leurs catégories, ce qui lui permet de choisir la catégorie la plus adéquate à son observation.
 
-## Création d'une organisation
+Création d'une organisation
+---------------------------
 
 Tout utilisateur peut créer une nouvelle organisation :
 
-```
-POST /organizations
-```
+.. code-block::
+
+    POST /organizations
 
 Exemple :
-```json
-{
-    "name":"Nom de l'organisation",
-    "billingEmailAddress":"test@test.com",
-    "notificationEmailAddress":"test@test.com"
-}
-```
+
+.. code-block:: json
+
+    {
+        "name":"Nom de l'organisation",
+        "billingEmailAddress":"test@test.com",
+        "notificationEmailAddress":"test@test.com"
+    }
 
 L'utilisateur devient automatiquement membre et administrateur de cette nouvelle organisation.
 
 Pour récupérer toutes les organisations de l'application :
 
-```
-GET /organizations
-```
+.. code-block::
+
+    GET /organizations
 
 Il est possible de filtrer la requête ci-dessus sur un point géographique (voir ci-dessous : [zones géographiques(#gestion-des-zones-géographiques)]) :
 
-```
-GET /organizations?geo_coordinates=+44.851404209987386-0.5762618780136108
-```
+.. code-block::
 
-## Gestion des membres
+    GET /organizations?geo_coordinates=+44.851404209987386-0.5762618780136108
+
+Gestion des membres
+-------------------
 
 Pour ajouter un nouveau membre à une organisation :
 
-```
-POST /organizations/{organization}/members
-```
+.. code-block::
+
+    POST /organizations/{organization}/members
 
 Exemple :
-```json
-{
-    "person":"63d07fc5-f4e6-471c-a8cc-3c3f227c8c2d"
-}
-```
+
+.. code-block:: json
+
+    {
+        "person":"63d07fc5-f4e6-471c-a8cc-3c3f227c8c2d"
+    }
 
 Ce endpoint est réservé à un utilisateur possédant le rôle ORGANIZATION:ADMIN et membre de l'organisation {organization}, et l'utilisateur ajouté ne doit être membre d'aucune organisation.
 
 Pour récupérer les membres d'une organisation :
 
-```
-GET /people?organization={organization}
-```
+.. code-block::
+
+    GET /people?organization={organization}
 
 Pour retirer un membre d'une organisation, un administrateur de cette organisation exécutera la requête :
 
-```
-DELETE /organizations/{organization}/members/{member}
-```
+.. code-block::
+
+    DELETE /organizations/{organization}/members/{member}
 
 LIEN : Pour plus d'informations sur le rôle ORGANIZATION:ADMIN et ses privilèges, voir .
 
-# Gestion des zones géographiques
+Gestion des zones géographiques
+-------------------------------
 
 Un administrateur d'organisation peut créer des zones géographiques, correspondant aux lieux sur lesquels cette organisation intervient :
 
-```
-POST /organizations/{organization}/places
-```
+.. code-block::
+
+    POST /organizations/{organization}/places
 
 body :
-```json
-{
-    "name": "Test",
-    "polygon":
+
+.. code-block:: json
+
     {
-        "rings":
-        [
-            {
-                "points":
-                [
-                    {
-                        "longitude": 2.373991012573242,
-                        "latitude": 48.84088179130599
-                    },
-                    {
-                        "longitude": 2.3763084411621094,
-                        "latitude": 48.84205393836751
-                    },
-                    {
-                        "longitude": 2.376694679260254,
-                        "latitude": 48.84189859515306
-                    },
-                    {
-                        "longitude": 2.3787975311279297,
-                        "latitude": 48.84041574931067
-                    },
-                    {
-                        "longitude": 2.376115322113037,
-                        "latitude": 48.839031720249054
-                    },
-                    {
-                        "longitude": 2.373991012573242,
-                        "latitude": 48.84088179130599
-                    }
-                ]
-            }
-        ],
-        "srid": 5555
-    },
-    "elevation": 1
-}
-```
+        "name": "Test",
+        "polygon":
+        {
+            "rings":
+            [
+                {
+                    "points":
+                    [
+                        {
+                            "longitude": 2.373991012573242,
+                            "latitude": 48.84088179130599
+                        },
+                        {
+                            "longitude": 2.3763084411621094,
+                            "latitude": 48.84205393836751
+                        },
+                        {
+                            "longitude": 2.376694679260254,
+                            "latitude": 48.84189859515306
+                        },
+                        {
+                            "longitude": 2.3787975311279297,
+                            "latitude": 48.84041574931067
+                        },
+                        {
+                            "longitude": 2.376115322113037,
+                            "latitude": 48.839031720249054
+                        },
+                        {
+                            "longitude": 2.373991012573242,
+                            "latitude": 48.84088179130599
+                        }
+                    ]
+                }
+            ],
+            "srid": 5555
+        },
+        "elevation": 1
+    }
 
 Pour récupérer toutes les zones géographiques de l'application :
 
-```
-GET /places
-```
+.. code-block::
+
+    GET /places
 
 La requête ci-dessus peut-être filtrée sur une organisation donnée et/ou sur un point géographique donné :
 
-```
-GET /places?geo_coordinates=+44.851404209987386-0.5762618780136108&organization={organization}
-```
+.. code-block::
 
-## Gestion des catégories
+    GET /places?geo_coordinates=+44.851404209987386-0.5762618780136108&organization={organization}
+
+Gestion des catégories
+----------------------
 
 Les catégories sont les secteurs d'activité d'une organisation. Un administrateur d'organisation peut créer une nouvelle catégorie en lui donnant un nom, une couleur et une icône. L'icône sera choisie dans le jeu d'icônes de Font Awesome : http://fontawesome.io/icons/
 
 
-```
-POST /organizations/{organization}/categories
-```
+.. code-block::
+
+    POST /organizations/{organization}/categories
 
 Exemple :
-```json
-{
-    "name":"Nom de la catégorie",
-    "color":"#ff0000",
-    "icon":"fa-bug"
-}
-```
+
+.. code-block:: json
+
+    {
+        "name":"Nom de la catégorie",
+        "color":"#ff0000",
+        "icon":"fa-bug"
+    }
 
 Les 3 propriétés name, color et icon peuvent être éditées par une requête PATCH (LIEN).
 
 Pour récupérer l'ensemble des catégories de l'application :
 
-```
-GET /categories
-```
+.. code-block::
+
+    GET /categories
 
 La requête ci-dessus peut-être filtrée sur une organisation donnée et/ou sur un point géographique donné :
 
-```
-GET /categories?geo_coordinates=+44.851404209987386-0.5762618780136108&organization={organization}
-```
+.. code-block::
 
-## Gestion des partenariats
+    GET /categories?geo_coordinates=+44.851404209987386-0.5762618780136108&organization={organization}
+
+Gestion des partenariats
+------------------------
 
 Une organisation peut avoir des partenaires, c'est-à-dire des organisations qui lui sont rattachées et à qui l'administrateur de l'organisation pourra déléguer des rapports. La relation de partenariat est unilatérale : si une organisation A est partenaire d'une organisation B, B n'est pas forcément partenaire de A.
 
 Pour ajouter un nouveau partenaire à l'organisation, un administrateur de l'organisation exécutera le endpoint :
 
-```
-POST /organizations/{orga}/relationships
-```
+.. code-block::
+
+    POST /organizations/{orga}/relationships
 
 Exemple :
-```json
-{
-    "organization":"84d36093-b8bc-47ad-bc8a-a043b3e301a9"
-}
-```
+
+.. code-block:: json
+
+    {
+        "organization":"84d36093-b8bc-47ad-bc8a-a043b3e301a9"
+    }
 
 Pour récupérer les partenaires d'une organisation :
 
-```
-GET /organizations/{orga}/relationships
-```
+.. code-block::
+
+    GET /organizations/{orga}/relationships
 
 Cette requête ne peut être exécutée que par un administrateur de l'organisation.
 
