@@ -22,7 +22,7 @@ Quand un nouveau rapport est généré à partir d'une observation, il possède 
 
 Le schéma ci-dessous montre l'évolution du statut d'un rapport en fonction des actions qui sont effectuées sur ce rapport.
 
-.. image:: images/report_workflow.png
+.. image:: images/operation_workflow_0.png
 
 Un endpoint unique permet de changer le statut du rapport :
 
