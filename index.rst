@@ -3,7 +3,6 @@ Documentation fonctionnelle de l'API Keyclic
 
 .. toctree::
 
-    index
     overview
     technical
     authentication
