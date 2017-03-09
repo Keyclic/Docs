@@ -10,13 +10,13 @@ Certains utilisateurs peuvent également être regroupés au sein d'organisation
 
 Les administrateurs d'organisation définissent des zones géographiques sur lesquelles leur organisation peut intervenir, et des catégories d'intervention (exemples : voirie, animal perdu, propreté, etc...) Ainsi, quand un utilisateur crée une observation, la position géographique de cette observation permet de lui proposer les catégories et organisations qui sont en mesure de traiter son signalement et de le laisser choisir celle qui lui semble la plus apte à traiter son problème.
 
-Quand un utilisateur crée une observation, celle-ci doit tout d'abord être validée par un administrateur de l'application, [sauf dans certains cas où la validation est automatique](LIEN_PAGE_FEEDBACKS)). Une fois validée, cette observation est visble par la communauté : ainsi les autres utilisateurs peuvent la commenter et/ou la soutenir. De plus, au moment où l'observation est validée, un rapport est généré et transmis à l'organisation concernée. 
+Quand un utilisateur crée une observation, celle-ci doit tout d'abord être validée par un administrateur de l'application, [sauf dans certains cas où la validation est automatique](LIEN_PAGE_FEEDBACKS)). Une fois validée, cette observation est visible par la communauté : ainsi, les autres utilisateurs peuvent la commenter et/ou la soutenir. De plus, au moment où l'observation est validée, un rapport est généré et transmis à l'organisation concernée. 
 
 Un administrateur d'organisation a donc accès à l'ensemble des rapports concernant son organisation, chaque rapport correspondant à une observation. Pour chaque rapport, il peut créer une ou plusieurs opérations, et affecter ces opérations aux utilisateurs membres de son organisation. Une fois que toutes les opérations ont été accomplies, il pourra considérer que le traitement est terminé et clôturer le rapport. Une autre possibilité est de déléguer ce rapport à une organisation partenaire.
 
 ## Vocabulaire
 
-Dans cette section, nous allons définir les principaux concepts utilisés par l'API Keyclic. Pour chacun d'entre eux nous donnerons le terme technique correspondant. Nous donnons aussi un lien vers chaque section correspondante de la documentation pour plus d'informations sur chaque notion.
+Dans cette section, nous allons définir les principaux concepts utilisés par l'API Keyclic. Pour chacun d'entre eux, nous donnerons le terme technique correspondant. Nous donnons aussi un lien vers chaque section correspondante de la documentation pour plus d'informations sur chaque notion.
 
 ### Observation
 
@@ -36,7 +36,7 @@ LIEN
 
 ### Organisation
 
-Groupe d'utilisateurs pouvant être une entreprise, une école, une association, etc... 
+Groupe d'utilisateurs pouvant être une entreprise, une école, une association, etc.
 
 Terme technique : organization
 
@@ -82,7 +82,7 @@ LIEN
 
 ### Partenaires
 
-Un administrateur d'organisation peut définir des organisations partenaires, qui sont d'autres organisations auxquelles il poura déléguer des rapports.
+Un administrateur d'organisation peut définir des organisations partenaires, qui sont d'autres organisations auxquelles il pourra déléguer des rapports.
 
 Terme technique : relationship
 

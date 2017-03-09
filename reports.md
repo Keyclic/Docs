@@ -18,7 +18,7 @@ GET /reports/{report}
 
 Quand un nouveau rapport est généré à partir d'une observation, il possède le statut NEW.
 
-Le schémas ci-dessous montre l'évolution du statut d'un rapport en fonction des actions qui sont effectuées sur ce rapport.
+Le schéma ci-dessous montre l'évolution du statut d'un rapport en fonction des actions qui sont effectuées sur ce rapport.
 
 ![Cycle de vie d'un rapport](images/report_workflow.png "Cycle de vie d'un rapport")
 
@@ -139,7 +139,7 @@ PATCH /operations/{operation}/state
 
 **Opération en cours et clôture**
 
-Une fois acceptée, l'opération peut-être passée "en cours" puis "cloturée", soit par la personne à qui l'opération a été assignée, soit par un administrateur de l'organisation.
+Une fois acceptée, l'opération peut-être passée "en cours" puis "clôturée", soit par la personne à qui l'opération a été assignée, soit par un administrateur de l'organisation.
 
 **Résumé du cycle de vie d'une opération**
 

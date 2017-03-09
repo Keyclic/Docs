@@ -12,7 +12,7 @@ Tout utilisateur nouvellement inscrit possède automatiquement le rôle ROLE_USE
 - consulter et modifier son profil
 - consulter les observations faites par les autres utilisateurs
 - soutenir une observation
-- commenter une observeration
+- commenter une observation
 - créer une nouvelle observation
 
 LIEN : rubrique observations
@@ -21,9 +21,9 @@ LIEN : rubrique observations
 
 Tout utilisateur a la possibilité de créer une nouvelle organisation.
 
-L'utilisateur qui crée une nouvelle organisation en devient automatiquement membre et administrateur, c'est à dire qu'il se voit attribuer le rôle ORGANIZATION:ADMIN. Une organisation peut posséder plusieurs administrateurs, mais un utilisateur ne peut être membre, et par conséquent administrateur, que d'une seule organisation.
+L'utilisateur qui crée une nouvelle organisation en devient automatiquement membre et administrateur, c'est-à-dire qu'il se voit attribuer le rôle ORGANIZATION:ADMIN. Une organisation peut posséder plusieurs administrateurs, mais un utilisateur ne peut être membre, et par conséquent administrateur, que d'une seule organisation.
 
-**Attention** : Si un utilisateur est déjà membre d'une organisation et qu'il en crée une nouvelle, étant donné qu'il sera automatiquement rattaché à cette nouvelle organisation, il sera de fait retiré de la liste des membres de l'organisation à laquelle il appartenait auparavant.
+**Attention** : si un utilisateur est déjà membre d'une organisation et qu'il en crée une nouvelle, étant donné qu'il sera automatiquement rattaché à cette nouvelle organisation, il sera, de fait, retiré de la liste des membres de l'organisation à laquelle il appartenait auparavant.
 
 L'administrateur d'une organisation peut :
 - Ajouter de nouveaux membres à son organisation
@@ -42,11 +42,11 @@ LIEN : Feedbacks / modération
 
 ## Membres d'organisation
 
-Quand un utilisateur est membre d'une organisation, celui ne lui confère par un rôle particulier, mais cette appartenance à l'organisation lui donne la possibilité de créer une nouvelle observation de façon à ce que celle-ci soit aussitôt visible par la communauté, sans passer par l'étape de modération.
+Quand un utilisateur est membre d'une organisation, cela ne lui confère par un rôle particulier, mais cette appartenance à l'organisation lui donne la possibilité de créer une nouvelle observation de façon à ce que celle-ci soit aussitôt visible par la communauté, sans passer par l'étape de modération.
 
 LIEN : Observations / Création d'une observation sans modération
 
-Note : dans l'appli cliente Keyclic, ce fonctionnement est obtenu par l'activation du mode Pro.
+Note : dans l'application cliente Keyclic, ce fonctionnement est obtenu par l'activation du mode Pro.
 
 ## Exemple de ressource utilisateur
 
@@ -121,20 +121,4 @@ Pour filtrer les membres d'une organisation :
 ```
 GET /people?organization={organization}
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

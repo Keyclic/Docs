@@ -1,8 +1,8 @@
 # Observations
 
-Une observation est consituée d'une description, d'une position géographique, et optionnellement d'une ou plusieurs photos. Tous les utilisateurs peuvent créer des observations.
+Une observation est constituée d'une description, d'une position géographique, et optionnellement d'une ou plusieurs photos. Tous les utilisateurs peuvent créer des observations.
 
-Le plus souvent, l'utilisateur va aussi attacher son observation à une catégorie donnée. Par conséquent, cette observation sera également rattachée à l'organisation à laquelle appartient cette cagorie.
+Le plus souvent, l'utilisateur va aussi attacher son observation à une catégorie donnée. Par conséquent, cette observation sera également rattachée à l'organisation à laquelle appartient cette catégorie.
 
 ## Création d'une observation
 
@@ -109,7 +109,7 @@ POST /feedbacks/issues
 
 La requête ci-dessus créera une observation qui aura automatiquement le statut ACCEPTED, et un rapport sera automatiquement généré.
 
-Si le paramère "organization" n'avait pas été passé, alors cette observation aurait suivi le cycle normal et aurait reçu le statut PENDING_REVIEW.
+Si le paramètre "organization" n'avait pas été passé, alors cette observation aurait suivi le cycle normal et aurait reçu le statut PENDING_REVIEW.
 
 **Résumé du cycle de vie d'une observation**
 
@@ -125,7 +125,7 @@ GET /feedbacks
 
 Cette requête retourne uniquement les observations dont le statut est ACCEPTED.
 
-Plusieurs critères permettent de filter les observations.
+Plusieurs critères permettent de filtrer les observations.
 
 **Par statut : paramètre state**
 
@@ -159,25 +159,6 @@ GET /feedbacks?geo_hash[]=ezzx&geo_hash[]=ezzz
 ```
 
 retournera les observations comprises dans les geo hash ezzx et ezzz.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 **Sur une période donnée : paramètres before et after**
 

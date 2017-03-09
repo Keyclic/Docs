@@ -20,7 +20,7 @@ Exemple :
 }
 ```
 
-Le nouvel utilisateur se voit attribuer un identifiant unique et le rôle ROLE_USER, lui permettant d'utiliser les fonctionalités de base de l'API.
+Le nouvel utilisateur se voit attribuer un identifiant unique et le rôle ROLE_USER, lui permettant d'utiliser les fonctionnalités de base de l'API.
 
 ## Connexion
 
@@ -44,7 +44,7 @@ Si les credentials sont reconnus par le serveur, celui-ci retourne un accessToke
 
 ## Utilisation du token
 
-La quasi totalité des requêtes à l'API nécessitent que l'utilisateur soit authentifié, c'est à dire qu'il fournisse son accessToken. Le token est envoyé dans l'entête Authorization de la requête, préfixé par Bearer.
+La quasi-totalité des requêtes à l'API nécessitent que l'utilisateur soit authentifié, c'est-à-dire qu'il fournisse son accessToken. Le token est envoyé dans l'en-tête Authorization de la requête, préfixé par Bearer.
 
 Par exemple, pour récupérer la liste des feedbacks de l'application com.keyclic.app, un utilisateur utilise le endpoint :
 

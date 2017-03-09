@@ -31,7 +31,7 @@ Pour récupérer toutes les organisations de l'application :
 GET /organizations
 ```
 
-Il est possible de filtrer la requête ci-dessus sur un point géographique (voir ci-dessous : zones géographiques) :
+Il est possible de filtrer la requête ci-dessus sur un point géographique (voir ci-dessous : [zones géographiques(#gestion-des-zones-géographiques)]) :
 
 ```
 GET /organizations?geo_coordinates=+44.851404209987386-0.5762618780136108
@@ -166,7 +166,7 @@ GET /categories?geo_coordinates=+44.851404209987386-0.5762618780136108&organizat
 
 ## Gestion des partenariats
 
-Une organisation peut avoir des partenaires, c'est à dire des organisations qui lui sont rattachées et à qui l'administrateur de l'organisation pourra déléguer des rapports. La relation de partenariat est unilatérale : si une organisation A est partenaire d'une organisation B, B n'est pas forcément partenaire de A.
+Une organisation peut avoir des partenaires, c'est-à-dire des organisations qui lui sont rattachées et à qui l'administrateur de l'organisation pourra déléguer des rapports. La relation de partenariat est unilatérale : si une organisation A est partenaire d'une organisation B, B n'est pas forcément partenaire de A.
 
 Pour ajouter un nouveau partenaire à l'organisation, un administrateur de l'organisation exécutera le endpoint :
 

@@ -52,6 +52,3 @@ Swagger file : https://api.keyclic.com/swagger.json
 - [Export des rapports](reports.md#export-des-rapports)
 
 
-
-
-
