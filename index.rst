@@ -1,6 +1,10 @@
 Documentation fonctionnelle de l'API Keyclic
 ============================================
 
+.. toctree::
+
+   overview
+
 Swagger file : https://api.keyclic.com/swagger.json
 
 `Aperçu <overview.rst>`_
