@@ -206,7 +206,7 @@ Changements de statut
 
 Plusieurs ressources manipulées par l'API ont un cycle de vie et possèdent un certain statut à un instant donné. C'est le cas des observations, des rapports et des opérations.
 
-Pour ces ressources, l'état est toujours indiqué dans la réponse avec le paramètre *state*, et les actions possibles pour faire évoluer ce statut sont toujours indiqués sous le paramètre *stateTransitions*. Exemple :
+Pour ces ressources, l'état est toujours indiqué dans la réponse avec le paramètre *state*, et les actions possibles pour faire évoluer ce statut sont toujours indiquées sous le paramètre *stateTransitions*. Exemple :
 
 .. code-block:: bash
 

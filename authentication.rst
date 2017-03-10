@@ -3,7 +3,7 @@
 Authentification et connexion
 =============================
 
-L'API Keyclic se base sur le standard JSON Web Token pour la sécurisation de l'échange des données. Toute requête à l'API est nécessairement effectuée en fournissant un jeton d'accès (accessToken) permettant au serveur de vérifier l'identité de l'utilisateur. Un endpoint permet à l'utilisateur d'obtenir ce jeton d'accès en fournissant son login et son mot de passe. Cette section détaille la création d'un compte, l'obtention et l'utilisation d'un accessToken, et la modification d'un compte utilisateur.
+L'API Keyclic se base sur le standard `JSON Web Tokens <https://jwt.io/>`_ pour la sécurisation de l'échange des données. Toute requête à l'API est nécessairement effectuée en fournissant un jeton d'accès (accessToken) permettant au serveur de vérifier l'identité de l'utilisateur. Un endpoint permet à l'utilisateur d'obtenir ce jeton d'accès en fournissant son login et son mot de passe. Cette section détaille la création d'un compte, l'obtention et l'utilisation d'un accessToken, et la modification d'un compte utilisateur.
 
 Pour plus d'informations sur le standard JWT, voir : `le site officiel de JSON Web Tokens <https://jwt.io/>`_.
 
