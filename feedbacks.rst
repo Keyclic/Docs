@@ -40,7 +40,7 @@ Exemple :
 
 Ce endpoint se présente sous la forme **/feedbacks/issue** et non pas simplement **/feedbacks**, car à terme, il sera possible de créer différents types d'observation. Actuellement, seul le type "issue" est disponible.
 
-Envoi d'images : voir :ref:`technical-files`
+Paramètre image : voir :ref:`technical-files`
 
 L'utilisateur peut ensuite ajouter d'autres images à son observation :
 
@@ -166,7 +166,9 @@ Par exemple, pour filtrer les observations en attente de validation, un administ
 
 Exemple :
 
-GET /feedbacks?geo_near[radius]=1000&geo_near[geo_coordinates]=+44.8-0.5
+.. code-block:: bash
+
+    GET /feedbacks?geo_near[radius]=1000&geo_near[geo_coordinates]=+44.8-0.5
 
 retournera les observations situées dans un rayon de 1000 mètres autour du point de latitude +44.8 et de longitude 0.5.
 
