@@ -1,3 +1,5 @@
+.. _overview:
+
 Aperçu
 ======
 
@@ -26,7 +28,7 @@ Remarque effectuée sur le terrain par un utilisateur, pouvant porter sur un dys
 
 Terme technique : feedback.
 
-LIEN
+Voir la page :ref:`feedbacks`
 
 Rapport
 ~~~~~~~
@@ -35,7 +37,7 @@ Toute observation, une fois validée par un administrateur du domaine applicatif
 
 Terme technique : report.
 
-LIEN
+Voir la page :ref:`reports`
 
 Organisation
 ~~~~~~~~~~~~

@@ -1,3 +1,5 @@
+.. _organizations:
+
 Organisations
 =============
 
@@ -72,6 +74,8 @@ Pour retirer un membre d'une organisation, un administrateur de cette organisati
     DELETE /organizations/{organization}/members/{member}
 
 LIEN : Pour plus d'informations sur le rôle ORGANIZATION:ADMIN et ses privilèges, voir .
+
+.. _zones:
 
 Gestion des zones géographiques
 -------------------------------
