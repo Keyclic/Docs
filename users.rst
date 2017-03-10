@@ -22,7 +22,7 @@ Tout utilisateur nouvellement inscrit possède automatiquement le rôle ROLE_USE
 - commenter une observation
 - créer une nouvelle observation
 
-Voir : :ref:`observations`
+Voir : :ref:`feedbacks`
 
 .. _users-organization-admin:
 

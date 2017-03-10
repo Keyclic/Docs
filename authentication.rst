@@ -132,7 +132,7 @@ Pour les données autres que le mot de passe, l'utilisateur requêtera sur le en
 
 .. code-block:: bash
 
-    PATCH /people/8fa7a1aa-dc61-42df-9233-b103fc34771d
+    PATCH /people/{user}
 
 Par exemple, pour modifier son nom :
 
