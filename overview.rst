@@ -19,8 +19,6 @@ Un administrateur d'organisation a donc accès à l'ensemble des rapports concer
 Vocabulaire
 -----------
 
-Dans cette section, nous allons définir les principaux concepts utilisés par l'API Keyclic. Pour chacun d'entre eux, nous donnerons le terme technique correspondant. Nous donnons aussi un lien vers chaque section correspondante de la documentation pour plus d'informations sur chaque notion.
-
 Observation
 ~~~~~~~~~~~
 
@@ -28,12 +26,12 @@ Remarque effectuée sur le terrain par un utilisateur, pouvant porter sur un dys
 
 Terme technique : feedback.
 
-Voir la page :ref:`feedbacks`
+Voir la page :ref:`feedbacks`.
 
 Rapport
 ~~~~~~~
 
-Toute observation, une fois validée par un administrateur du domaine applicatif, entraîne la génération d'un rapport. Un rapport reprend donc toutes les informations de l'observation dont il est issu, et n'est visible et manipulable que par l'organisation concernée par l'observation initiale. Le rapport est donc le pendant professionnel de l'observation. C'est sur ce rapport que l'organisation travaille : création d'opérations, suivi, délégation, etc.
+Toute observation, une fois validée par un administrateur du domaine applicatif, entraîne la génération d'un rapport. Un rapport reprend donc toutes les informations de l'observation dont il est issu, et n'est visible et manipulable que par l'organisation concernée. Le rapport peut donc être vu comme le pendant « professionnel » de l'observation. C'est sur ce rapport que l'organisation travaille : création d'opérations, suivi, délégation, etc.
 
 Terme technique : report.
 
@@ -44,27 +42,27 @@ Organisation
 
 Groupe d'utilisateurs pouvant être une entreprise, une école, une association, etc.
 
-Terme technique : organization
+Terme technique : organization.
 
-Voir la page :ref:`organizations`
+Voir la page :ref:`organizations`.
 
 Zone
 ~~~~
 
 Aire géographique sur laquelle une organisation peut intervenir.
 
-Terme technique : place
+Terme technique : place.
 
-Voir la section :ref:`organizations-places`
+Voir la section :ref:`organizations-places`.
 
 Catégorie
 ~~~~~~~~~
 
-Secteur d'activité d'une organisation
+Secteur d'activité d'une organisation.
 
-Terme technique : category
+Terme technique : category.
 
-Voir la section :ref:`organizations-categories`
+Voir la section :ref:`organizations-categories`.
 
 Application
 ~~~~~~~~~~~
@@ -76,26 +74,26 @@ Soutien
 
 Une observation peut être soutenue par les utilisateurs de la communauté, afin de leur donner plus de poids.
 
-Terme technique : contribution
+Terme technique : contribution.
 
-Voir la section :ref:`feedbacks-contributions`
+Voir la section :ref:`feedbacks-contributions`.
 
 Opération
 ~~~~~~~~~
 
 Une opération est une tâche créée par un administrateur d'organisation sur un rapport donné. Cette tâche est assignée à un membre de l'organisation. Un rapport ne peut être clôturé que si toutes les opérations qui lui sont liées ont été accomplies.
 
-Terme technique : operation
+Terme technique : operation.
 
-Voir la section :ref:`reports-operations`
+Voir la section :ref:`reports-operations`.
 
 Partenaires
 ~~~~~~~~~~~
 
 Un administrateur d'organisation peut définir des organisations partenaires, qui sont d'autres organisations auxquelles il pourra déléguer des rapports.
 
-Terme technique : relationship
+Terme technique : relationship.
 
-Voir la section :ref:`organizations-relationships`
+Voir la section :ref:`organizations-relationships`.
 
 
