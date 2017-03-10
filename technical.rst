@@ -23,7 +23,7 @@ Deux clés d'application sont actuellement disponibles :
 - com.keyclic.app
 - com.keyclic.highway.vinci
 
-Chaque requête doit donc préciser, dans ses headers, la valeur du paramètre X-Keyclic-App. Voir ci-dessous le paragraphe `Requêtes <#requetes>`_ pour la mise en œuvre.
+Chaque requête doit donc préciser, dans ses headers, la valeur du paramètre X-Keyclic-App. Voir ci-dessous le paragraphe `Requêtes <#id1>`_ pour la mise en œuvre.
 
 Notez cependant que la base utilisateurs est commune à toutes les applications Keyclic. De fait, les endpoints d'inscription et de connexion (LIEN : authentification) font exception à la règle ci-dessus : ces deux endpoints n'exigent pas qu'une clé d'application leur soit fournie.
 
