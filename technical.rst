@@ -76,7 +76,7 @@ Par ailleurs, pour une meilleure lisibilité, les paramètres d'uri seront écri
 Headers
 ~~~~~~~
 
-En plus des `headers conventionnels de HTTP/1.1 <https://tools.ietf.org/html/rfc7231#section-5>`_, l'API Keyclic accepte, et même exige dans la plupart des cas, le header X-Keyclic-App, correspondant à l'application utilisée (voir ci-dessus : :ref:`technical-applications`). Par exemple, pour récupérer toutes les observations sur l'application com.keyclic.app, la requête comportera le header :
+En plus des `headers conventionnels de HTTP/1.1 <https://tools.ietf.org/html/rfc7231#section-5>`_, l'API Keyclic accepte, et même exige dans la plupart des cas, le header **X-Keyclic-App**, correspondant à l'application utilisée (voir ci-dessus : :ref:`technical-applications`). Par exemple, pour récupérer toutes les observations sur l'application com.keyclic.app, la requête comportera le header :
 
 .. code-block:: bash
 
@@ -84,7 +84,7 @@ En plus des `headers conventionnels de HTTP/1.1 <https://tools.ietf.org/html/rfc
 
 Tous les endpoints exigent que ce header soit fourni, à l'exception des endpoints de login et de changement de mot de passe. (voir : :ref:`authentication`)
 
-Toutes les requêtes (à l'exception du login, du register et du changement de mot de passe) doivent aussi comporter le header Authorization afin d'authenfier l'utilisateur. (voir : :ref:`authentication`)
+Toutes les requêtes (à l'exception du login, du register et du changement de mot de passe) doivent aussi comporter le header Authorization afin d'authentifier l'utilisateur. (voir : :ref:`authentication`)
 
 .. _technical-format:
 
@@ -97,7 +97,7 @@ Le seul type de contenu accepté par l'API Keyclic est JSON. Vos requêtes devro
 
     Content-type: application/json
 
-Et les paramètres de requêtes, hors query string, seront toujours envoyés en JSON. Les réponses sont également toujours retournées au format JSON.
+et le corps des requêtes devra toujours être formaté en JSON. Les réponses sont également toujours retournées au format JSON.
 
 .. _technical-files:
 
@@ -160,8 +160,7 @@ Le retour d'une collection contient les informations et liens nécessaires pour 
         "previous": {
           "href": "/feedbacks?page=1&limit=10"
         }
-      },
-      // ...
+      }
     }
 
 Dans cette documentation, nous ne rappellerons pas systématiquement qu'il est possible de paginer avec les filtres *page* et *limit*, ceux-ci étant communs à tous les endpoints retournant une collection.
@@ -226,8 +225,7 @@ Réponse :
           "accept",
           "refuse"
         ]
-      },
-      // ...
+      }
     }
 
 Dans l'exemple ci-dessus, le rapport est en statut NEW et les actions possibles sur son statut sont *accept* et *refuse*.
@@ -265,8 +263,7 @@ La réponse nous informe que le rapport possède désormais le statut ACCEPTED, 
           "hold",
           "progress"
         ]
-      },
-      // ...
+      }
     }
 
 Les actions et status possibles pour chaque type de ressources sont décrits dans les sections idoines de cette documentation.
