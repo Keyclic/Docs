@@ -130,7 +130,7 @@ en passant dans les headers de la requête :
 
     Link : /people/{user}
 
-où {user} est l'identifiant de l'utilisateur à qui est assigné l'opération.
+où {user} est l'identifiant de l'utilisateur à qui est assignée l'opération.
 
 **Acceptation ou refus**
 
