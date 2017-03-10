@@ -50,7 +50,7 @@ Voir : :ref:`organizations`
 Administrateur d'application (rôle APPLICATION:ADMIN)
 -----------------------------------------------------
 
-L'administrateur d'une application a la possibilité de modérer les observations avant que celles-ci soient transmises, sous forme de rapport, aux organisations concernées.
+L'administrateur d'une application a la possibilité de modérer les observations avant que celles-ci soient transmises, sous forme de rapports, aux organisations concernées.
 
 Voir : :ref:`feedbacks-lifecyle`
 
@@ -59,9 +59,11 @@ Voir : :ref:`feedbacks-lifecyle`
 Membres d'organisation
 ----------------------
 
-Quand un utilisateur est membre d'une organisation, cela ne lui confère par un rôle particulier, mais cette appartenance à l'organisation lui donne la possibilité de créer une nouvelle observation de façon à ce que celle-ci soit aussitôt visible par la communauté, sans passer par l'étape de modération.
+Quand un utilisateur est membre d'une organisation, cela ne lui confère par un rôle particulier, mais cette appartenance à l'organisation lui donne la possibilité de créer une nouvelle observation de façon à ce que celle-ci soit aussitôt visible par la communauté, sans passer par l'étape de modération (voir : :ref:`feedbacks-lifecyle`).
 
-Voir : :ref:`feedbacks-lifecyle`
+De plus, les membres d'une organisation peuvent se voir assigner des opérations par les administrateurs de cette organisation (voir : :ref:`reports-operations`).
+
+
 
 Note : dans l'application cliente Keyclic, ce fonctionnement est obtenu par l'activation du mode Pro.
 
