@@ -170,10 +170,12 @@ retournera les observations situées dans un rayon de 1000 mètres autour du poi
 
 **Dans un GeoHash : paramètre geo_hash**
 
-GeoHash est un système de géocodage [...] basé sur une fonction de hachage qui subdivise la surface terrestre selon une grille hiérarchique. (Source : [Geohash](https://fr.wikipedia.org/wiki/Geohash))
+GeoHash est un système de géocodage [...] basé sur une fonction de hachage qui subdivise la surface terrestre selon une grille hiérarchique. (Source : `Wikipedia <https://fr.wikipedia.org/wiki/Geohash>`_)
 
-Site officiel de GeoHash : http://geohash.org/
-GeoHash explorer : http://geohash.gofreerange.com/
+Pour plus d'informations sur GeoHash, voir :
+
+- `Site officiel de GeoHash <http://geohash.org/>`_
+- `GeoHash explorer <http://geohash.gofreerange.com/>`_
 
 Les observations peuvent être filtrées par GeoHash de la façon suivante :
 
@@ -193,7 +195,7 @@ Exemple :
 
 retournera les observations effectuées entre le 10/01/2017 et le 22/02/2017.
 
-Les dates sont écrites au format ISO 8601 : https://www.iso.org/iso-8601-date-and-time-format.html
+Les dates sont écrites au format  : `ISO 8601 <https://www.iso.org/iso-8601-date-and-time-format.html>`_.
 
 **Note : Cas des observations sans catégorie**
 

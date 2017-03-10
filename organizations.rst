@@ -142,7 +142,7 @@ La requête ci-dessus peut-être filtrée sur une organisation donnée et/ou sur
 Gestion des catégories
 ----------------------
 
-Les catégories sont les secteurs d'activité d'une organisation. Un administrateur d'organisation peut créer une nouvelle catégorie en lui donnant un nom, une couleur et une icône. L'icône sera choisie dans le jeu d'icônes de Font Awesome : http://fontawesome.io/icons/
+Les catégories sont les secteurs d'activité d'une organisation. Un administrateur d'organisation peut créer une nouvelle catégorie en lui donnant un nom, une couleur et une icône. L'icône sera choisie dans  `le jeu d'icônes de Font Awesome <http://fontawesome.io/icons/>`_.
 
 
 .. code-block::

@@ -9,7 +9,7 @@ Le nom de domaine de l'API Keyclic est :
 
     api.keyclic.com
 
-La documentation technique Swagger de l'API peut être téléchargée ici : https://api.keyclic.com/swagger.json
+Vous pouvez télécharger `la documentation technique Swagger de l'API <https://api.keyclic.com/swagger.json>`_.
 
 Applications et clés d'applications
 -----------------------------------
@@ -23,20 +23,28 @@ Deux clés d'application sont actuellement disponibles :
 - com.keyclic.app
 - com.keyclic.highway.vinci
 
-Chaque requête doit donc préciser, dans ses headers, la valeur du paramètre X-Keyclic-App. Voir ci-dessous le paragraphe [Requêtes](#requêtes) pour la mise en œuvre.
+Chaque requête doit donc préciser, dans ses headers, la valeur du paramètre X-Keyclic-App. Voir ci-dessous le paragraphe `Requêtes <#requetes>`_ pour la mise en œuvre.
 
 Notez cependant que la base utilisateurs est commune à toutes les applications Keyclic. De fait, les endpoints d'inscription et de connexion (LIEN : authentification) font exception à la règle ci-dessus : ces deux endpoints n'exigent pas qu'une clé d'application leur soit fournie.
 
 Requêtes
 --------
 
-Dans cette documentation, chaque endpoint de l'API sera décrit par le chemin d'accès à la ressource précédé du [verbe HTTP](https://tools.ietf.org/html/rfc7231#section-4.1). Exemple :
+Dans cette documentation, chaque endpoint de l'API sera décrit par le chemin d'accès à la ressource précédé du `verbe HTTP <https://tools.ietf.org/html/rfc7231#section-4.1>`_.
+
+Exemple :
 
 .. code-block::
 
     GET /feedbacks
 
-Le endpoint ci-dessus retourne toutes les observations. Son url véritable est https://api.keyclic.com/feedbacks mais pour des raisons de concision, dans cette documentation, nous ne préciserons jamais le protocole ni le nom de domaine.
+Le endpoint ci-dessus retourne toutes les observations. Son url véritable est 
+
+.. code-block::
+
+    https://api.keyclic.com/feedbacks
+
+mais pour des raisons de concision, dans cette documentation, nous ne préciserons jamais le protocole ni le nom de domaine.
 
 Paramètres d'url
 ~~~~~~~~~~~~~~~~
@@ -62,7 +70,7 @@ Par ailleurs, pour une meilleure lisibilité, les paramètres d'uri seront écri
 Headers
 ~~~~~~~
 
-En plus des [headers conventionnels de HTTP/1.1](https://tools.ietf.org/html/rfc7231#section-5), l'API Keyclic accepte, et même exige dans la plupart des cas, le header X-Keyclic-App, correspondant à l'application utilisée (voir ci-dessus : [Domaines applicatifs](#domaines-applicatifs)). Par exemple, pour récupérer toutes les observations sur l'application com.keyclic.app, la requête comportera le header :
+En plus des `headers conventionnels de HTTP/1.1 <https://tools.ietf.org/html/rfc7231#section-5>`_, l'API Keyclic accepte, et même exige dans la plupart des cas, le header X-Keyclic-App, correspondant à l'application utilisée (voir ci-dessus : [Domaines applicatifs](#domaines-applicatifs)). Par exemple, pour récupérer toutes les observations sur l'application com.keyclic.app, la requête comportera le header :
 
 .. code-block::
 
@@ -149,7 +157,7 @@ Dans cette documentation, nous ne rappellerons pas systématiquement qu'il est p
 Modification de ressources avec la méthode PATCH
 ------------------------------------------------
 
-Dans l'API Keyclic, la modification des ressources s'effectue avec la méthode [PATCH](https://tools.ietf.org/html/rfc5789). Contrairement à la méthode [PUT](https://tools.ietf.org/html/rfc7231#section-4.3.4), la méthode [PATCH](https://tools.ietf.org/html/rfc5789) permet de modifier une seule propriété, ou une partie seulement des propriétés, d'une ressource, sans qu'il soit nécessaire d'en envoyer une représentation complète. Le format utilisé pour la description du patch est [JSON Patch](https://tools.ietf.org/html/rfc6902). La seule opération acceptée par l'API lors d'un PATCH est l'opération *replace*. 
+Dans l'API Keyclic, la modification des ressources s'effectue avec la méthode `PATCH <https://tools.ietf.org/html/rfc5789>`_. Contrairement à la méthode `PUT <https://tools.ietf.org/html/rfc7231#section-4.3.4>`_, la méthode `PATCH <https://tools.ietf.org/html/rfc5789>`_ permet de modifier une seule propriété, ou une partie seulement des propriétés, d'une ressource, sans qu'il soit nécessaire d'en envoyer une représentation complète. Le format utilisé pour la description du patch est `JSON Patch <https://tools.ietf.org/html/rfc6902>`_. La seule opération acceptée par l'API lors d'un `PATCH <https://tools.ietf.org/html/rfc5789>`_ est l'opération *replace*. 
 
 À titre d'exemple, voici la modification de la popriété *billingEmailAddress* d'une organisation :
 
@@ -170,9 +178,9 @@ Dans l'API Keyclic, la modification des ressources s'effectue avec la méthode [
 Retours d'erreurs
 -----------------
 
-Toute erreur entraîne une réponse de code [4xx](https://tools.ietf.org/html/rfc7231#section-6.5) reflétant le type d'erreur.
+Toute erreur entraîne une réponse de code `4xx <https://tools.ietf.org/html/rfc7231#section-6.5>`_ reflétant le type d'erreur.
 
-Quand il s'agit d'une erreur de type [400](https://tools.ietf.org/html/rfc7231#section-6.5.1) (Bad Request), les raisons de l'erreur sont retournées.
+Quand il s'agit d'une erreur de type `400 <https://tools.ietf.org/html/rfc7231#section-6.5.1>`_ (Bad Request), les raisons de l'erreur sont retournées.
 
 Changements de statut
 ---------------------
