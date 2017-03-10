@@ -55,7 +55,7 @@ Aire géographique sur laquelle une organisation peut intervenir.
 
 Terme technique : place
 
-LIEN
+Voir la page :ref:`zones`
 
 Catégorie
 ~~~~~~~~~
