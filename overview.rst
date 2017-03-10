@@ -31,7 +31,7 @@ Voir la page :ref:`feedbacks`.
 Rapport
 ~~~~~~~
 
-Toute observation, une fois validée par un administrateur du domaine applicatif, entraîne la génération d'un rapport. Un rapport reprend donc toutes les informations de l'observation dont il est issu, et n'est visible et manipulable que par l'organisation concernée. Le rapport peut donc être vu comme le pendant « professionnel » de l'observation. C'est sur ce rapport que l'organisation travaille : création d'opérations, suivi, délégation, etc.
+Toute observation, une fois validée par un administrateur de l'application, entraîne la génération d'un rapport. Un rapport reprend donc toutes les informations de l'observation dont il est issu, et n'est visible et manipulable que par l'organisation concernée. Le rapport peut donc être vu comme le pendant « professionnel » de l'observation. C'est sur ce rapport que l'organisation travaille : création d'opérations, suivi, délégation, etc.
 
 Terme technique : report.
 
