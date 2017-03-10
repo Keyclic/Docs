@@ -173,7 +173,7 @@ Délégation de rapports
 
 Un administrateur d'une organisation peut déléguer un rapport à l'une des organisations partenaires.
 
-LIEN : organisations partenaires
+Voir : :ref:`organizations-relationships`
 
 Pour déléguer un rapport, un administrateur de l'organisation effectue la requête :
 

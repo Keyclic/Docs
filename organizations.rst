@@ -77,7 +77,7 @@ Pour retirer un membre d'une organisation, un administrateur de cette organisati
 
     DELETE /organizations/{organization}/members/{member}
 
-LIEN : Pour plus d'informations sur le rôle ORGANIZATION:ADMIN et ses privilèges, voir .
+Pour plus d'informations sur le rôle ORGANIZATION:ADMIN et ses privilèges, voir :ref:`users-organization-admin`.
 
 .. _organizations-places:
 
@@ -169,7 +169,7 @@ Exemple :
         "icon":"fa-bug"
     }
 
-Les 3 propriétés name, color et icon peuvent être éditées par une requête PATCH (LIEN).
+Les 3 propriétés name, color et icon peuvent être éditées par une requête PATCH (voir : :ref:`technical-patch`).
 
 Pour récupérer l'ensemble des catégories de l'application :
 

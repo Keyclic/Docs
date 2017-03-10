@@ -29,7 +29,7 @@ Deux clés d'application sont actuellement disponibles :
 
 Chaque requête doit donc préciser, dans ses headers, la valeur du paramètre X-Keyclic-App. Voir ci-dessous le paragraphe :ref:`technical-requests` pour la mise en œuvre.
 
-Notez cependant que la base utilisateurs est commune à toutes les applications Keyclic. De fait, les endpoints d'inscription et de connexion (LIEN : authentification) font exception à la règle ci-dessus : ces deux endpoints n'exigent pas qu'une clé d'application leur soit fournie.
+Notez cependant que la base utilisateurs est commune à toutes les applications Keyclic. De fait, les endpoints d'inscription et de connexion (voir : :ref:`authentication`) font exception à la règle ci-dessus : ces deux endpoints n'exigent pas qu'une clé d'application leur soit fournie.
 
 .. _technical-requests:
 
@@ -82,9 +82,9 @@ En plus des `headers conventionnels de HTTP/1.1 <https://tools.ietf.org/html/rfc
 
     X-Keyclic-App : com.keyclic.app
 
-Tous les endpoints exigent que ce header soit fourni, à l'exception des endpoints de login et de changement de mot de passe. (LIEN : authentification)
+Tous les endpoints exigent que ce header soit fourni, à l'exception des endpoints de login et de changement de mot de passe. (voir : :ref:`authentication`)
 
-Toutes les requêtes (à l'exception du login, du register et du changement de mot de passe) doivent aussi comporter le header Authorization afin d'authenfier l'utilisateur. (LIEN : authentification)
+Toutes les requêtes (à l'exception du login, du register et du changement de mot de passe) doivent aussi comporter le header Authorization afin d'authenfier l'utilisateur. (voir : :ref:`authentication`)
 
 .. _technical-format:
 

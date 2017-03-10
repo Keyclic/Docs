@@ -40,9 +40,7 @@ Exemple :
 
 Ce endpoint se présente sous la forme **/feedbacks/issue** et non pas simplement **/feedbacks**, car à terme, il sera possible de créer différents types d'observation. Actuellement, seul le type "issue" est disponible.
 
-Coordonnées géographiques du point : LIEN
-
-Image : LIEN
+Envoi d'images : voir :ref:`technical-files`
 
 L'utilisateur peut ensuite ajouter d'autres images à son observation :
 
@@ -65,7 +63,7 @@ Modération et cycle de vie d'une observation
 
 Après qu'un utilisateur a créé une nouvelle observation, celle-ci possède le statut PENDING_REVIEW : en attente de modération. Elle devra être validée par un administrateur de l'application.
 
-LIEN : statuts et changements de statuts
+Voir : :ref:`technical-states`
 
 Un administrateur d'application valide une observation avec le endpoint :
 
@@ -87,7 +85,7 @@ Exemple :
 
 L'observation prend alors le statut ACCEPTED et un rapport est créé sur cette observation.
 
-LIEN : rapports
+Voir : :ref:`reports`
 
 Pour refuser une observation :
 

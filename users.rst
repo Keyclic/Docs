@@ -22,7 +22,7 @@ Tout utilisateur nouvellement inscrit possède automatiquement le rôle ROLE_USE
 - commenter une observation
 - créer une nouvelle observation
 
-LIEN : rubrique observations
+Voir : :ref:`observations`
 
 .. _users-organization-admin:
 
@@ -43,7 +43,7 @@ L'administrateur d'une organisation peut :
 - Gérer les partenaires de cette organisation
 - Consulter et gérer les rapports reçus par cette organisation et les opérations liées à ces rapports
 
-LIEN : rubrique organisation
+Voir : :ref:`organizations`
 
 .. _users-application-admin:
 
@@ -52,7 +52,7 @@ Administrateur d'application (rôle APPLICATION:ADMIN)
 
 L'administrateur d'une application a la possibilité de modérer les observations avant que celles-ci soient transmises, sous forme de rapport, aux organisations concernées.
 
-LIEN : Feedbacks / modération
+Voir : :ref:`feedbacks-lifecyle`
 
 .. _users-organization-member:
 
@@ -61,7 +61,7 @@ Membres d'organisation
 
 Quand un utilisateur est membre d'une organisation, cela ne lui confère par un rôle particulier, mais cette appartenance à l'organisation lui donne la possibilité de créer une nouvelle observation de façon à ce que celle-ci soit aussitôt visible par la communauté, sans passer par l'étape de modération.
 
-LIEN : Observations / Création d'une observation sans modération
+Voir : :ref:`feedbacks-lifecyle`
 
 Note : dans l'application cliente Keyclic, ce fonctionnement est obtenu par l'activation du mode Pro.
 
