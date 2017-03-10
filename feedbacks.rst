@@ -166,9 +166,7 @@ Par exemple, pour filtrer les observations en attente de validation, un administ
 
 Exemple :
 
-.. code-block::
-
-    GET /feedbacks?geo_near[radius]=1000&geo_near[geo_coordinates]=+44.8-0.5
+GET /feedbacks?geo_near[radius]=1000&geo_near[geo_coordinates]=+44.8-0.5
 
 retournera les observations situées dans un rayon de 1000 mètres autour du point de latitude +44.8 et de longitude 0.5.
 

@@ -36,7 +36,7 @@ Notez cependant que la base utilisateurs est commune à toutes les applications 
 Requêtes
 --------
 
-Dans cette documentation, chaque endpoint de l'API sera décrit par le chemin d'accès à la ressource précédé du `verbe HTTP <https://tools.ietf.org/html/rfc7231#section-4.1>`_.
+Dans cette documentation, chaque endpoint de l'API sera décrit par le chemin d'accès à la ressource précédé du `verbe HTTP <https://tools.ietf.org/html/rfc7231#section-4>`_.
 
 Exemple :
 
