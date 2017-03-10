@@ -135,7 +135,7 @@ Par défaut, *page* a la valeur 1 et *limit* a la valeur 10. Ainsi le endpoint
 
 retourne les 10 premières observations.
 
-Le retour d'une collection contient les informations et liens nécessaires pour naviguer entre les pages de cette collection. Exemple de retour de la liste des observations :
+Le retour d'une collection contient les informations et liens nécessaires pour naviguer entre les pages de cette collection. Exemple de retour (partiel) de la liste des observations :
 
 .. code-block:: json
 
@@ -212,7 +212,7 @@ Pour ces ressources, l'état est toujours indiqué dans la réponse avec le para
 
     GET reports/{report}
 
-Réponse :
+Réponse (partielle) :
 
 .. code-block:: json
 
