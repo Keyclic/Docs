@@ -76,7 +76,7 @@ La lecture d'une ressource Utilisateur permet de découvrir les rôles de cet ut
 
 .. code-block:: bash
 
-    GET /people/5020c6ea-ca07-42d1-994f-d90b86703b1a
+    GET /people/{user}
 
 .. code-block:: json
 
@@ -134,13 +134,13 @@ Pour récupérer un utilisateur :
 
 .. code-block:: bash
 
-    GET /people/{person}
+    GET /people/{user}
 
 Pour rechercher les membres dont l'adresse email match un mot donné :
 
 .. code-block:: bash
 
-    GET /people?search[email]=marti
+    GET /people?search[email]=martin
 
 Pour filtrer les membres d'une organisation :
 
