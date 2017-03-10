@@ -40,13 +40,13 @@ Dans cette documentation, chaque endpoint de l'API sera décrit par le chemin d'
 
 Exemple :
 
-.. code-block::
+.. code-block:: bash
 
     GET /feedbacks
 
 Le endpoint ci-dessus retourne toutes les observations. Son url véritable est 
 
-.. code-block::
+.. code-block:: bash
 
     https://api.keyclic.com/feedbacks
 
@@ -57,19 +57,19 @@ Paramètres d'url
 
 Dans cette documentation, les variables d'URI (exemples : identifiant d'une ressource, numéro de page, etc) seront exprimés entre accolades. Par exemple, pour récupérer une observation (feedback) donnée :
 
-.. code-block::
+.. code-block:: bash
 
     GET /feedbacks/{feedback}
 
 Dans l'API Keyclic, conformément aux principes d'architecture REST, les paramètres de filtrage sont toujours passés en "query string". Exemple :
 
-.. code-block::
+.. code-block:: bash
 
     GET /feedbacks?page={page}
 
 Par ailleurs, pour une meilleure lisibilité, les paramètres d'uri seront écrits tels quels dans cette documentation, et non sous leur forme url encodée :
 
-.. code-block::
+.. code-block:: bash
 
     GET /feedbacks?before=2018-04-22T01:00:00+05:00
 
@@ -78,7 +78,7 @@ Headers
 
 En plus des `headers conventionnels de HTTP/1.1 <https://tools.ietf.org/html/rfc7231#section-5>`_, l'API Keyclic accepte, et même exige dans la plupart des cas, le header X-Keyclic-App, correspondant à l'application utilisée (voir ci-dessus : :ref:`technical-applications`). Par exemple, pour récupérer toutes les observations sur l'application com.keyclic.app, la requête comportera le header :
 
-.. code-block::
+.. code-block:: bash
 
     X-Keyclic-App : com.keyclic.app
 
@@ -93,7 +93,7 @@ Format des requêtes et réponses
 
 Le seul type de contenu accepté par l'API Keyclic est JSON. Vos requêtes devront donc comporter le header :
 
-.. code-block::
+.. code-block:: bash
 
     Content-type: application/json
 
@@ -106,7 +106,7 @@ Envoi de fichiers
 
 Tous les fichiers sont envoyés en base 64 à l'API. Voici par exemple l'ajout d'une image représentant un carré rouge d'1 pixel sur 1 sur une observation :
 
-.. code-block::
+.. code-block:: bash
 
     POST /feedbacks/{feedback}/images
 
@@ -123,13 +123,13 @@ Pagination
 
 Tous les endpoints permettant de récupérer une collection de ressources peuvent être paginés avec les filtres **page** et **limit**. Par exemple, pour récupérer la deuxième page des observations à raison de 5 observations par page :
 
-.. code-block::
+.. code-block:: bash
 
     POST /feedbacks?page=2&limit=5
 
 Par défaut, *page* a la valeur 1 et *limit* a la valeur 10. Ainsi le endpoint 
 
-.. code-block::
+.. code-block:: bash
 
     POST /feedbacks
 
@@ -175,7 +175,7 @@ Dans l'API Keyclic, la modification des ressources s'effectue avec la méthode `
 
 À titre d'exemple, voici la modification de la popriété *billingEmailAddress* d'une organisation :
 
-.. code-block::
+.. code-block:: bash
 
     PATCH /organizations/{organization}
 
@@ -209,7 +209,7 @@ Plusieurs ressources manipulées par l'API ont un cycle de vie et possèdent un 
 
 Pour ces ressources, l'état est toujours indiqué dans la réponse avec le paramètre *state*, et les actions possibles pour faire évoluer ce statut sont toujours indiqués sous le paramètre *stateTransitions*. Exemple :
 
-.. code-block::
+.. code-block:: bash
 
     GET reports/{report}
 
@@ -236,7 +236,7 @@ Tout changement de statut est effectué avec la méthode PATCH et l'opération *
 
 Par exemple, pour accepter le rapport ci-dessus :
 
-.. code-block::
+.. code-block:: bash
 
     PATCH /reports/{report}/state
 

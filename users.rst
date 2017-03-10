@@ -72,7 +72,7 @@ Exemple de ressource utilisateur
 
 La lecture d'une ressource Utilisateur permet de découvrir les rôles de cet utilisateur, et éventuellement l'organisation dont il est administrateur et/ou l'application dont il est administrateur.
 
-.. code-block::
+.. code-block:: bash
 
     GET /people/5020c6ea-ca07-42d1-994f-d90b86703b1a
 
@@ -124,25 +124,25 @@ Récupération des utilisateurs
 
 Pour récupérer l'ensemble des utilisateurs de l'application :
 
-.. code-block::
+.. code-block:: bash
 
     GET /people
 
 Pour récupérer un utilisateur :
 
-.. code-block::
+.. code-block:: bash
 
     GET /people/{person}
 
 Pour rechercher les membres dont l'adresse email match un mot donné :
 
-.. code-block::
+.. code-block:: bash
 
     GET /people?search[email]=marti
 
 Pour filtrer les membres d'une organisation :
 
-.. code-block::
+.. code-block:: bash
 
     GET /people?organization={organization}
 

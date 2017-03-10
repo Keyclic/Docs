@@ -7,13 +7,13 @@ Chaque fois qu'une observation est acceptée, soit après validation par un admi
 
 Un administrateur d'organisation récupère les rapports concernant son organisation avec :
 
-.. code-block::
+.. code-block:: bash
 
     GET /organizations/{organization}/reports
 
 Et un rapport donné est récupéré avec :
 
-.. code-block::
+.. code-block:: bash
 
     GET /reports/{report}
 
@@ -30,7 +30,7 @@ Le schéma ci-dessous montre l'évolution du statut d'un rapport en fonction des
 
 Un endpoint unique permet de changer le statut du rapport :
 
-.. code-block::
+.. code-block:: bash
 
     PATCH /reports/{report}/state
 
@@ -60,7 +60,7 @@ Une opération est une action à réaliser associée à un rapport et assignée 
 
 Pour récupérer l'ensemble des opérations associées à un rapport :
 
-.. code-block::
+.. code-block:: bash
 
     GET /reports/{report}/operations
 
@@ -68,7 +68,7 @@ Pour récupérer l'ensemble des opérations associées à un rapport :
 
 Un administrateur d'organisation crée une opération sur un rapport en effectuant la requête :
 
-.. code-block::
+.. code-block:: bash
 
     POST /operations
 
@@ -86,7 +86,7 @@ Une opération nouvellement créée possède le statut NEW.
 
 Une ou plusieurs images peuvent être ajoutées à l'opération :
 
-.. code-block::
+.. code-block:: bash
 
     POST /operations/{operation}/images
 
@@ -100,7 +100,7 @@ Exemple :
 
 La description d'une opération peut être modifiée avec la requête :
 
-.. code-block::
+.. code-block:: bash
 
     PATCH /operations/{operation}
 
@@ -120,13 +120,13 @@ body :
 
 Pour assigner une opération à un membre de l'organisation, l'administrateur de l'organisation effectue la requête :
 
-.. code-block::
+.. code-block:: bash
 
     LINK /operations/{operation}
 
 en passant dans les headers de la requête :
 
-.. code-block::
+.. code-block:: bash
 
     Link : /people/{user}
 
@@ -136,7 +136,7 @@ où {user} est l'identifiant de l'utilisateur à qui est assigné l'opération.
 
 Une fois assignée, l'opération peut être acceptée ou refusée, soit par la personne à qui l'opération a été assignée, soit par un administrateur de l'organisation. Pour accepter l'opération :
 
-.. code-block::
+.. code-block:: bash
 
     PATCH /operations/{operation}/state
 
@@ -162,7 +162,7 @@ Une fois acceptée, l'opération peut-être passée "en cours" puis "clôturée"
 
 Un administrateur d'organisation peut consulter l'historique d'une opération avec :
 
-.. code-block::
+.. code-block:: bash
 
     GET /operations/{operation}/logs
 
@@ -177,7 +177,7 @@ Voir : :ref:`organizations-relationships`
 
 Pour déléguer un rapport, un administrateur de l'organisation effectue la requête :
 
-.. code-block::
+.. code-block:: bash
 
     POST /organizations/{organization}/delegates
 
@@ -205,7 +205,7 @@ Export des rapports
 
 Un administrateur d'organisation peut exporter tous les rapports de son organisation au format Excel :
 
-.. code-block::
+.. code-block:: bash
 
     POST /organizations/{organization}/reports/exports
 

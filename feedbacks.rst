@@ -12,7 +12,7 @@ Le plus souvent, l'utilisateur va aussi attacher son observation à une catégor
 Création d'une observation
 --------------------------
 
-.. code-block::
+.. code-block:: bash
 
     POST /feedbacks/issues
 
@@ -44,7 +44,7 @@ Envoi d'images : voir :ref:`technical-files`
 
 L'utilisateur peut ensuite ajouter d'autres images à son observation :
 
-.. code-block::
+.. code-block:: bash
 
     POST /feedbacks/{feedback}/images
 
@@ -67,7 +67,7 @@ Voir : :ref:`technical-states`
 
 Un administrateur d'application valide une observation avec le endpoint :
 
-.. code-block::
+.. code-block:: bash
 
     POST /feedbacks/{feedback}/state
 
@@ -89,7 +89,7 @@ Voir : :ref:`reports`
 
 Pour refuser une observation :
 
-.. code-block::
+.. code-block:: bash
 
     [
         {
@@ -108,7 +108,7 @@ Un utilisateur qui est membre d'une organisation peut créer une nouvelle observ
 Supposons que la requête suivante est exécutée par un utilisateur membre de l'organisation 84d36093-b8bc-47ad-bc8a-a043b3e301a9 et que la catégorie b0d007d5-e6ad-4113-b2b5-d8a1858a2fb1 appartient à cette organisation :
 
 
-.. code-block::
+.. code-block:: bash
 
     POST /feedbacks/issues
 
@@ -146,7 +146,7 @@ Récupération des observations
 
 Pour récupérer les observations :
 
-.. code-block::
+.. code-block:: bash
 
     GET /feedbacks
 
@@ -158,7 +158,7 @@ Plusieurs critères permettent de filtrer les observations.
 
 Par exemple, pour filtrer les observations en attente de validation, un administrateur d'application effectuera la requête :
 
-.. code-block::
+.. code-block:: bash
 
     GET /feedbacks?state=PENDING_REVIEW
 
@@ -181,7 +181,7 @@ Pour plus d'informations sur GeoHash, voir :
 
 Les observations peuvent être filtrées par GeoHash de la façon suivante :
 
-.. code-block::
+.. code-block:: bash
 
     GET /feedbacks?geo_hash[]=ezzx&geo_hash[]=ezzz
 
@@ -191,7 +191,7 @@ retournera les observations comprises dans les geo hash ezzx et ezzz.
 
 Exemple :
 
-.. code-block::
+.. code-block:: bash
 
     GET /feedbacks?after=2017-01-10T00:00:00+05:00&before=2017-02-22T23:59:59+05:00
 
@@ -210,7 +210,7 @@ Commentaires
 
 Les utilisateurs de la communauté peuvent commenter une observation :
 
-.. code-block::
+.. code-block:: bash
 
     POST /feedbacks/{feedback}/comments
 
@@ -225,7 +225,7 @@ Exemple :
 
 Pour récupérer les commentaires d'une observation :
 
-.. code-block::
+.. code-block:: bash
 
     GET /feedbacks/{feedback}/comments
 
@@ -236,13 +236,13 @@ Soutiens
 
 Un utilisateur peut soutenir une contribution en effectuant la requête suivante, sans paramètres :
 
-.. code-block::
+.. code-block:: bash
 
     POST /feedbacks/{feedback}/contributions
 
 Pour récupérer tous les soutiens effectués sur une observation :
 
-.. code-block::
+.. code-block:: bash
 
     GET /feedbacks/{feedback}/contributions
 

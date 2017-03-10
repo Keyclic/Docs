@@ -16,7 +16,7 @@ Création d'une organisation
 
 Tout utilisateur peut créer une nouvelle organisation :
 
-.. code-block::
+.. code-block:: bash
 
     POST /organizations
 
@@ -34,13 +34,13 @@ L'utilisateur devient automatiquement membre et administrateur de cette nouvelle
 
 Pour récupérer toutes les organisations de l'application :
 
-.. code-block::
+.. code-block:: bash
 
     GET /organizations
 
 Il est possible de filtrer la requête ci-dessus sur un point géographique (voir ci-dessous : :ref:`organizations-places`) :
 
-.. code-block::
+.. code-block:: bash
 
     GET /organizations?geo_coordinates=+44.851404209987386-0.5762618780136108
 
@@ -51,7 +51,7 @@ Gestion des membres
 
 Pour ajouter un nouveau membre à une organisation :
 
-.. code-block::
+.. code-block:: bash
 
     POST /organizations/{organization}/members
 
@@ -67,13 +67,13 @@ Ce endpoint est réservé à un utilisateur possédant le rôle ORGANIZATION:ADM
 
 Pour récupérer les membres d'une organisation :
 
-.. code-block::
+.. code-block:: bash
 
     GET /people?organization={organization}
 
 Pour retirer un membre d'une organisation, un administrateur de cette organisation exécutera la requête :
 
-.. code-block::
+.. code-block:: bash
 
     DELETE /organizations/{organization}/members/{member}
 
@@ -86,7 +86,7 @@ Gestion des zones géographiques
 
 Un administrateur d'organisation peut créer des zones géographiques, correspondant aux lieux sur lesquels cette organisation intervient :
 
-.. code-block::
+.. code-block:: bash
 
     POST /organizations/{organization}/places
 
@@ -137,13 +137,13 @@ body :
 
 Pour récupérer toutes les zones géographiques de l'application :
 
-.. code-block::
+.. code-block:: bash
 
     GET /places
 
 La requête ci-dessus peut-être filtrée sur une organisation donnée et/ou sur un point géographique donné :
 
-.. code-block::
+.. code-block:: bash
 
     GET /places?geo_coordinates=+44.851404209987386-0.5762618780136108&organization={organization}
 
@@ -155,7 +155,7 @@ Gestion des catégories
 Les catégories sont les secteurs d'activité d'une organisation. Un administrateur d'organisation peut créer une nouvelle catégorie en lui donnant un nom, une couleur et une icône. L'icône sera choisie dans  `le jeu d'icônes de Font Awesome <http://fontawesome.io/icons/>`_.
 
 
-.. code-block::
+.. code-block:: bash
 
     POST /organizations/{organization}/categories
 
@@ -173,13 +173,13 @@ Les 3 propriétés name, color et icon peuvent être éditées par une requête 
 
 Pour récupérer l'ensemble des catégories de l'application :
 
-.. code-block::
+.. code-block:: bash
 
     GET /categories
 
 La requête ci-dessus peut-être filtrée sur une organisation donnée et/ou sur un point géographique donné :
 
-.. code-block::
+.. code-block:: bash
 
     GET /categories?geo_coordinates=+44.851404209987386-0.5762618780136108&organization={organization}
 
@@ -192,7 +192,7 @@ Une organisation peut avoir des partenaires, c'est-à-dire des organisations qui
 
 Pour ajouter un nouveau partenaire à l'organisation, un administrateur de l'organisation exécutera le endpoint :
 
-.. code-block::
+.. code-block:: bash
 
     POST /organizations/{orga}/relationships
 
@@ -206,7 +206,7 @@ Exemple :
 
 Pour récupérer les partenaires d'une organisation :
 
-.. code-block::
+.. code-block:: bash
 
     GET /organizations/{orga}/relationships
 

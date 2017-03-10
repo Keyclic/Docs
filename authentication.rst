@@ -14,7 +14,7 @@ Création d'un compte utilisateur
 
 Un nouveau compte utilisateur est créé avec la requête :
 
-.. code-block::
+.. code-block:: bash
 
     POST /security/register
 
@@ -38,7 +38,7 @@ La connexion consiste à envoyer ses credentials au serveur afin d'obtenir en re
 
 La connexion s'effectue avec la requête :
 
-.. code-block::
+.. code-block:: bash
 
     POST /security/login
 
@@ -62,11 +62,11 @@ La quasi-totalité des requêtes à l'API nécessitent que l'utilisateur soit au
 
 Par exemple, pour récupérer la liste des feedbacks de l'application com.keyclic.app, un utilisateur utilise le endpoint :
 
-.. code-block::
+.. code-block:: bash
 
     GET /feedbacks
 
-.. code-block::
+.. code-block:: bash
 
     Request headers :
         X-Keyclic-App : com.keyclic.app
@@ -90,7 +90,7 @@ Un utilisateur qui souhaite modifier son mot de passe procède en deux étapes.
 
 Il effectue d'abord une demande de changement de mot passe :
 
-.. code-block::
+.. code-block:: bash
 
     POST /security/password/change-request
 
@@ -104,7 +104,7 @@ Exemple :
 
 Cette requête envoie un email à l'utilisateur contenant un lien se terminant par un token de vérification. Exemple de lien :
 
-.. code-block::
+.. code-block:: bash
 
     https://domain.com/#/password-reset/jrtVqBLxxoSA0c2hpsOBN-JQGQHGN3YXsKPMG1PWWWA
 
@@ -112,7 +112,7 @@ Dans le lien ci-dessus, le nom de domaine dépend de la configuration de l'appli
 
 L'utilisateur peut ensuite changer son mot de passe avec :
 
-.. code-block::
+.. code-block:: bash
 
     POST /security/password/change/-VtYMG0VnU8vHJdKUC_AqA_XpypI9kd8OmOvWj4NYMw
 
@@ -131,7 +131,7 @@ Modification des données utilisateur
 
 Pour les données autres que le mot de passe, l'utilisateur requêtera sur le endpoint :
 
-.. code-block::
+.. code-block:: bash
 
     PATCH /people/8fa7a1aa-dc61-42df-9233-b103fc34771d
 
