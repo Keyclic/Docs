@@ -7,7 +7,7 @@ Dans l'application Keyclic, une organisation est une entité telle que club, ent
 
 Les membres d'une organisation sont des utilisateurs de l'application Keyclic rattachés à cette organisation. Un ou plusieurs membres d'une organisation peuvent en être les administrateurs. Une organisation possède au minimum un membre, et un utilisateur ne peut être membre que d'une seule organisation.
 
-Les administrateurs d'une organisation peuvent définir les champs d'intervention de leur organisation en créant des catégories (exemple : voirie, transports, etc) et des zones géographiques. Quand un utilisateur crée une nouvelle observation, il précise toujours les coordonnées géographiques de cette observation. Ainsi, l'application est en mesure de lui retourner l'ensemble des organisations et de leurs catégories, ce qui lui permet de choisir la catégorie la plus adéquate à son observation.
+Les administrateurs d'une organisation peuvent définir les champs d'intervention de leur organisation en créant des catégories (exemple : voirie, transports, etc) et des zones géographiques. Quand un utilisateur crée une nouvelle observation, il précise toujours les coordonnées géographiques de cette observation. Ainsi, l'application est en mesure de lui retourner l'ensemble des organisations et catégories qui ont une zone d'intervention sur cette position, ce qui lui permet de choisir la catégorie la plus adéquate à son observation.
 
 .. _organizations-creation:
 
@@ -63,7 +63,7 @@ Exemple :
         "person":"63d07fc5-f4e6-471c-a8cc-3c3f227c8c2d"
     }
 
-Ce endpoint est réservé à un utilisateur possédant le rôle ORGANIZATION:ADMIN et membre de l'organisation {organization}, et l'utilisateur ajouté ne doit être membre d'aucune organisation.
+Ce endpoint est réservé à un utilisateur possédant le rôle ORGANIZATION:ADMIN et membre de l'organisation {organization}, et l'utilisateur ajouté ne doit être membre d'aucune autre organisation.
 
 Pour récupérer les membres d'une organisation :
 
@@ -194,7 +194,7 @@ Pour ajouter un nouveau partenaire à l'organisation, un administrateur de l'org
 
 .. code-block:: bash
 
-    POST /organizations/{orga}/relationships
+    POST /organizations/{organization}/relationships
 
 Exemple :
 
@@ -208,7 +208,7 @@ Pour récupérer les partenaires d'une organisation :
 
 .. code-block:: bash
 
-    GET /organizations/{orga}/relationships
+    GET /organizations/{organization}/relationships
 
 Cette requête ne peut être exécutée que par un administrateur de l'organisation.
 
