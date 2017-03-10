@@ -70,9 +70,8 @@ Par exemple, pour récupérer la liste des feedbacks de l'application com.keycli
 
     Request headers :
         X-Keyclic-App : com.keyclic.app
-        Authorization : Bearer eyJhbGciOiJSUzI1N0wAwe5O4CQhebI
+        Authorization : Bearer eyJhbGciOiJSUzI1NiJ9.eyJyb2xlcyI6WyJPUkdBTklaQVRJT046QURNSU4iLCJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJ0ZXN0MjJAdGVzdC5jb20iLCJpcCI6Ijc3LjIwMy40NS40NCIsImV4cCI6MTQ4OTI0MTQ0NCwiaWF0IjoxNDg5MTU1MDQ0fQ.ZIqbBVSgJaXKj73IPYbFeEfie6FUIflv-ausUO-AAzVjPg8-jdhFv3nqsdOVJvE_AB4bXjME1CRVFI7xD2SYCA8V6E6H2-y0XZE8SN_XTpHGMxDvOP27C2VUNQfPwgeWxjXzlDopo_U9ybAEX4QdFhW14aeRgb9YWMDlzSD6VLgJO-LuprxX668Ajq5X9c8YND4D_p4WRDSQr8pqb3rTY9NQ6O34F-OpDJlAUYj0pwMehYWpywVKJHRMv9xCRRoI8HrU6H3J3wo-K2OtQVJi9XFZ8g8sohw_ZaasG7dohxrO-NtYSrOPXIXPI6kCDRuMi7sce06wfno1bC3jBoc83EhiBSBpDbWL98DSjPbF1SaCeE05aATfM5cMEXbnp8Iwh-QLxglE4M-ZISJ8VooxzJxa7cWLlFW-iu0XWVFWrMbYgmSoU0PKRQB47w_IOPxjWzDeMUTSA3esDwkxsYlNdS9SZe201EvI6zur5Ayot0PEGfAgex6Ew-eKOHAfnuDiqeLQLbWs4Y69FO2DooWUhkfVGdl-IGglDPgk2AOs3w19e7mx-Gmm8DlUUr-bK61NPPQ8dy7HPjXnU63-jbA17MAjHaRTO4eKopcZMWbpL-jgQjJltV3R5_0qNODaHCS_auZs2cyqFN0HL9Rred5g7t6Fxyk-8MyyX0GiTyHsp3c
 
-(Pour une meilleure lisibilité, nous avons réduit la chaîne de caractères de l'accessToken dans l'exemple ci-dessus).
 
 Toutes les requêtes à l'API Keyclic nécessitent l'envoi d'un accessToken dans les headers, à l'exception évidente des endpoints suivants :
 
