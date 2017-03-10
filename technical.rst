@@ -7,7 +7,7 @@ L'API Keyclic est une **API REST**. Toutes les opérations sont effectuées via 
 
 Le nom de domaine de l'API Keyclic est :
 
-.. code-block:: json
+.. highlight::
 
     api.keyclic.com
 
