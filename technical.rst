@@ -198,6 +198,8 @@ Toute erreur entraîne une réponse de code `4xx <https://tools.ietf.org/html/rf
 
 Quand il s'agit d'une erreur de type `400 <https://tools.ietf.org/html/rfc7231#section-6.5.1>`_ (Bad Request), les raisons de l'erreur sont retournées.
 
+Les erreurs sont décrites au format `vdn.error <https://github.com/blongden/vnd.error>`_.
+
 .. _technical-states:
 
 Changements de statut
