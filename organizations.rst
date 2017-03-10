@@ -38,7 +38,7 @@ Pour récupérer toutes les organisations de l'application :
 
     GET /organizations
 
-Il est possible de filtrer la requête ci-dessus sur un point géographique (voir ci-dessous : `zones géographiques <#gestion-des-zones-geographiques>`_) :
+Il est possible de filtrer la requête ci-dessus sur un point géographique (voir ci-dessous : :ref:`organizations-places`) :
 
 .. code-block::
 

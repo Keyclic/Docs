@@ -27,7 +27,7 @@ Deux clés d'application sont actuellement disponibles :
 - com.keyclic.app
 - com.keyclic.highway.vinci
 
-Chaque requête doit donc préciser, dans ses headers, la valeur du paramètre X-Keyclic-App. Voir ci-dessous le paragraphe `Requêtes <#id1>`_ pour la mise en œuvre.
+Chaque requête doit donc préciser, dans ses headers, la valeur du paramètre X-Keyclic-App. Voir ci-dessous le paragraphe :ref:`technical-requests` pour la mise en œuvre.
 
 Notez cependant que la base utilisateurs est commune à toutes les applications Keyclic. De fait, les endpoints d'inscription et de connexion (LIEN : authentification) font exception à la règle ci-dessus : ces deux endpoints n'exigent pas qu'une clé d'application leur soit fournie.
 
@@ -76,7 +76,7 @@ Par ailleurs, pour une meilleure lisibilité, les paramètres d'uri seront écri
 Headers
 ~~~~~~~
 
-En plus des `headers conventionnels de HTTP/1.1 <https://tools.ietf.org/html/rfc7231#section-5>`_, l'API Keyclic accepte, et même exige dans la plupart des cas, le header X-Keyclic-App, correspondant à l'application utilisée (voir ci-dessus : `Applications et clés d’applications <#applications-et-cles-d-applications>`_). Par exemple, pour récupérer toutes les observations sur l'application com.keyclic.app, la requête comportera le header :
+En plus des `headers conventionnels de HTTP/1.1 <https://tools.ietf.org/html/rfc7231#section-5>`_, l'API Keyclic accepte, et même exige dans la plupart des cas, le header X-Keyclic-App, correspondant à l'application utilisée (voir ci-dessus : :ref:`technical-applications`). Par exemple, pour récupérer toutes les observations sur l'application com.keyclic.app, la requête comportera le header :
 
 .. code-block::
 
