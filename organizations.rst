@@ -9,6 +9,8 @@ Les membres d'une organisation sont des utilisateurs de l'application Keyclic ra
 
 Les administrateurs d'une organisation peuvent définir les champs d'intervention de leur organisation en créant des catégories (exemple : voirie, transports, etc) et des zones géographiques. Quand un utilisateur crée une nouvelle observation, il précise toujours les coordonnées géographiques de cette observation. Ainsi, l'application est en mesure de lui retourner l'ensemble des organisations et de leurs catégories, ce qui lui permet de choisir la catégorie la plus adéquate à son observation.
 
+.. _organizations-creation:
+
 Création d'une organisation
 ---------------------------
 
@@ -41,6 +43,8 @@ Il est possible de filtrer la requête ci-dessus sur un point géographique (voi
 .. code-block::
 
     GET /organizations?geo_coordinates=+44.851404209987386-0.5762618780136108
+
+.. _organizations-members:
 
 Gestion des membres
 -------------------
@@ -75,7 +79,7 @@ Pour retirer un membre d'une organisation, un administrateur de cette organisati
 
 LIEN : Pour plus d'informations sur le rôle ORGANIZATION:ADMIN et ses privilèges, voir .
 
-.. _zones:
+.. _organizations-places:
 
 Gestion des zones géographiques
 -------------------------------
@@ -143,6 +147,8 @@ La requête ci-dessus peut-être filtrée sur une organisation donnée et/ou sur
 
     GET /places?geo_coordinates=+44.851404209987386-0.5762618780136108&organization={organization}
 
+.. _organizations-categories:
+
 Gestion des catégories
 ----------------------
 
@@ -176,6 +182,8 @@ La requête ci-dessus peut-être filtrée sur une organisation donnée et/ou sur
 .. code-block::
 
     GET /categories?geo_coordinates=+44.851404209987386-0.5762618780136108&organization={organization}
+
+.. _organizations-relationships:
 
 Gestion des partenariats
 ------------------------

@@ -7,6 +7,8 @@ Une observation est constituée d'une description, d'une position géographique,
 
 Le plus souvent, l'utilisateur va aussi attacher son observation à une catégorie donnée. Par conséquent, cette observation sera également rattachée à l'organisation à laquelle appartient cette catégorie.
 
+.. _feedbacks-creation:
+
 Création d'une observation
 --------------------------
 
@@ -56,6 +58,7 @@ Exemple :
         "image":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAIAAAACDbGyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QIVDRUfvq7u+AAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAUSURBVAjXY3wrIcGABJgYUAGpfABZiwEnbOeFrwAAAABJRU5ErkJggg=="
     }
 
+.. _feedbacks-lifecyle:
 
 Modération et cycle de vie d'une observation
 --------------------------------------------
@@ -138,6 +141,7 @@ Si le paramètre "organization" n'avait pas été passé, alors cette observatio
 
 .. image:: images/feedback_workflow.png
 
+.. _feedbacks-retrieving:
 
 Récupération des observations
 -----------------------------
@@ -203,6 +207,8 @@ Les dates sont écrites au format  : `ISO 8601 <https://www.iso.org/iso-8601-dat
 
 Les observations qui ne sont rattachées à aucune catégorie ne sont pas remontées par les requêtes ci-dessus.
 
+.. _feedbacks-comments:
+
 Commentaires
 ------------
 
@@ -226,6 +232,8 @@ Pour récupérer les commentaires d'une observation :
 .. code-block::
 
     GET /feedbacks/{feedback}/comments
+
+.. _feedbacks-contributions:
 
 Soutiens
 --------

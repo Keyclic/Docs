@@ -13,6 +13,8 @@ Le nom de domaine de l'API Keyclic est :
 
 Vous pouvez télécharger `la documentation technique Swagger de l'API <https://api.keyclic.com/swagger.json>`_.
 
+.. _technical-applications:
+
 Applications et clés d'applications
 -----------------------------------
 
@@ -28,6 +30,8 @@ Deux clés d'application sont actuellement disponibles :
 Chaque requête doit donc préciser, dans ses headers, la valeur du paramètre X-Keyclic-App. Voir ci-dessous le paragraphe `Requêtes <#id1>`_ pour la mise en œuvre.
 
 Notez cependant que la base utilisateurs est commune à toutes les applications Keyclic. De fait, les endpoints d'inscription et de connexion (LIEN : authentification) font exception à la règle ci-dessus : ces deux endpoints n'exigent pas qu'une clé d'application leur soit fournie.
+
+.. _technical-requests:
 
 Requêtes
 --------
@@ -82,6 +86,8 @@ Tous les endpoints exigent que ce header soit fourni, à l'exception des endpoin
 
 Toutes les requêtes (à l'exception du login, du register et du changement de mot de passe) doivent aussi comporter le header Authorization afin d'authenfier l'utilisateur. (LIEN : authentification)
 
+.. _technical-format:
+
 Format des requêtes et réponses
 -------------------------------
 
@@ -92,6 +98,8 @@ Le seul type de contenu accepté par l'API Keyclic est JSON. Vos requêtes devro
     Content-type: application/json
 
 Et les paramètres de requêtes, hors query string, seront toujours envoyés en JSON. Les réponses sont également toujours retournées au format JSON.
+
+.. _technical-files:
 
 Envoi de fichiers
 -----------------
@@ -107,6 +115,8 @@ Tous les fichiers sont envoyés en base 64 à l'API. Voici par exemple l'ajout d
     {
         "image":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAIAAAACDbGyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QIVDRUfvq7u+AAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAUSURBVAjXY3wrIcGABJgYUAGpfABZiwEnbOeFrwAAAABJRU5ErkJggg=="
     }
+
+.. _technical-pagination:
 
 Pagination
 ----------
@@ -156,6 +166,8 @@ Le retour d'une collection contient les informations et liens nécessaires pour 
 
 Dans cette documentation, nous ne rappellerons pas systématiquement qu'il est possible de paginer avec les filtres *page* et *limit*, ceux-ci étant communs à tous les endpoints retournant une collection.
 
+.. _technical-patch:
+
 Modification de ressources avec la méthode PATCH
 ------------------------------------------------
 
@@ -177,12 +189,16 @@ Dans l'API Keyclic, la modification des ressources s'effectue avec la méthode `
 	    }
     ]
 
+.. _technical-errors:
+
 Retours d'erreurs
 -----------------
 
 Toute erreur entraîne une réponse de code `4xx <https://tools.ietf.org/html/rfc7231#section-6.5>`_ reflétant le type d'erreur.
 
 Quand il s'agit d'une erreur de type `400 <https://tools.ietf.org/html/rfc7231#section-6.5.1>`_ (Bad Request), les raisons de l'erreur sont retournées.
+
+.. _technical-states:
 
 Changements de statut
 ---------------------

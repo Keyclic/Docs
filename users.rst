@@ -9,6 +9,8 @@ Les utilisateurs de l'application Keyclic possèdent un ou plusieurs rôles, dé
 - ORGANIZATION:ADMIN : administrateur d'une organisation
 - APPLICATION:ADMIN : administrateur d'application
 
+.. _users-basic-user:
+
 Utilisateur de base (rôle ROLE_USER)
 ------------------------------------
 
@@ -21,6 +23,8 @@ Tout utilisateur nouvellement inscrit possède automatiquement le rôle ROLE_USE
 - créer une nouvelle observation
 
 LIEN : rubrique observations
+
+.. _users-organization-admin:
 
 Administrateur d'organisation (rôle ORGANIZATION:ADMIN)
 -------------------------------------------------------
@@ -41,12 +45,16 @@ L'administrateur d'une organisation peut :
 
 LIEN : rubrique organisation
 
+.. _users-application-admin:
+
 Administrateur d'application (rôle APPLICATION:ADMIN)
 -----------------------------------------------------
 
 L'administrateur d'une application a la possibilité de modérer les observations avant que celles-ci soient transmises, sous forme de rapport, aux organisations concernées.
 
 LIEN : Feedbacks / modération
+
+.. _users-organization-member:
 
 Membres d'organisation
 ----------------------
@@ -56,6 +64,8 @@ Quand un utilisateur est membre d'une organisation, cela ne lui confère par un 
 LIEN : Observations / Création d'une observation sans modération
 
 Note : dans l'application cliente Keyclic, ce fonctionnement est obtenu par l'activation du mode Pro.
+
+.. _users-example:
 
 Exemple de ressource utilisateur
 --------------------------------
@@ -107,7 +117,9 @@ Ce retour indique que :
 3. Il possède le rôle ORGANIZATION:ADMIN, il est donc administrateur de l'organisation 84d36093-b8bc-47ad-bc8a-a043b3e301a9
 4. Il possède le rôle APPLICATION:ADMIN, il est donc administrateur de l'application à laquelle est rattachée l'organisation 84d36093-b8bc-47ad-bc8a-a043b3e301a9
 
-Récupération des membres
+.. _users-retrieving:
+
+Récupération des utilisateurs
 ------------------------
 
 Pour récupérer l'ensemble des utilisateurs de l'application :

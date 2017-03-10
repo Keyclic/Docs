@@ -17,6 +17,8 @@ Et un rapport donné est récupéré avec :
 
     GET /reports/{report}
 
+.. _reports-lifecycle:
+
 Cycle de vie d'un rapport
 -------------------------
 
@@ -48,6 +50,8 @@ Un rapport ne peut être clôturé (statut CLOSED) que si :
 
 - Toutes les opérations associées à ce rapport ont été clôturées ou refusées (voir ci-dessous le paragraphe `Opérations <#id1>`_).
 - Tous les rapports délégués à d'autres organisations à partir de ce rapport ont été clôturés (voir ci-dessous le paragraphe `Délégation de rapports <#id2>`_).
+
+.. _reports-operations:
 
 Opérations
 ----------
@@ -162,6 +166,8 @@ Un administrateur d'organisation peut consulter l'historique d'une opération av
 
     GET /operations/{operation}/logs
 
+.. _reports-delegation:
+
 Délégation de rapports
 ----------------------
 
@@ -191,6 +197,8 @@ où a31d9ab7-9476-45f2-8cc7-033bf40bbcfa est l'identifiant de l'organisation à 
 Déléguer un rapport ne signifie pas que ce rapport est simplement transmis. En effet, le rapport initial n'est pas modifié ni transféré, mais un nouveau rapport "enfant" est créé et attribué à l'organisation partenaire. Ce rapport enfant sera traité par l'organisation partenaire de la même façon que le rapport initial : changements de statuts, opérations, assignations des opérations, etc, jusqu'à sa clôture.
 
 L'organisation partenaire peut elle-même déléguer le rapport à l'une de ses partenaires et ainsi de suite. Pour qu'un rapport puisse être clôturé, il est obligatoire que le rapport enfant, s'il existe, ait été préalablement clôturé par l'organisation partenaire.
+
+.. _reports-export:
 
 Export des rapports
 -------------------

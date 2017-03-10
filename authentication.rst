@@ -7,6 +7,8 @@ L'API Keyclic se base sur le standard JSON Web Token pour la sécurisation de l'
 
 Pour plus d'informations sur le standard JWT, voir : `le site officiel de JSON Web Tokens <https://jwt.io/>`_.
 
+.. _authentication-account-creation:
+
 Création d'un compte utilisateur
 --------------------------------
 
@@ -26,6 +28,8 @@ Exemple :
     }
 
 Le nouvel utilisateur se voit attribuer un identifiant unique et le rôle ROLE_USER, lui permettant d'utiliser les fonctionnalités de base de l'API.
+
+.. _authentication-login:
 
 Connexion
 ---------
@@ -48,6 +52,8 @@ Exemple :
     }
 
 Si les credentials sont reconnus par le serveur, celui-ci retourne un accessToken qui sera utilisé par l'utilisateur pour ses futures requêtes.
+
+.. _authentication-using-token:
 
 Utilisation du token
 --------------------
@@ -74,6 +80,8 @@ Toutes les requêtes à l'API Keyclic nécessitent l'envoi d'un accessToken dans
 - login (POST /security/login)
 - demande de changement de mot de passe
 - changement de mot de passe (POST /security/password/change/{changePasswordToken})
+
+.. _authentication-password-change:
 
 Modification du mot de passe
 ----------------------------
@@ -115,6 +123,8 @@ Exemple :
     {
         "password":"password"
     }
+
+.. _authentication-user-edition:
 
 Modification des données utilisateur
 ------------------------------------

@@ -55,7 +55,7 @@ Aire géographique sur laquelle une organisation peut intervenir.
 
 Terme technique : place
 
-Voir la page :ref:`zones`
+Voir la section :ref:`organizations-places`
 
 Catégorie
 ~~~~~~~~~
@@ -64,14 +64,12 @@ Secteur d'activité d'une organisation
 
 Terme technique : category
 
-LIEN
+Voir la section :ref:`organizations-categories`
 
 Application
 ~~~~~~~~~~~
 
 Un client de l'API travaille toujours sur une application particulière de Keyclic, correspondant à un domaine applicatif. Chaque application possède ses propres administrateurs, dont la principale mission est de modérer les observations avant que celles-ci ne soient transmises sous forme de rapport aux organisations concernées.
-
-LIEN
 
 Soutien
 ~~~~~~~
@@ -80,7 +78,7 @@ Une observation peut être soutenue par les utilisateurs de la communauté, afin
 
 Terme technique : contribution
 
-LIEN
+Voir la section :ref:`feedbacks-contributions`
 
 Opération
 ~~~~~~~~~
@@ -89,7 +87,7 @@ Une opération est une tâche créée par un administrateur d'organisation sur u
 
 Terme technique : operation
 
-LIEN
+Voir la section :ref:`reports-operations`
 
 Partenaires
 ~~~~~~~~~~~
@@ -98,6 +96,6 @@ Un administrateur d'organisation peut définir des organisations partenaires, qu
 
 Terme technique : relationship
 
-LIEN
+Voir la section :ref:`organizations-relationships`
 
 
