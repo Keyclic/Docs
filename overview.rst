@@ -44,7 +44,7 @@ Groupe d'utilisateurs pouvant être une entreprise, une école, une association,
 
 Terme technique : organization
 
-LIEN
+Voir la page `Organisations <organizations>`_
 
 Zone
 ~~~~

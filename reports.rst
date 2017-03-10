@@ -44,8 +44,8 @@ Par exemple, pour passer du statut NEW au statut ACCEPTED, l'administrateur de l
 
 Un rapport ne peut être clôturé (statut CLOSED) que si :
 
-- Toutes les opérations associées à ce rapport ont été clôturées ou refusées (voir ci-dessous le paragraphe `Opérations <#operations>`_).
-- Tous les rapports délégués à d'autres organisations à partir de ce rapport ont été clôturés (voir ci-dessous le paragraphe `Délégation de rapports <#delegation-de-rapports>`_).
+- Toutes les opérations associées à ce rapport ont été clôturées ou refusées (voir ci-dessous le paragraphe `Opérations <#id1>`_).
+- Tous les rapports délégués à d'autres organisations à partir de ce rapport ont été clôturés (voir ci-dessous le paragraphe `Délégation de rapports <#id2>`_).
 
 Opérations
 ----------
