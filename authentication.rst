@@ -107,7 +107,7 @@ Cette requête envoie un email à l'utilisateur contenant un lien se terminant p
 
     https://domain.com/#/password-reset/jrtVqBLxxoSA0c2hpsOBN-JQGQHGN3YXsKPMG1PWWWA
 
-Dans le lien ci-dessus, le nom de domaine dépend de la configuration de l'application et jrtVqBLxxoSA0c2hpsOBN-JQGQHGN3YXsKPMG1PWWWA est le jeton de changement de mot de passe.
+Dans le lien ci-dessus, jrtVqBLxxoSA0c2hpsOBN-JQGQHGN3YXsKPMG1PWWWA est le jeton de changement de mot de passe. La portion d'url *https://domain.com/#/password-reset/* dépend de la configuration de l'application.
 
 L'utilisateur peut ensuite changer son mot de passe avec :
 
@@ -134,6 +134,8 @@ Pour les données autres que le mot de passe, l'utilisateur requêtera sur le en
 
     PATCH /people/{user}
 
+Pour plus d'informations sur les requêtes PATCH, voir la section :ref:`technical-patch`.
+
 Par exemple, pour modifier son nom :
 
 .. code-block:: json
@@ -147,5 +149,3 @@ Par exemple, pour modifier son nom :
     ]
 
 Les champs qu'un utilisateur peut modifier sont : son nom (familyName), son prénom (givenName), sa photo (image), son travail (job), son adresse email (email).
-
-

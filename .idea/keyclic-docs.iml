@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="PHP" type="php">
+        <CLASSES>
+          <root url="file:///var/www/chess/api.chess.local/vendor/composer" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/doctrine/annotations" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/doctrine/cache" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/doctrine/collections" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/doctrine/common" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/doctrine/dbal" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/doctrine/doctrine-bundle" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/doctrine/doctrine-cache-bundle" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/doctrine/inflector" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/doctrine/instantiator" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/doctrine/lexer" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/doctrine/orm" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/friendsofsymfony/user-bundle" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/incenteev/composer-parameter-handler" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/jdorn/sql-formatter" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/monolog/monolog" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/paragonie/random_compat" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/psr/cache" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/psr/log" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/sensio/distribution-bundle" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/sensio/framework-extra-bundle" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/sensio/generator-bundle" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/sensiolabs/security-checker" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/swiftmailer/swiftmailer" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/symfony/monolog-bundle" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/symfony/phpunit-bridge" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/symfony/polyfill-apcu" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/symfony/polyfill-intl-icu" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/symfony/polyfill-mbstring" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/symfony/polyfill-php56" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/symfony/polyfill-php70" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/symfony/polyfill-util" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/symfony/swiftmailer-bundle" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/symfony/symfony" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/twig/twig" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file:///var/www/chess/api.chess.local/vendor/composer" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/doctrine/annotations" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/doctrine/cache" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/doctrine/collections" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/doctrine/common" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/doctrine/dbal" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/doctrine/doctrine-bundle" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/doctrine/doctrine-cache-bundle" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/doctrine/inflector" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/doctrine/instantiator" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/doctrine/lexer" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/doctrine/orm" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/friendsofsymfony/user-bundle" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/incenteev/composer-parameter-handler" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/jdorn/sql-formatter" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/monolog/monolog" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/paragonie/random_compat" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/psr/cache" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/psr/log" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/sensio/distribution-bundle" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/sensio/framework-extra-bundle" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/sensio/generator-bundle" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/sensiolabs/security-checker" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/swiftmailer/swiftmailer" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/symfony/monolog-bundle" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/symfony/phpunit-bridge" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/symfony/polyfill-apcu" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/symfony/polyfill-intl-icu" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/symfony/polyfill-mbstring" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/symfony/polyfill-php56" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/symfony/polyfill-php70" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/symfony/polyfill-util" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/symfony/swiftmailer-bundle" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/symfony/symfony" />
+          <root url="file:///var/www/chess/api.chess.local/vendor/twig/twig" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="PHP Runtime" type="php">
+        <CLASSES>
+          <root url="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard" />
+        </CLASSES>
+        <SOURCES>
+          <root url="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="PHARS">
+        <CLASSES>
+          <root url="phar:///var/www/chess/api.chess.local/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
+          <root url="phar:///var/www/chess/api.chess.local/vendor/twig/twig/test/Twig/Tests/Loader/Fixtures/phar/phar-sample.phar/" />
+        </CLASSES>
+        <SOURCES>
+          <root url="phar:///var/www/chess/api.chess.local/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
+          <root url="phar:///var/www/chess/api.chess.local/vendor/twig/twig/test/Twig/Tests/Loader/Fixtures/phar/phar-sample.phar/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+</module>

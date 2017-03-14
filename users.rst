@@ -11,10 +11,10 @@ Les utilisateurs de l'application Keyclic possèdent un ou plusieurs rôles, dé
 
 .. _users-basic-user:
 
-Utilisateur de base (rôle ROLE_USER)
-------------------------------------
+Utilisateur de base
+-------------------
 
-Tout utilisateur nouvellement inscrit possède automatiquement le rôle ROLE_USER. Ce rôle lui permet de :
+Tout utilisateur nouvellement inscrit possède automatiquement le rôle **ROLE_USER**. Ce rôle lui permet de :
 
 - consulter et modifier son profil
 - consulter les observations faites par les autres utilisateurs
@@ -26,12 +26,12 @@ Voir : :ref:`feedbacks`
 
 .. _users-organization-admin:
 
-Administrateur d'organisation (rôle ORGANIZATION:ADMIN)
--------------------------------------------------------
+Administrateur d'organisation
+-----------------------------
 
 Tout utilisateur a la possibilité de créer une nouvelle organisation.
 
-L'utilisateur qui crée une nouvelle organisation en devient automatiquement membre et administrateur, c'est-à-dire qu'il se voit attribuer le rôle ORGANIZATION:ADMIN. Une organisation peut posséder plusieurs administrateurs, mais un utilisateur ne peut être membre, et par conséquent administrateur, que d'une seule organisation.
+L'utilisateur qui crée une nouvelle organisation en devient automatiquement membre et administrateur, c'est-à-dire qu'il se voit attribuer le rôle **ORGANIZATION:ADMIN**. Une organisation peut posséder plusieurs administrateurs, mais un utilisateur ne peut être membre, et par conséquent administrateur, que d'une seule organisation.
 
 **Attention** : si un utilisateur est déjà membre d'une organisation et qu'il en crée une nouvelle, étant donné qu'il sera automatiquement rattaché à cette nouvelle organisation, il sera, de fait, retiré de la liste des membres de l'organisation à laquelle il appartenait auparavant.
 
@@ -47,10 +47,10 @@ Voir : :ref:`organizations`
 
 .. _users-application-admin:
 
-Administrateur d'application (rôle APPLICATION:ADMIN)
------------------------------------------------------
+Administrateur d'application
+----------------------------
 
-L'administrateur d'une application a la possibilité de modérer les observations avant que celles-ci soient transmises, sous forme de rapports, aux organisations concernées.
+L'administrateur d'une application a la possibilité de modérer les observations avant que celles-ci soient transmises, sous forme de rapports, aux organisations concernées. Ils possèdent le rôle **APPLICATION:ADMIN**.
 
 Voir : :ref:`feedbacks-lifecyle`
 

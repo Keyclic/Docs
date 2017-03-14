@@ -3,7 +3,7 @@
 Considérations techniques
 =========================
 
-L'API Keyclic est une **API REST**. Toutes les opérations sont effectuées via le protocole **https** et sécurisées par **JSON Web Token**. Les données sont échangées exclusivement au format **JSON**.
+L'API Keyclic est une **API REST**. Toutes les opérations sont effectuées via le protocole **https** et sécurisées par `JSON Web Tokens <https://jwt.io/>`_. Les données sont échangées exclusivement au format **JSON**.
 
 Le nom de domaine de l'API Keyclic est :
 
@@ -22,10 +22,11 @@ Tout client de l'API doit transmettre dans les headers de chaque requête une cl
 
 Si vous développez un client pour travailler sur une application existante de Keyclic, vous devez connaître la clé de cette application. Si au contraire vous développez un client pour une nouvelle application, merci de vous adresser à la société Keyclic pour que celle-ci crée l'application et sa configuration et vous fournisse la clé correspondante.
 
-Deux clés d'application sont actuellement disponibles :
+Exemples de clés d'applications :
 
 - com.keyclic.app
-- com.keyclic.highway.vinci
+- com.keyclic.city
+- com.keyclic.highway
 
 Chaque requête doit donc préciser, dans ses headers, la valeur du paramètre X-Keyclic-App. Voir ci-dessous le paragraphe :ref:`technical-requests` pour la mise en œuvre.
 
@@ -198,6 +199,27 @@ Toute erreur entraîne une réponse de code `4xx <https://tools.ietf.org/html/rf
 Quand il s'agit d'une erreur de type `400 <https://tools.ietf.org/html/rfc7231#section-6.5.1>`_ (Bad Request), les raisons de l'erreur sont retournées.
 
 Les erreurs sont décrites au format `vdn.error <https://github.com/blongden/vnd.error>`_.
+
+L'exemple suivant montre un retour d'erreur de validation. Le champ *path* indique la propriété sur laquelle porte l'erreur (ici : reporter), et le champ *message* indique la nature de l'erreur.
+
+.. code-block:: json
+
+        {
+           "@context":"https:\/\/github.com\/blongden\/vnd.error",
+           "@type":"ValidationError",
+           "message":"Validation failed.",
+           "total":1,
+           "_embedded":{
+              "errors":[
+                 {
+                    "@context":"https:\/\/github.com\/blongden\/vnd.error",
+                    "@type":"Error",
+                    "message":"Cette valeur ne doit pas \u00eatre vide.",
+                    "path":"reporter"
+                 }
+              ]
+           }
+        }
 
 .. _technical-states:
 

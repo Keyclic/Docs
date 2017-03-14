@@ -33,16 +33,13 @@ Exemple :
             },
         "category":"b0d007d5-e6ad-4113-b2b5-d8a1858a2fb1",
         "description":"Mon feedback 5",
-        "reporter":"6dbbd601-267f-46ea-be90-8c9742f7180b",
-        "image":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="
+        "reporter":"6dbbd601-267f-46ea-be90-8c9742f7180b"
     }
 
 
 Ce endpoint se présente sous la forme **/feedbacks/issue** et non pas simplement **/feedbacks**, car à terme, il sera possible de créer différents types d'observation. Actuellement, seul le type "issue" est disponible.
 
-Paramètre image : voir :ref:`technical-files`
-
-L'utilisateur peut ensuite ajouter d'autres images à son observation :
+L'utilisateur peut ensuite ajouter une ou plusieurs images à son observation :
 
 .. code-block:: bash
 
@@ -55,6 +52,8 @@ Exemple :
     {
         "image":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAIAAAACDbGyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QIVDRUfvq7u+AAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAUSURBVAjXY3wrIcGABJgYUAGpfABZiwEnbOeFrwAAAABJRU5ErkJggg=="
     }
+
+Pour plus d'informations sur l'envoi de fichiers, voir :ref:`technical-files`.
 
 .. _feedbacks-lifecyle:
 

@@ -158,6 +158,26 @@ Une fois acceptée, l'opération peut-être passée "en cours" puis "clôturée"
 
 .. image:: images/operation_workflow.png
 
+**Commentaires**
+
+Il est possible de commenter une opération :
+
+.. code-block:: bash
+
+    POST /operations/{operation}/comments
+
+.. code-block:: json
+
+    {
+        "text":"Mon commentaire"
+    }
+
+Pour récupérer tous les commentaires d'une opération :
+
+.. code-block:: bash
+
+    GET /operations/{operation}/comments
+
 **Logs d'une opération**
 
 Un administrateur d'organisation peut consulter l'historique d'une opération avec :
