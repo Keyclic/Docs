@@ -3,9 +3,9 @@
 Observations
 ============
 
-Une observation est constituée d'une description, d'une position géographique, et optionnellement d'une ou plusieurs photos. Tous les utilisateurs peuvent créer des observations.
+Une observation est toujours faite en une position géographique donnée. La position géographique est la composante la plus importante, et la seule obligatoire, d'une observation. Les paramètres optionnels étant la description, la catégorie, et éventuellement une ou plusieurs photos.
 
-Le plus souvent, l'utilisateur va aussi attacher son observation à une catégorie donnée. Par conséquent, cette observation sera également rattachée à l'organisation à laquelle appartient cette catégorie.
+Tous les utilisateurs peuvent créer des observations.
 
 .. _feedbacks-creation:
 
@@ -17,7 +17,27 @@ Création d'une observation
     POST /feedbacks/issues
 
 
-Exemple :
+Exemple minimaliste : dans l'exemple suivant, une observation est créée sans catégorie et sans description.
+
+.. code-block:: json
+
+    {
+        "geo":
+            {
+                "elevation":1,
+                "point":
+                    {
+                        "latitude":44.851343361295214,
+                        "longitude":-0.5763262510299683
+                    }
+            },
+        "reporter":"6dbbd601-267f-46ea-be90-8c9742f7180b"
+    }
+
+
+Ce endpoint se présente sous la forme **/feedbacks/issue** et non pas simplement **/feedbacks**, car à terme, il sera possible de créer différents types d'observation. Actuellement, seul le type "issue" est disponible.
+
+Exemple plus complet, l'utilisateur précise une catégorie et une description :
 
 .. code-block:: json
 
@@ -36,9 +56,6 @@ Exemple :
         "reporter":"6dbbd601-267f-46ea-be90-8c9742f7180b"
     }
 
-
-Ce endpoint se présente sous la forme **/feedbacks/issue** et non pas simplement **/feedbacks**, car à terme, il sera possible de créer différents types d'observation. Actuellement, seul le type "issue" est disponible.
-
 L'utilisateur peut ensuite ajouter une ou plusieurs images à son observation :
 
 .. code-block:: bash
@@ -54,6 +71,19 @@ Exemple :
     }
 
 Pour plus d'informations sur l'envoi d'images, voir :ref:`technical-files`.
+
+Rattachement d'une observation à une organisation
+-------------------------------------------------
+
+L'application Keyclic ne se contente pas de recueillir des observations : elle les fait ensuite remonter, sous la forme de :ref:`reports`, aux organisations concernées, qui en assureront le traitement. Toute observation doit donc être, dans la mesure du possible, remontée à une organisation sous la forme d'un rapport. Pour cela, quatre cas de figure peuvent se présenter :
+
+- Si la position géographique de l'observation ne correspond à aucune zone, alors l'API retournera une erreur 409 et aucune organisation ne recevra de rapport sur cette observation.
+
+- Si la position géographique de l'observation se trouve dans une zone géographique définie par une organisation, alors le rapport de l'observation est automatiquement remonté à l'organisation en question.
+
+- Si la position géographique de l'observation se trouve sur deux (ou plus) zones géographiques appartenant à deux (ou plus) organisations différentes, et que l'utilisateur a précisé une catégorie, alors le rapport de l'observation est remonté à l'organisation propriétaire de la catégorie en question.
+
+- Si la position géographique de l'observation se trouve sur deux (ou plus) zones géographiques appartenant à deux (ou plus) organisations différentes, mais que l'utilisateur n'a pas précisé de catégorie, alors plusieurs rapports sont générés et remontés à toutes les organisations concernées. La première organisation qui acceptera le rapport pourra en effectuer le traitement.
 
 .. _feedbacks-lifecyle:
 
