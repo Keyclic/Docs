@@ -59,13 +59,13 @@ Voir : :ref:`feedbacks-lifecyle`
 Membres d'organisation
 ----------------------
 
-Quand un utilisateur est membre d'une organisation, cela ne lui confère par un rôle particulier, mais cette appartenance à l'organisation lui donne la possibilité de créer une nouvelle observation de façon à ce que celle-ci soit aussitôt visible par la communauté, sans passer par l'étape de modération (voir : :ref:`feedbacks-lifecyle`).
+Quand un utilisateur est membre d'une organisation, cela ne lui confère par un rôle particulier, mais l'application peut réagir différemment à certaines de ses opérations. Nous appelons par convention ce mode de fonctionnement le "mode pro". Celui-ci se présente principalement sous deux aspects :
 
-De plus, les membres d'une organisation peuvent se voir assigner des opérations par les administrateurs de cette organisation (voir : :ref:`reports-operations`).
+- Quand l'utilisateur crée une observation : s'il passe l'identifiant de son organisation, alors cette observation pourra être traitée différamment. Voir : :ref:`feedbacks-organization-member`.
 
+- Sur les différentes requêtes de récupération (d'observations, de zones géographiques, de catégories), si l'utilisateur passe en paramètre de filtrage l'identifiant de son organisation, les objets retournés sont ceux appartenant à cette organisation.
 
-
-Note : dans l'application cliente Keyclic, ce fonctionnement est obtenu par l'activation du mode Pro.
+Par ailleurs, les membres d'une organisation peuvent se voir assigner des opérations par les administrateurs de cette organisation (voir : :ref:`reports-operations`).
 
 .. _users-example:
 
