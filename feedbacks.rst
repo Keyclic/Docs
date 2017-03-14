@@ -53,7 +53,7 @@ Exemple :
         "image":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAIAAAACDbGyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QIVDRUfvq7u+AAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAUSURBVAjXY3wrIcGABJgYUAGpfABZiwEnbOeFrwAAAABJRU5ErkJggg=="
     }
 
-Pour plus d'informations sur l'envoi de fichiers, voir :ref:`technical-files`.
+Pour plus d'informations sur l'envoi d'images, voir :ref:`technical-files`.
 
 .. _feedbacks-lifecyle:
 

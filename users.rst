@@ -26,8 +26,8 @@ Voir : :ref:`feedbacks`
 
 .. _users-organization-admin:
 
-Administrateur d'organisation
------------------------------
+Administrateurs d'organisation
+------------------------------
 
 Tout utilisateur a la possibilité de créer une nouvelle organisation.
 
@@ -47,8 +47,8 @@ Voir : :ref:`organizations`
 
 .. _users-application-admin:
 
-Administrateur d'application
-----------------------------
+Administrateurs d'application
+-----------------------------
 
 L'administrateur d'une application a la possibilité de modérer les observations avant que celles-ci soient transmises, sous forme de rapports, aux organisations concernées. Ils possèdent le rôle **APPLICATION:ADMIN**.
 
