@@ -77,13 +77,13 @@ Rattachement d'une observation à une organisation
 
 L'application Keyclic ne se contente pas de recueillir des observations : elle les fait ensuite remonter, sous la forme de :ref:`reports`, aux organisations concernées, qui en assureront le traitement. Toute observation doit donc être, dans la mesure du possible, remontée à une organisation sous la forme d'un rapport. Pour cela, quatre cas de figure peuvent se présenter :
 
-- Si la position géographique de l'observation ne correspond à aucune zone, alors l'API retournera une erreur 409 et aucune organisation ne recevra de rapport sur cette observation.
+- Si la position géographique de l'observation ne correspond à aucune zone de responsabilité, alors l'API retournera une erreur 409 et aucune organisation ne recevra de rapport sur cette observation.
 
-- Si la position géographique de l'observation se trouve dans une zone géographique définie par une organisation, alors le rapport de l'observation est automatiquement remonté à l'organisation en question.
+- Si la position géographique de l'observation se trouve dans une zone de responsabilité définie par une organisation, alors le rapport de l'observation est automatiquement remonté à l'organisation en question.
 
-- Si la position géographique de l'observation se trouve sur deux (ou plus) zones géographiques appartenant à deux (ou plus) organisations différentes, et que l'utilisateur a précisé une catégorie, alors le rapport de l'observation est remonté à l'organisation propriétaire de la catégorie en question.
+- Si la position géographique de l'observation se trouve sur deux (ou plus) zones de responsabilité appartenant à deux (ou plus) organisations différentes, et que l'utilisateur a précisé une catégorie, alors le rapport de l'observation est remonté à l'organisation propriétaire de la catégorie en question.
 
-- Si la position géographique de l'observation se trouve sur deux (ou plus) zones géographiques appartenant à deux (ou plus) organisations différentes, mais que l'utilisateur n'a pas précisé de catégorie, alors plusieurs rapports sont générés et remontés à toutes les organisations concernées. La première organisation qui acceptera le rapport pourra en effectuer le traitement.
+- Si la position géographique de l'observation se trouve sur deux (ou plus) zones de responsabilité appartenant à deux (ou plus) organisations différentes, mais que l'utilisateur n'a pas précisé de catégorie, alors plusieurs rapports sont générés et remontés à toutes les organisations concernées. La première organisation qui acceptera le rapport pourra en effectuer le traitement.
 
 .. _feedbacks-lifecyle:
 
@@ -137,11 +137,11 @@ Observation postée par un membre d'organisation
 
 Les :ref:`users-organization-member` peuvent poster des observations de la même façon que tous les utilisateurs. Cependant, si un membre d'organisation fournit, dans sa requête, l'identifiant de son organisation, il entre dans le mode de fonctionnement que nous avons appelé le "mode pro", et son observation pourra être traitée différemment :
 
-- Si son observation est positionnée dans une zone géographique régie par son organisation, alors cette observation est automatiquement validée, sans passer par l'étape de modération.
+- Si son observation est positionnée dans une zone de responsabilité régie par son organisation, alors cette observation est automatiquement validée, sans passer par l'étape de modération.
 
-- Si son observation n'est pas positionnée dans une zone géographique régie par son organisation, alors son observation est refusée et une erreur 409 est retournée.
+- Si son observation n'est pas positionnée dans une zone de responsabilité régie par son organisation, alors son observation est refusée et une erreur 409 est retournée.
 
-Sur la figure ci-dessous, le rectangle A représente une zone géographique appartenant à une organisation A, et le rectangle B représente une zone géographique appartenant à une organisation B.
+Sur la figure ci-dessous, le rectangle A représente une zone de responsabilité appartenant à une organisation A, et le rectangle B représente une zone de responsabilité appartenant à une organisation B.
 
 Chaque point représente une observation effectuée **par un utilisateur membre de l'organisation B**.
 

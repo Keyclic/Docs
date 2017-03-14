@@ -7,7 +7,7 @@ Dans l'application Keyclic, une organisation est une entité telle que corporati
 
 Les :ref:`users-organization-member` sont des utilisateurs de l'application Keyclic rattachés à une organisation. Un ou plusieurs membres d'une organisation peuvent en être les administrateurs (voir : :ref:`users-organization-admin`). Une organisation possède au minimum un membre, et un utilisateur ne peut être membre que d'une seule organisation.
 
-Les :ref:`users-organization-admin` peuvent définir les champs d'intervention de leur organisation en créant des catégories (exemple : voirie, transports, etc) et des zones géographiques. Quand un utilisateur crée une nouvelle observation, il précise toujours les coordonnées géographiques de cette observation. Ainsi, l'application est en mesure de lui retourner l'ensemble des organisations et catégories qui ont une zone d'intervention sur cette position, ce qui lui permet de choisir la catégorie la plus adéquate à son observation.
+Les :ref:`users-organization-admin` peuvent définir les champs d'intervention de leur organisation en créant des catégories (exemple : voirie, transports, etc) et des zones de responsabilité. Quand un utilisateur crée une nouvelle observation, il précise toujours les coordonnées géographiques de cette observation. Ainsi, l'application est en mesure de lui retourner l'ensemble des organisations et catégories qui ont une zone de responsabilité sur cette position, ce qui lui permet de choisir la catégorie la plus adéquate à son observation.
 
 .. _organizations-creation:
 
@@ -81,10 +81,10 @@ Pour plus d'informations sur le rôle ORGANIZATION:ADMIN et ses privilèges, voi
 
 .. _organizations-places:
 
-Gestion des zones géographiques
--------------------------------
+Gestion des zones de responsabilité
+-----------------------------------
 
-Un administrateur d'organisation peut créer des zones géographiques, correspondant aux lieux sur lesquels cette organisation intervient :
+Un administrateur d'organisation peut créer des zones de responsabilité, correspondant aux lieux sur lesquels cette organisation intervient :
 
 .. code-block:: bash
 
@@ -135,7 +135,7 @@ body :
         "elevation": 1
     }
 
-Pour récupérer toutes les zones géographiques de l'application :
+Pour récupérer toutes les zones de responsabilité de l'application :
 
 .. code-block:: bash
 

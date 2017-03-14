@@ -61,9 +61,9 @@ Membres d'organisation
 
 Quand un utilisateur est membre d'une organisation, cela ne lui confère par un rôle particulier, mais l'application peut réagir différemment à certaines de ses opérations. Nous appelons par convention ce mode de fonctionnement le "mode pro". Celui-ci se présente principalement sous deux aspects :
 
-- Quand l'utilisateur crée une observation : s'il passe l'identifiant de son organisation, alors cette observation pourra être traitée différamment. Voir : :ref:`feedbacks-organization-member`.
+- Quand l'utilisateur crée une observation : s'il passe l'identifiant de son organisation, alors cette observation pourra être traitée différemment. Voir : :ref:`feedbacks-organization-member`.
 
-- Sur les différentes requêtes de récupération (d'observations, de zones géographiques, de catégories), si l'utilisateur passe en paramètre de filtrage l'identifiant de son organisation, les objets retournés sont uniquement ceux appartenant à cette organisation. Voir les sections concernées pour plus d'informations ().
+- Sur les différentes requêtes de récupération (d'observations, de zones de responsabilité, de catégories), si l'utilisateur passe en paramètre de filtrage l'identifiant de son organisation, les objets retournés sont uniquement ceux appartenant à cette organisation. Voir les sections concernées pour plus d'informations.
 
 Par ailleurs, les membres d'une organisation peuvent se voir assigner des opérations par les administrateurs de cette organisation (voir : :ref:`reports-operations`).
 
