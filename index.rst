@@ -7,7 +7,7 @@ Liens utiles
 ------------
 
 - `Spécification Swagger de l'API <https://api.keyclic.com/swagger.json>`_
-- `Documentation technique restlet de l'API <https://keyclic.restlet.io/>`_
+- `Documentation technique Restlet de l'API <https://keyclic.restlet.io/>`_
 
 Sommaire
 --------
