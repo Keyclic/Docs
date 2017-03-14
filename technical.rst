@@ -11,7 +11,11 @@ Le nom de domaine de l'API Keyclic est :
 
     api.keyclic.com
 
-Vous pouvez télécharger `la documentation technique Swagger de l'API <https://api.keyclic.com/swagger.json>`_.
+Liens utiles
+------------
+
+- `Spécification Swagger de l'API <https://api.keyclic.com/swagger.json>`_
+- `Documentation technique restlet de l'API <https://keyclic.restlet.io/>`_
 
 .. _technical-applications:
 
