@@ -90,7 +90,7 @@ L'application Keyclic ne se contente pas de recueillir des observations : elle l
 Modération et cycle de vie d'une observation
 --------------------------------------------
 
-Après qu'un utilisateur a créé une nouvelle observation, celle-ci possède le statut PENDING_REVIEW : en attente de modération. Elle devra être validée par un administrateur de l'application.
+Après qu'un utilisateur a créé une nouvelle observation, celle-ci possède le statut PENDING_REVIEW : en attente de modération. Elle devra être validée par un administrateur de l'application (sauf cas particulier d'une :ref:`feedbacks-organization-member`).
 
 Voir : :ref:`technical-states`
 
@@ -130,41 +130,30 @@ Pour refuser une observation :
 
 L'observation prend alors le statut REFUSED.
 
-**Acceptation automatique d'une observation**
+.. _feedbacks-organization-member:
 
-Un utilisateur qui est membre d'une organisation peut créer une nouvelle observation qui sera automatiquement acceptée sans passer par l'étape de modération. À condition que cette nouvelle observation soit effectuée sur une catégorie appartenant à l'organisation dont l'utilisateur est un membre.
+Observation postée par un membre d'organisation
+-----------------------------------------------
 
-Supposons que la requête suivante est exécutée par un utilisateur membre de l'organisation 84d36093-b8bc-47ad-bc8a-a043b3e301a9 et que la catégorie b0d007d5-e6ad-4113-b2b5-d8a1858a2fb1 appartient à cette organisation :
+Les membres d'organisation peuvent poster des observations de la même façon que tous les utilisateurs. Cependant, si un membre d'organisation fournit, dans sa requête, l'identifiant de son organisation, il entre dans le mode de fonctionnement que nous avons appelé le "mode pro", et son observation pourra être traitée différemment :
 
+- Si son observation est positionnée dans une zone géographique régie par son organisation, alors cette observation est automatiquement validée, sans passer par l'étape de modération.
 
-.. code-block:: bash
+- Si son observation n'est pas positionnée dans une zone géographique régie par son organisation, alors son observation est refusée et une erreur 409 est retournée.
 
-    POST /feedbacks/issues
+Sur la figure ci-dessous, le rectangle A représente une zone géographique appartenant à une organisation A, et le rectangle B représente une zone géographique appartenant à une organisation B.
 
-.. code-block:: json
+Chaque point représente une observation effectuée **par un utilisateur membre de l'organisation B**.
 
-    {
-        "geo":
-            {
-                "elevation":1,
-                "point":
-                    {
-                        "latitude":44.851343361295214,
-                        "longitude":-0.5763262510299683
-                    }
-            },
-        "category":"b0d007d5-e6ad-4113-b2b5-d8a1858a2fb1",
-        "description":"Mon feedback 5",
-        "reporter":"6dbbd601-267f-46ea-be90-8c9742f7180b",
-        "image":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==",
-        "organization":"84d36093-b8bc-47ad-bc8a-a043b3e301a9"
-    }
+En bleu : observations effectuées en passant l'identifiant de son organisation (correspond au "mode pro").
+En rouge : observations effectuées sans passer l'identifiant de son organisation. Ces observations sont donc identiques à celle d'un utilisateur lambda.
 
-La requête ci-dessus créera une observation qui aura automatiquement le statut ACCEPTED, et un rapport sera automatiquement généré.
+.. image:: images/feedback_by_place.png
 
-Si le paramètre "organization" n'avait pas été passé, alors cette observation aurait suivi le cycle normal et aurait reçu le statut PENDING_REVIEW.
+.. _feedbacks-lifecyle-overview:
 
-**Résumé du cycle de vie d'une observation**
+Résumé du cycle de vie d'une observation
+----------------------------------------
 
 .. image:: images/feedback_workflow.png
 
