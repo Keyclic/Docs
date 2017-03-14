@@ -63,7 +63,7 @@ Quand un utilisateur est membre d'une organisation, cela ne lui confère par un 
 
 - Quand l'utilisateur crée une observation : s'il passe l'identifiant de son organisation, alors cette observation pourra être traitée différamment. Voir : :ref:`feedbacks-organization-member`.
 
-- Sur les différentes requêtes de récupération (d'observations, de zones géographiques, de catégories), si l'utilisateur passe en paramètre de filtrage l'identifiant de son organisation, les objets retournés sont uniquement ceux appartenant à cette organisation.
+- Sur les différentes requêtes de récupération (d'observations, de zones géographiques, de catégories), si l'utilisateur passe en paramètre de filtrage l'identifiant de son organisation, les objets retournés sont uniquement ceux appartenant à cette organisation. Voir les sections concernées pour plus d'informations ().
 
 Par ailleurs, les membres d'une organisation peuvent se voir assigner des opérations par les administrateurs de cette organisation (voir : :ref:`reports-operations`).
 

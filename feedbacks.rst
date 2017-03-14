@@ -219,6 +219,12 @@ retournera les observations effectuées entre le 10/01/2017 et le 22/02/2017.
 
 Les dates sont écrites au format  : `ISO 8601 <https://www.iso.org/iso-8601-date-and-time-format.html>`_.
 
+**Par organisation**
+
+.. code-block:: bash
+
+    GET /feedbacks?organization={organization}
+
 .. _feedbacks-comments:
 
 Commentaires
