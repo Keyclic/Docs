@@ -5,9 +5,9 @@ Organisations
 
 Dans l'application Keyclic, une organisation est une entité telle que corporation, entreprise, association, école, institution, etc, à laquelle peuvent être rattachées les observations faites par les utilisateurs.
 
-Les :ref:`users-organization-member` sont des utilisateurs de l'application Keyclic rattachés à une organisation. Un ou plusieurs membres d'une organisation peuvent en être les administrateurs (voir : :ref:`users-organization-admin`). Une organisation possède au minimum un membre, et un utilisateur ne peut être membre que d'une seule organisation.
+Les :ref:`members-no-roles` sont des utilisateurs du service Keyclic rattachés à une organisation. Un ou plusieurs membres d'une organisation peuvent en être les administrateurs (voir : :ref:`members-organization-admin`). Une organisation possède au minimum un administrateur.
 
-Les :ref:`users-organization-admin` peuvent définir les champs d'intervention de leur organisation en créant des catégories (exemple : voirie, transports, etc) et des zones de responsabilité. Quand un utilisateur crée une nouvelle observation, il précise toujours les coordonnées géographiques de cette observation. Ainsi, l'application est en mesure de lui retourner l'ensemble des organisations et catégories qui ont une zone de responsabilité sur cette position, ce qui lui permet de choisir la catégorie la plus adéquate à son observation.
+Les :ref:`members-organization-admin` peuvent définir les champs d'intervention de leur organisation en créant des catégories (exemple : voirie, transports, etc) et des zones de responsabilité. Quand un utilisateur crée une nouvelle observation, il précise toujours les coordonnées géographiques de cette observation. Ainsi, l'application est en mesure de lui retourner l'ensemble des organisations et catégories qui ont une zone de responsabilité sur cette position, ce qui lui permet de choisir la catégorie la plus adéquate à son observation.
 
 .. _organizations-creation:
 
