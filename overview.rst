@@ -94,10 +94,3 @@ Un administrateur d'organisation peut définir des organisations partenaires, qu
 Terme technique : relationship.
 
 Voir la section :ref:`organizations-relationships`.
-
-
-Application
-~~~~~~~~~~~
-
-Un client de l'API travaille toujours sur une application particulière de Keyclic. Chaque application possède ses propres administrateurs, dont la principale mission est de modérer les observations avant que celles-ci ne soient transmises sous forme de rapport aux organisations concernées.
-Les observations sont toutes liées à une application et sont isolées les unes des autres suivant l'application à laquelle elles sont attachées.
