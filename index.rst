@@ -27,5 +27,4 @@ Sommaire
     organizations
     feedbacks
     reports
-
-
+    application
