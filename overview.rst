@@ -12,9 +12,12 @@ Certains utilisateurs peuvent également être regroupés au sein d'organisation
 
 Les administrateurs d'organisation définissent des zones de responsabilité sur lesquelles leur organisation peut intervenir, et des catégories d'intervention (exemples : voirie, animal perdu, propreté, etc...) Ainsi, quand un utilisateur crée une observation, la position géographique de cette observation permet de lui proposer les catégories et organisations qui sont en mesure de traiter son signalement et de le laisser choisir celle qui lui semble la plus adaptée.
 
-Quand un utilisateur crée une observation, celle-ci doit tout d'abord être validée par un administrateur de l'application, sauf dans certains cas où la validation est automatique (voir : :ref:`feedbacks-lifecyle`). Une fois validée, cette observation est visible par la communauté : ainsi, les autres utilisateurs peuvent la commenter et/ou la soutenir. De plus, au moment où l'observation est validée, un rapport est généré et transmis à l'organisation concernée. 
+Quand un utilisateur crée une observation, celui-ci a le choix de la rendre publique ou privée. Si publique, l'observation est visible par la communauté : ainsi, les autres utilisateurs peuvent la commenter et/ou la soutenir. 
 
-Un administrateur d'organisation a donc accès à l'ensemble des rapports concernant son organisation, chaque rapport correspondant à une observation. Pour chaque rapport, il peut créer une ou plusieurs opérations, et affecter ces opérations aux utilisateurs membres de son organisation. Une fois que toutes les opérations ont été accomplies, il pourra considérer que le traitement est terminé et clôturer le rapport. Une autre possibilité est de déléguer ce rapport à une organisation partenaire.
+De plus, au moment où l'observation est créée, celle-ci doit tout d'abord être modérée par un administrateur de l'application, sauf dans certains cas où la modération est automatique (voir : :ref:`feedbacks-lifecyle`).
+L'observation validée, un rapport est généré et transmis à l'organisation concernée.
+
+Un administrateur d'organisation a donc accès à l'ensemble des rapports concernant son organisation, chaque rapport correspondant à une observation. Pour chaque rapport, il peut créer une ou plusieurs interventions, et affecter ces interventions aux membres de son organisation. Une autre possibilité est de déléguer ce rapport à une organisation partenaire, le patenaire aura alors la charge de créer des intervent.  Une fois que toutes les interventions ont été accomplies, il pourra considérer que le traitement est terminé et clôturer le rapport.
 
 Vocabulaire
 -----------
@@ -31,7 +34,7 @@ Voir la page :ref:`feedbacks`.
 Rapport
 ~~~~~~~
 
-Toute observation, une fois validée par un administrateur de l'application, entraîne la génération d'un rapport. Un rapport reprend donc toutes les informations de l'observation dont il est issu, et n'est visible et manipulable que par l'organisation concernée. Le rapport peut donc être vu comme le pendant « professionnel » de l'observation. C'est sur ce rapport que l'organisation travaille : création d'opérations, suivi, délégation, etc.
+Toute observation, une fois validée par un administrateur de l'application, entraîne la génération d'un rapport. Un rapport reprend donc toutes les informations de l'observation dont il est issu, et n'est visible et manipulable que par l'organisation concernée. Le rapport peut donc être vu comme le pendant « professionnel » de l'observation. C'est sur ce rapport que l'organisation travaille : création d'interventions, suivi, délégation, etc.
 
 Terme technique : report.
 
@@ -40,7 +43,7 @@ Voir la page :ref:`reports`
 Organisation
 ~~~~~~~~~~~~
 
-Groupe d'utilisateurs pouvant être une entreprise, une école, une association, etc.
+Groupe d'utilisateurs pouvant être une entreprise, une école, une association, un groupe de pesonnel d'un site, d'un chantier, etc.
 
 Terme technique : organization.
 
@@ -64,10 +67,6 @@ Terme technique : category.
 
 Voir la section :ref:`organizations-categories`.
 
-Application
-~~~~~~~~~~~
-
-Un client de l'API travaille toujours sur une application particulière de Keyclic, correspondant à un domaine applicatif. Chaque application possède ses propres administrateurs, dont la principale mission est de modérer les observations avant que celles-ci ne soient transmises sous forme de rapport aux organisations concernées.
 
 Soutien
 ~~~~~~~
@@ -81,7 +80,7 @@ Voir la section :ref:`feedbacks-contributions`.
 Opération
 ~~~~~~~~~
 
-Une opération est une tâche créée par un administrateur d'organisation sur un rapport donné. Cette tâche est assignée à un membre de l'organisation. Un rapport ne peut être clôturé que si toutes les opérations qui lui sont liées ont été accomplies.
+Une opération est une tâche créée par un administrateur d'organisation sur un rapport donné. Cette tâche est assignée à un membre de l'organisation. Un rapport ne peut être clôturé que si toutes les opérations qui lui sont liées ont été accomplies (ou refusées).
 
 Terme technique : operation.
 
@@ -97,3 +96,8 @@ Terme technique : relationship.
 Voir la section :ref:`organizations-relationships`.
 
 
+Application
+~~~~~~~~~~~
+
+Un client de l'API travaille toujours sur une application particulière de Keyclic. Chaque application possède ses propres administrateurs, dont la principale mission est de modérer les observations avant que celles-ci ne soient transmises sous forme de rapport aux organisations concernées.
+Les observations sont toutes liées à une application et sont isolées les unes des autres suivant l'application à laquelle elles sont attachées.
