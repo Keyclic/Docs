@@ -43,9 +43,10 @@ Tout utilisateur a la possibilité de créer une nouvelle organisation.
 L’utilisateur qui créé une nouvelle organisation en devient automatiquement membre et administrateur, c’est-à-dire qu’il se voit attribuer le rôle « Administrateur d’organisation ».
 
 Aux permissions et aux droits des « Membres d’organisation » s’ajoute les suivants :
- - Ajouter de nouveaux membres à une organisation
- - Gérer les catégories d’une organisation
- - Gérer les zones de responsabilité d’une organisation
+
+- Ajouter de nouveaux membres à une organisation
+- Gérer les catégories d’une organisation
+- Gérer les zones de responsabilité d’une organisation
 - Gérer les partenaires d’une organisation
 - Consulter et gérer les rapports reçus d’une  et les opérations liées à ces rapports
 
