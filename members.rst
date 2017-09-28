@@ -1,6 +1,6 @@
 .. _members:
 
-Members d'organisation et rôles
+Membres d'organisation et rôles
 ===============================
 
 Quand un utilisateur est membre d’une organisation, il peut bénéficier de  aucun, un ou plusieurs rôles définissant un ensemble de permissions et de possibilités d’actions.
