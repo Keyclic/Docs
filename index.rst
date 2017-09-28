@@ -23,8 +23,8 @@ Sommaire
     overview
     technical
     authentication
-    users
+    members
     organizations
     feedbacks
     reports
-    application
+    applications
