@@ -1,11 +1,11 @@
-.. _notification:
+.. _notifications:
 
 Notifications
 =============
 
 Le service Keyclic peut notifier des utilisateurs après que certaines actions sont réalisées.
 
-.. _notification-table:
+.. _notifications-table:
 
 Type des notifications émises suivant les actions
 -------------------------------------------------
