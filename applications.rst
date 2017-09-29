@@ -1,7 +1,7 @@
 .. _applications:
 
 Applications
-===========-
+============
 
 Une application au coeur du service Keyclic permet de cloisonner les remontées d’observation suivant des domaines applicatifs. Cela se traduit par l’utilisation d’applications ou de sites internet spécifiques à certains métiers. Pour l'application éponyme du service, les applications sont « Keyclic » pour les smartphones et le site internet https://app.keyclic.com pour les navigateurs.
 
