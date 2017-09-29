@@ -26,7 +26,7 @@ Quand un nouveau rapport est généré à partir d'une observation, il possède 
 
 Le schéma ci-dessous montre l'évolution du statut d'un rapport en fonction des actions qui sont effectuées sur ce rapport.
 
-.. image:: images/report_workflow_0.png
+.. image:: images/report_workflow.png
 
 Un endpoint unique permet de changer le statut du rapport :
 
@@ -39,11 +39,11 @@ Par exemple, pour passer du statut NEW au statut ACCEPTED, l'administrateur de l
 .. code-block:: json
 
     [
-	    {
-		    "op":"replace",
-		    "path":"/transition",
-		    "value":"accept"
-	    }
+      {
+        "op":"replace",
+        "path":"/transition",
+        "value":"accept"
+      }
     ]
 
 Un rapport ne peut être clôturé (statut CLOSED) que si :
@@ -109,11 +109,11 @@ body :
 .. code-block:: json
 
     [
-	    {
-		    "op":"replace",
-		    "path":"/description",
-		    "value":"Nouvelle description"
-	    }
+      {
+        "op":"replace",
+        "path":"/description",
+        "value":"Nouvelle description"
+      }
     ]
 
 **Assignation**
@@ -143,11 +143,11 @@ Une fois assignée, l'opération peut être acceptée ou refusée, soit par la p
 .. code-block:: json
 
     [
-	    {
-		    "op":"replace",
-		    "path":"/transition",
-		    "value":"accept"
-	    }
+      {
+        "op":"replace",
+        "path":"/transition",
+        "value":"accept"
+      }
     ]
 
 **Opération en cours et clôture**
@@ -208,8 +208,8 @@ Exemple :
 .. code-block:: json
 
     {
-	    "report":"cb7118b5-a821-4cf2-9475-0c0d0efdb8d0",
-	    "organization":"a31d9ab7-9476-45f2-8cc7-033bf40bbcfa"
+      "report":"cb7118b5-a821-4cf2-9475-0c0d0efdb8d0",
+      "organization":"a31d9ab7-9476-45f2-8cc7-033bf40bbcfa"
     }
 
 où a31d9ab7-9476-45f2-8cc7-033bf40bbcfa est l'identifiant de l'organisation à laquelle le rapport est délégué.
