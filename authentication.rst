@@ -141,11 +141,11 @@ Par exemple, pour modifier son nom :
 .. code-block:: json
 
     [
-	    {
-		    "op":"replace",
-		    "path":"/familyName",
-		    "value":"Nom de famille"
-	    }
+      {
+        "op":"replace",
+        "path":"/familyName",
+        "value":"Nom de famille"
+      }
     ]
 
 Les champs qu'un utilisateur peut modifier sont : son nom (familyName), son prénom (givenName), sa photo (image), son travail (job), son adresse email (email).
