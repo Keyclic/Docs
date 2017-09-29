@@ -1,7 +1,7 @@
-.. _application:
+.. _applications:
 
-Application
-===========
+Applications
+===========-
 
 Une application au coeur du service Keyclic permet de cloisonner les remontées d’observation suivant des domaines applicatifs. Cela se traduit par l’utilisation d’applications ou de sites internet spécifiques à certains métiers. Pour l'application éponyme du service, les applications sont « Keyclic » pour les smartphones et le site internet https://app.keyclic.com pour les navigateurs.
 
@@ -10,7 +10,7 @@ Il existe d’autres applications utilisant le service Keyclic, notamment l’ap
 Depuis l’application « Jaidemaville », il est impossible de remonter une observation à l’application « Keyclic » et inversement.
 Depuis l’application « Jaidemaville », il est impossible de lister les observations dédiées à l’application « Keyclic » et inversement.
 
-.. _application-admin:
+.. _applications-admin:
 
 Administrateur d'application
 ----------------------------
