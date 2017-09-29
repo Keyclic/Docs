@@ -3,7 +3,7 @@
 Rapports
 ========
 
-Chaque fois qu'une observation est acceptée, soit après validation par un administrateur de l'application, soit automatiquement parce que l'utilisateur qui l'a créée était membre de l'organisation concernée par cette observation, un rapport est créé.
+Chaque fois qu'une observation est acceptée, après validation par un administrateur de l'application sauf dans certains cas où la modération est automatique (voir : Modération et cycle de vie d’une observation), un rapport est créé.
 
 Un administrateur d'organisation récupère les rapports concernant son organisation avec :
 
@@ -104,7 +104,7 @@ La description d'une intervention peut être modifiée avec la requête :
 
     PATCH /operations/{operation}
 
-body :
+dont le body est :
 
 .. code-block:: json
 
@@ -124,7 +124,7 @@ Pour assigner une intervention à un membre de l'organisation, l'administrateur 
 
     POST /operations/{operation}/assign
 
-en passant dans les headers de la requête :
+dont le body est :
 
 .. code-block:: bash
 
@@ -141,6 +141,8 @@ Une fois assignée, l'intervention peut être acceptée ou refusée, soit par la
 .. code-block:: bash
 
     PATCH /operations/{operation}/state
+
+dont le body est :
 
 .. code-block:: json
 
@@ -167,6 +169,8 @@ Il est possible de commenter une intervention :
 .. code-block:: bash
 
     POST /operations/{operation}/comments
+
+dont le body est :
 
 .. code-block:: json
 
@@ -203,7 +207,7 @@ Pour déléguer un rapport, un administrateur de l'organisation effectue la requ
 
     POST /organizations/{organization}/delegates
 
-où {organization} est l'identifiant de l'organisation **courante** (dont l'utilisateur est administrateur).
+où {organization} est l'identifiant de l'organisation **courante** (dont le membre est administrateur).
 
 Exemple :
 
