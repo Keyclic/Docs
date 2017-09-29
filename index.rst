@@ -28,4 +28,4 @@ Sommaire
     feedbacks
     reports
     applications
-    notification
+    notifications
