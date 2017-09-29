@@ -122,15 +122,17 @@ Pour assigner une intervention à un membre de l'organisation, l'administrateur 
 
 .. code-block:: bash
 
-    LINK /operations/{operation}
+    POST /operations/{operation}/assign
 
 en passant dans les headers de la requête :
 
 .. code-block:: bash
 
-    Link : /people/{user}
+    {
+      "member":"{member}",
+    }
 
-où {user} est l'identifiant de l'utilisateur à qui est assignée l'intervention.
+où {member} est l'identifiant du membre à qui est assignée l'intervention.
 
 **Acceptation ou refus**
 
