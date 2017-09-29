@@ -3,7 +3,7 @@
 Rapports
 ========
 
-Chaque fois qu'une observation est acceptée, après validation par un administrateur de l'application sauf dans certains cas où la modération est automatique (voir : Modération et cycle de vie d’une observation), un rapport est créé.
+Chaque fois qu'une observation est acceptée, après validation par un administrateur de l'application sauf dans certains cas où la modération est automatique (voir : :ref:`feedbacks-lifecyle`), un rapport est créé.
 
 Un administrateur d'organisation récupère les rapports concernant son organisation avec :
 
