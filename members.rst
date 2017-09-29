@@ -60,9 +60,9 @@ Note : Un utilisateur peut être « Administrateur d’organisation » de plus
 
 Agent
 -----
- 
+
 « Agent » est un rôle particulier adapté aux personnels de terrain qui effectuent des remontées d’observation uniquement dédiées à leur organisation.
- 
+
 Aux permissions et aux droits des « Membres d’organisation » s’ajoute les suivants :
 
 - Activer le Mode Pro (cf infra: Observation postée en Mode Pro)
@@ -72,21 +72,21 @@ Aux permissions et aux droits des « Membres d’organisation » s’ajoute le
 
 .. _members-stat:
 
-Stat
-----
- 
+Statistiques
+------------
+
 Le rôle « Statistique » permet d’accéder aux statistiques d’une organisation.
 
-note: Un utilisateur peut avoir le rôle « Statistique » pour plusieurs organisations et une organisation peut avoir plusieurs utilisateurs avec le rôle « Statistique ».
- 
+Note : Un utilisateur peut avoir le rôle « Statistique » pour plusieurs organisations et une organisation peut avoir plusieurs utilisateurs avec le rôle « Statistique ».
+
 .. _members-export:
 
 Export
 ------
- 
+
 Le rôle « Export » permet d’accéder aux fonctionnalités d’exportation excel des rapports qu’a reçu une organisation.
 
-note: Un utilisateur peut avoir le rôle « Export » pour plusieurs organisations et une organisation peut avoir plusieurs utilisateurs avec le rôle « Export ».
+Note : Un utilisateur peut avoir le rôle « Export » pour plusieurs organisations et une organisation peut avoir plusieurs utilisateurs avec le rôle « Export ».
 
 .. _members-example:
 
