@@ -7,8 +7,7 @@ Une application au coeur du service Keyclic permet de cloisonner les remontées 
 
 Exemple :
 Il existe d’autres applications utilisant le service Keyclic, notamment l’application « Jaidemaville ».
-Depuis l’application « Jaidemaville », il est impossible de remonter une observation à l’application « Keyclic » et inversement.
-Depuis l’application « Jaidemaville », il est impossible de lister les observations dédiées à l’application « Keyclic » et inversement.
+Depuis l’application « Jaidemaville », il est impossible de remonter une observation à l’application « Keyclic » (et inversement) et il est impossible de lister les observations dédiées à l’application « Keyclic » (et inversement).
 
 .. _applications-admin:
 
