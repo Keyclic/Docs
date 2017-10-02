@@ -3,11 +3,15 @@
 Organisations
 =============
 
-Dans l'application Keyclic, une organisation est une entité telle que corporation, entreprise, association, école, institution, etc, à laquelle peuvent être rattachées les observations faites par les utilisateurs.
+Dans l'application Keyclic, une organisation est une entité telle que corporation, entreprise, département d'entreprise, association, école, institution, etc à laquelle peuvent être rattachées les observations faites par les utilisateurs.
 
-Les :ref:`members-no-roles` sont des utilisateurs du service Keyclic rattachés à une organisation. Un ou plusieurs membres d'une organisation peuvent en être les administrateurs (voir : :ref:`members-organization-admin`). Une organisation possède au minimum un administrateur.
+Les :ref:`members-no-roles` sont des utilisateurs du service Keyclic rattachés à une organisation.
+Un ou plusieurs membres d'une organisation peuvent en être les administrateurs (voir : :ref:`members-organization-admin`). Une organisation possède au minimum un administrateur d'organisation.
 
-Les :ref:`members-organization-admin` peuvent définir les champs d'intervention de leur organisation en créant des catégories (exemple : voirie, transports, etc) et des zones de responsabilité. Quand un utilisateur crée une nouvelle observation, il précise toujours les coordonnées géographiques de cette observation. Ainsi, l'application est en mesure de lui retourner l'ensemble des organisations et catégories qui ont une zone de responsabilité sur cette position, ce qui lui permet de choisir la catégorie la plus adéquate à son observation.
+Les :ref:`members-organization-admin` peuvent définir les champs d'intervention de leur organisation en créant des catégories (exemple : voirie, transports, etc) et des zones de responsabilité.
+Quand un utilisateur crée une nouvelle observation, les coordonnées géographiques de cette observation sont toujours automatiquement précisées.
+Ainsi, l'application est en mesure de lui retourner l'ensemble des organisations et catégories qui ont une zone de responsabilité sur cette position.
+Ce qui lui permet de choisir la catégorie la plus adéquate à son observation.
 
 .. _organizations-creation:
 
