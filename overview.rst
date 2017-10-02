@@ -19,6 +19,13 @@ L'observation validée, un rapport est généré et transmis à l'organisation c
 
 Un administrateur d'organisation a donc accès à l'ensemble des rapports concernant son organisation, chaque rapport correspondant à une observation. Pour chaque rapport, il peut créer une ou plusieurs interventions, et affecter ces interventions aux membres de son organisation. Une autre possibilité est de déléguer ce rapport à une organisation partenaire, le patenaire aura alors la charge de créer des intervent.  Une fois que toutes les interventions ont été accomplies, il pourra considérer que le traitement est terminé et clôturer le rapport.
 
+Liens utiles
+------------
+
+- `Spécification Swagger de l'API <https://api.keyclic.com/swagger.json>`_
+- `Documentation technique de l'API <https://app.swaggerhub.com/apis/Keyclic/keyclic/1.0.0/>`_
+- `Code source du SDK client javascript <https://github.com/Keyclic/app-sdk>`_
+
 Vocabulaire
 -----------
 
