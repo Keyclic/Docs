@@ -20,7 +20,6 @@ Sommaire
 .. toctree::
     :maxdepth: 2
 
-    index
     overview
     technical
     authentication
