@@ -16,24 +16,20 @@ Création d'une observation
 
     POST /feedbacks/issues
 
-
 Exemple minimaliste : dans l'exemple suivant, une observation est créée sans catégorie et sans description.
 
 .. code-block:: json
 
     {
-        "geo":
-            {
-                "elevation":1,
-                "point":
-                    {
-                        "latitude":44.851343361295214,
-                        "longitude":-0.5763262510299683
-                    }
-            },
+        "geo": {
+            "elevation":1,
+            "point": {
+                "latitude":44.851343361295214,
+                "longitude":-0.5763262510299683
+            }
+        },
         "reporter":"6dbbd601-267f-46ea-be90-8c9742f7180b"
     }
-
 
 Ce endpoint se présente sous la forme **/feedbacks/issue** et non pas simplement **/feedbacks**, car à terme, il sera possible de créer différents types d'observation. Actuellement, seul le type "issue" est disponible.
 
@@ -42,15 +38,13 @@ Exemple plus complet, l'utilisateur précise une catégorie et une description :
 .. code-block:: json
 
     {
-        "geo":
-            {
-                "elevation":1,
-                "point":
-                    {
-                        "latitude":44.851343361295214,
-                        "longitude":-0.5763262510299683
-                    }
-            },
+        "geo": {
+            "elevation":1,
+            "point": {
+                "latitude":44.851343361295214,
+                "longitude":-0.5763262510299683
+            }
+        },
         "category":"b0d007d5-e6ad-4113-b2b5-d8a1858a2fb1",
         "description":"Mon feedback 5",
         "reporter":"6dbbd601-267f-46ea-be90-8c9742f7180b"
@@ -112,7 +106,7 @@ Exemple :
         }
     ]
 
-L'observation prend alors le statut ACCEPTED et un rapport est créé sur cette observation.
+L'observation prend alors le statut DELIVERED et un rapport est créé sur cette observation.
 
 Voir : :ref:`reports`
 
@@ -135,11 +129,16 @@ L'observation prend alors le statut REFUSED.
 Observation postée par un membre d'organisation
 -----------------------------------------------
 
-Les :ref:`users-organization-member` peuvent poster des observations de la même façon que tous les utilisateurs. Cependant, si un membre d'organisation fournit, dans sa requête, l'identifiant de son organisation, il entre dans le mode de fonctionnement que nous avons appelé le "mode pro", et son observation pourra être traitée différemment :
+Les :ref:`members` peuvent poster des observations de la même façon que tous les utilisateurs. Cependant, si un membre d'organisation fournit, dans sa requête, l'identifiant de son organisation, il entre dans le mode de fonctionnement que nous avons appelé le "mode pro", et son observation pourra être traitée différemment :
 
-- Si son observation est positionnée dans une zone de responsabilité régie par son organisation, alors cette observation est automatiquement validée, sans passer par l'étape de modération.
+- Si son observation est positionnée dans une zone de responsabilité régie par son organisation, alors cette observation est automatiquement validée (sans passer par l'étape de modération) et le rapport créé qui en découle est automatiquement accepté.
 
 - Si son observation n'est pas positionnée dans une zone de responsabilité régie par son organisation, alors son observation est refusée et une erreur 409 est retournée.
+
+.. _feedbacks-normal-mode-vs-pro-mode:
+
+Mode normal vs "Mode pro"
+-------------------------
 
 Sur la figure ci-dessous, le rectangle A représente une zone de responsabilité appartenant à une organisation A, et le rectangle B représente une zone de responsabilité appartenant à une organisation B.
 
@@ -168,7 +167,7 @@ Pour récupérer les observations :
 
     GET /feedbacks
 
-Cette requête retourne uniquement les observations dont le statut est ACCEPTED.
+Cette requête retourne uniquement les observations dont le statut est DELIVERED.
 
 Plusieurs critères permettent de filtrer les observations.
 
