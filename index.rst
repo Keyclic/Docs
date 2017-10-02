@@ -5,7 +5,7 @@
 Documentation du service Keyclic
 ==============================
 
-Keyclic est une application de remontée et de traitement d'observations. Elle permet à ses utilisateurs de signaler des dysfonctionnements, des problèmes techniques ou tout autre type d'information, et de remonter ces signalements aux personnes concernées.
+Keyclic est une application de remontée et de traitement d'observations. Elle permet à ses utilisateurs de signaler des dysfonctionnements, des problèmes techniques ou tout autre type d'information, et de remonter ces signalements aux organisations concernées.
 
 Liens utiles
 ------------
@@ -20,6 +20,7 @@ Sommaire
 .. toctree::
     :maxdepth: 2
 
+    index
     overview
     technical
     authentication

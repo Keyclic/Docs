@@ -12,7 +12,7 @@ Certains utilisateurs peuvent également être regroupés au sein d'organisation
 
 Les administrateurs d'organisation définissent des zones de responsabilité sur lesquelles leur organisation peut intervenir, et des catégories d'intervention (exemples : voirie, animal perdu, propreté, etc...) Ainsi, quand un utilisateur crée une observation, la position géographique de cette observation permet de lui proposer les catégories et organisations qui sont en mesure de traiter son signalement et de le laisser choisir celle qui lui semble la plus adaptée.
 
-Quand un utilisateur crée une observation, celui-ci a le choix de la rendre publique ou privée. Si publique, l'observation est visible par la communauté : ainsi, les autres utilisateurs peuvent la commenter et/ou la soutenir. 
+Quand un utilisateur crée une observation, celui-ci a le choix de la rendre publique ou privée. Si publique, l'observation est visible par la communauté : ainsi, les autres utilisateurs peuvent la commenter et/ou la soutenir.
 
 De plus, au moment où l'observation est créée, celle-ci doit tout d'abord être modérée par un administrateur de l'application, sauf dans certains cas où la modération est automatique (voir : :ref:`feedbacks-lifecyle`).
 L'observation validée, un rapport est généré et transmis à l'organisation concernée.
