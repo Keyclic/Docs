@@ -129,7 +129,7 @@ L'observation prend alors le statut REFUSED.
 Observation postée par un membre d'organisation
 -----------------------------------------------
 
-Les :ref:`members` peuvent poster des observations de la même façon que tous les utilisateurs. Cependant, si un membre d'organisation fournit, dans sa requête, l'identifiant de son organisation, il entre dans le mode de fonctionnement que nous avons appelé le "mode pro", et son observation pourra être traitée différemment :
+Les membres (:ref:`members`) peuvent poster des observations de la même façon que tous les utilisateurs. Cependant, si un membre d'organisation fournit, dans sa requête, l'identifiant de son organisation, il entre dans le mode de fonctionnement que nous avons appelé le "mode pro", et son observation pourra être traitée différemment :
 
 - Si son observation est positionnée dans une zone de responsabilité régie par son organisation, alors cette observation est automatiquement validée (sans passer par l'étape de modération) et le rapport créé qui en découle est automatiquement accepté.
 
