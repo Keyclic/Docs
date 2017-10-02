@@ -63,7 +63,7 @@ Exemple :
         "person":"63d07fc5-f4e6-471c-a8cc-3c3f227c8c2d"
     }
 
-Ce endpoint est réservé à un utilisateur possédant le rôle ORGANIZATION:ADMIN et membre de l'organisation {organization}, et l'utilisateur ajouté ne doit être membre d'aucune autre organisation.
+Ce endpoint est réservé à un utilisateur possédant le rôle ORGANIZATION:ADMIN et membre de l'organisation {organization}.
 
 Pour récupérer les membres d'une organisation :
 
