@@ -23,7 +23,7 @@ Liens utiles
 ------------
 
 - `Spécification Swagger de l'API <https://api.keyclic.com/swagger.json>`_
-- `Documentation technique de l'API <https://app.swaggerhub.com/apis/Keyclic/keyclic/1.0.0/>`_
+- `Documentation technique de l'API <https://app.swaggerhub.com/apis/Keyclic/keyclic/>`_
 - `Code source du SDK client javascript <https://github.com/Keyclic/app-sdk>`_
 
 Vocabulaire
