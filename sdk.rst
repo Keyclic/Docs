@@ -3,8 +3,8 @@
 SDK
 ===
 
-La société Keyclic gratuitement et librement sous licence MIT propose un SDK javascript.
-Ce SDK permet de développer plus rapidement des applications se connectant à l'API du service Keyclic.
+La société Keyclic propose gratuitement et librement sous licence MIT un SDK javascript.
+Ce SDK permet de développer plus rapidement des applications clientes se connectant à l'API du service Keyclic.
 
 Liens utiles
 ------------
@@ -14,4 +14,4 @@ Liens utiles
 Utilisation
 -----------
 
-Ce SDK est utilisé par l'application Keyclic et toutes les autres applications développées par la société Keyclic.
+Ce SDK est utilisé par l'application Keyclic elle-même et toutes les autres applications développées par la société Keyclic.

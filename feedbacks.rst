@@ -16,28 +16,29 @@ Création d'une observation
 
     POST /feedbacks/issues
 
-Exemple minimaliste : dans l'exemple suivant, une observation est créée sans catégorie et sans description.
+Exemple du minimum requis pour effectuer une observation, une observation est créée sans catégorie et sans description. L'utilisateur émettant cette observation est détecté automatiquement grâce à l'authentification.
 
 .. code-block:: json
 
     {
+        "businessActivity": "4bff7cb9-0fd2-4b44-9b0e-f6d17bb4ef36",
         "geo": {
-            "elevation":1,
+            "elevation": 1,
             "point": {
-                "latitude":44.851343361295214,
-                "longitude":-0.5763262510299683
+                "latitude": 44.851343361295214,
+                "longitude": -0.5763262510299683
             }
-        },
-        "reporter":"6dbbd601-267f-46ea-be90-8c9742f7180b"
+        }
     }
 
-Ce endpoint se présente sous la forme **/feedbacks/issue** et non pas simplement **/feedbacks**, car à terme, il sera possible de créer différents types d'observation. Actuellement, seul le type "issue" est disponible.
-
-Exemple plus complet, l'utilisateur précise une catégorie et une description :
+Exemple plus complet, une catégorie et une description sont précisées :
 
 .. code-block:: json
 
     {
+        "businessActivity": "4bff7cb9-0fd2-4b44-9b0e-f6d17bb4ef36",
+        "category": "b0d007d5-e6ad-4113-b2b5-d8a1858a2fb1",
+        "description": "Mon feedback 5",
         "geo": {
             "elevation":1,
             "point": {
@@ -45,9 +46,7 @@ Exemple plus complet, l'utilisateur précise une catégorie et une description :
                 "longitude":-0.5763262510299683
             }
         },
-        "category":"b0d007d5-e6ad-4113-b2b5-d8a1858a2fb1",
-        "description":"Mon feedback 5",
-        "reporter":"6dbbd601-267f-46ea-be90-8c9742f7180b"
+        "visibility": "VISIBILITY_PUBLIC"
     }
 
 L'utilisateur peut ensuite ajouter une ou plusieurs images à son observation :
@@ -69,13 +68,11 @@ Pour plus d'informations sur l'envoi d'images, voir :ref:`technical-files`.
 Rattachement d'une observation à une organisation
 -------------------------------------------------
 
-L'application Keyclic ne se contente pas de recueillir des observations : elle les fait ensuite remonter, sous la forme de :ref:`reports`, aux organisations concernées, qui en assureront le traitement. Toute observation doit donc être, dans la mesure du possible, remontée à une organisation sous la forme d'un rapport. Pour cela, quatre cas de figure peuvent se présenter :
+Le service Keyclic ne se contente pas de recueillir des observations : elle les fait ensuite remonter, sous la forme de :ref:`reports`, aux organisations concernées, qui en assureront le traitement. Toute observation doit donc être, dans la mesure du possible, remontée à une organisation sous la forme d'un rapport. Pour cela, quatre cas de figure peuvent se présenter :
 
 - Si la position géographique de l'observation ne correspond à aucune zone de responsabilité, alors l'API retournera une erreur 409 et aucune organisation ne recevra de rapport sur cette observation.
 
 - Si la position géographique de l'observation se trouve dans une zone de responsabilité définie par une organisation, alors le rapport de l'observation est automatiquement remonté à l'organisation en question.
-
-- Si la position géographique de l'observation se trouve sur deux (ou plus) zones de responsabilité appartenant à deux (ou plus) organisations différentes, et que l'utilisateur a précisé une catégorie, alors le rapport de l'observation est remonté à l'organisation propriétaire de la catégorie en question.
 
 - Si la position géographique de l'observation se trouve sur deux (ou plus) zones de responsabilité appartenant à deux (ou plus) organisations différentes, mais que l'utilisateur n'a pas précisé de catégorie, alors plusieurs rapports sont générés et remontés à toutes les organisations concernées. La première organisation qui acceptera le rapport pourra en effectuer le traitement.
 
@@ -84,11 +81,11 @@ L'application Keyclic ne se contente pas de recueillir des observations : elle l
 Modération et cycle de vie d'une observation
 --------------------------------------------
 
-Après qu'un utilisateur a créé une nouvelle observation, celle-ci possède le statut PENDING_REVIEW : en attente de modération. Elle devra être validée par un administrateur de l'application (sauf cas particulier d'une :ref:`feedbacks-organization-member`).
+Après qu'un utilisateur a créé une nouvelle observation, celle-ci possède le statut PENDING_REVIEW : en attente de modération. Elle devra être validée par un *administrateur d'application* (sauf cas particulier d'une :ref:`feedbacks-organization-member`).
 
 Voir : :ref:`technical-states`
 
-Un administrateur d'application valide une observation avec le endpoint :
+Un *administrateur d'application* valide une observation avec le endpoint :
 
 .. code-block:: bash
 
@@ -266,5 +263,3 @@ Pour récupérer tous les soutiens effectués sur une observation :
 .. code-block:: bash
 
     GET /feedbacks/{feedback}/contributions
-
-
