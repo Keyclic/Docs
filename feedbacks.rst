@@ -16,7 +16,7 @@ Création d'une observation
 
     POST /feedbacks/issues
 
-Exemple : le minimum requis pour effectuer une observation, ici une observation est créée sans catégorie et sans description. L'utlisateur emettant cette observation est détecté automatiquement grâce à l'authentification.
+Exemple du minimum requis pour effectuer une observation, une observation est créée sans catégorie et sans description. L'utilisateur émettant cette observation est détecté automatiquement grâce à l'authentification.
 
 .. code-block:: json
 
@@ -31,9 +31,7 @@ Exemple : le minimum requis pour effectuer une observation, ici une observation 
         }
     }
 
-Ce endpoint se présente sous la forme **/feedbacks/issue** et non pas simplement **/feedbacks**, car à terme, il sera possible de créer différents types d'observation. Actuellement, seul le type "issue" est disponible.
-
-Exemple plus complet, l'utilisateur précise une catégorie et une description :
+Exemple plus complet, une catégorie et une description sont précisées :
 
 .. code-block:: json
 
