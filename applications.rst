@@ -6,15 +6,15 @@ Applications
 Une *application* au coeur du service Keyclic permet de cloisonner les remontées d’observation suivant des domaines applicatifs.
 Cela se traduit par l’utilisation d’applications clientes ou de sites internet spécifiques à certains métiers.
 
-Pour le client éponyme du service, l'*application* déclarée est "com.keyclic.app", toutes les applications clientes ou sites internet utilisant cette clé auront le même cloisement, ici par exemple, l'application iPhone Keyclic, l'application Android Keyclic et le site internet https://app.keyclic.com pour les navigateurs.
+Pour le client éponyme du service, l'*application* déclarée est "com.keyclic.app", toutes les applications clientes ou sites internet utilisant cette clé auront le même cloisement. (Ici : l'application iPhone Keyclic, l'application Android Keyclic et le site internet https://app.keyclic.com pour les navigateurs.)
 
-Il existe d’autres *applications* déclarées dans le service Keyclic avec d'autres clés, par exemple "Vinci Mon Autoroute" disponible sur iPhone et Android.
+Il existe d’autres *applications* déclarées dans le service Keyclic avec d'autres clés, notamment "Vinci Mon Autoroute" disponible sur iPhone et Android.
 
-Depuis "Vinci Mon Autoroute":
+Par exemple depuis "Vinci Mon Autoroute":
 
- - il est impossible de remonter une observation à l’*application* avec la clé "com.keyclic.app" (et inversement),
+ - il est impossible de remonter une observation à l’*application* déclarée avec la clé "com.keyclic.app" et inversement,
 
- - il est impossible de lister les observations dédiées à l’*application*  avec la clé "com.keyclic.app" (et inversement).
+ - il est impossible de lister les observations dédiées à l’*application* déclarée avec la clé "com.keyclic.app" et inversement.
 
 .. _applications-admin:
 
@@ -33,4 +33,4 @@ Cas particulier
 ---------------
 
 Toutes les observations ne sont pas soumises à la modération.
-C'est le cas d'une observation effectuée par un acteur de confiance. (Voir :ref:`feedbacks-organization-member`)
+C'est le cas d'une observation effectuée par un acteur de confiance. (Voir :ref:`feedbacks-organization-member`.)
