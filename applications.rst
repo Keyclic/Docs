@@ -21,13 +21,13 @@ Par exemple depuis "Vinci Mon Autoroute":
 Administrateur d'application
 ----------------------------
 
-L’*administrateur d’application* est un statut particulier donné à un utilisateur du service Keyclic qui a la possibilité de **modérer** les observations d’une *application* avant que celles-ci soient transmises, sous forme de rapports, aux organisations concernées.
+L’ *administrateur d’application* est un statut particulier donné à un utilisateur du service Keyclic qui a la possibilité de **modérer** les observations d’une *application* avant que celles-ci soient transmises, sous forme de rapports, aux organisations concernées.
 
 Cette modération permet de filtrer toutes observations avec du contenu enfreignant les règles d’utilisation d’une application cliente ou d'un site internet. Par exemple, obstruction à la législation d’un pays (contenu pédopornographique, incitation à la haine, etc).
 
 Plusieurs *administrateurs d'application* peuvent modérer les observations d'une *application*. Cependant un *administrateur d'application* ne peut pas modérer les observations provenant de plusieurs *applications*.
 
-Note : L'*administrateur d'application* n'est pas obligatoirement membre d'une organisation ou n'est pas obligatoirement employé par la société Keyclic.
+Note : L' *administrateur d'application* n'est pas obligatoirement membre d'une organisation ou n'est pas obligatoirement employé par la société Keyclic.
 
 Cas particulier
 ---------------
