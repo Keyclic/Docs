@@ -1,4 +1,4 @@
-.. image:: http://static1.squarespace.com/static/54e7409ee4b06d2d7216b378/t/586e571bbe659461a7446490/1490112988831/?format=200w
+.. image:: http://keyclic.com/assets/images/logo.svg
     :align: center
     :alt: logo Keyclic
 
