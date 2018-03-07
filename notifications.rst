@@ -15,8 +15,9 @@ Type des notifications émises suivant les actions
 +==============================+========================================================================+=========================+
 | Création de rapport          | Les administrateurs de l'organisation                                  | Email + Push smartphone |
 +------------------------------+------------------------------------------------------------------------+-------------------------+
-| Clôture du rapport           | L'émetteur de l'observation (dont le rapport est issu) et              | Push smartphone         |
-|                              | les personnes qui ont soutenu l'observation (dont le rapport est issu) |                         |
+| Clôture du rapport           | L'émetteur de l'observation (dont le rapport est issu)                 | Push smartphone         |
+|                              |                                                                        |                         |
+|                              | Les personnes qui ont soutenu l'observation (dont le rapport est issu) |                         |
 +------------------------------+------------------------------------------------------------------------+-------------------------+
 | Assignation d'une opération  | Le membre assigné à l'opération                                        | Push smartphone         |
 +------------------------------+------------------------------------------------------------------------+-------------------------+
