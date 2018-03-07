@@ -15,12 +15,13 @@ Type des notifications émises suivant les actions
 +==============================+========================================================================+=========================+
 | Création de rapport          | Les administrateurs de l'organisation                                  | Email + Push smartphone |
 +------------------------------+------------------------------------------------------------------------+-------------------------+
-| Clôture du rapport           | L'émetteur de l'observation (dont le rapport est issu)                 | Push smartphone         |
-|                              | Les personnes qui ont soutenu l'observation (dont le rapport est issu) |                         |
+| Clôture du rapport           | L'émetteur de l'observation (dont le rapport est issu) et              | Push smartphone         |
+|                              | les personnes qui ont soutenu l'observation (dont le rapport est issu) |                         |
 +------------------------------+------------------------------------------------------------------------+-------------------------+
-| Assignation d'une opération  | Membre assigné à l'opération                                           | Push smartphon          |
+| Assignation d'une opération  | Le membre assigné à l'opération                                        | Push smartphone         |
 +------------------------------+------------------------------------------------------------------------+-------------------------+
-| Exportation des rapports     | Administrateur courant de la session                                   | Email                   |
+| Exportation des rapports     | L'administrateur courant de la session                                 | Email                   |
 +------------------------------+------------------------------------------------------------------------+-------------------------+
-| Modération d'une observation | Administrateurs de l'application                                       | Push smartphone         |
+| Modération d'une observation | Les administrateurs de l'application                                   | Push smartphone         |
 +------------------------------+------------------------------------------------------------------------+-------------------------+
+
