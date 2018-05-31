@@ -3,14 +3,10 @@
 Membres d'organisation et rôles
 ===============================
 
-Quand un utilisateur est membre d’une organisation, il peut bénéficier de  aucun, un ou plusieurs rôles définissant un ensemble de permissions et de possibilités d’actions.
-
-Définissant un ensemble de droits, ces rôles peuvent être cumulés pour un même utilisateur et sont au nombre de cinq :
-
-Les utilisateurs de l'application Keyclic possèdent un ou plusieurs rôles, définissant un ensemble de permissions et de possibilités d'action. Ces rôles, qui peuvent être cumulés pour un même utilisateur, sont au nombre de trois :
+Quand un utilisateur est membre d’une organisation, il peut bénéficier d'aucun, d'un ou plusieurs rôles définissant un ensemble de permissions et de possibilités d’actions. Ces rôles peuvent être cumulés pour un même utilisateur et sont au nombre de cinq :
 
 - Aucun rôle - Membre d’organisation
-- Administrateur d’organisation
+- Administrateur
 - Agent
 - Statistiques
 - Export
@@ -35,12 +31,12 @@ Note : Un utilisateur peut être membre d’organisation de plusieurs organisat
 
 .. _members-organization-admin:
 
-Administrateur d'organisation
------------------------------
+Administrateur
+--------------
 
 Tout utilisateur a la possibilité de créer une nouvelle organisation.
 
-L’utilisateur qui créé une nouvelle organisation en devient automatiquement membre et administrateur, c’est-à-dire qu’il se voit attribuer le rôle « Administrateur d’organisation ».
+L’utilisateur qui crée une nouvelle organisation en devient automatiquement membre et administrateur, c’est-à-dire qu’il se voit attribuer le rôle « Administrateur ».
 
 Aux permissions et aux droits des « Membres d’organisation » s’ajoute les suivants :
 
@@ -48,13 +44,13 @@ Aux permissions et aux droits des « Membres d’organisation » s’ajoute le
 - Gérer les catégories d’une organisation
 - Gérer les zones de responsabilité d’une organisation
 - Gérer les partenaires d’une organisation
-- Consulter et gérer les rapports reçus d’une  et les opérations liées à ces rapports
+- Consulter et gérer les rapports reçus et les opérations liées à ces rapports
 
 Voir : :ref:`organizations`
 
 Voir : :ref:`reports`
 
-Note : Un utilisateur peut être « Administrateur d’organisation » de plusieurs organisations et une organisation peut avoir plusieurs « Administrateurs d’organisation ».
+Note : Un utilisateur peut être « Administrateur » de plusieurs organisations et une organisation peut avoir plusieurs « Administrateurs ».
 
 .. _members-agent:
 
@@ -84,64 +80,9 @@ Note : Un utilisateur peut avoir le rôle « Statistique » pour plusieurs org
 Export
 ------
 
-Le rôle « Export » permet d’accéder aux fonctionnalités d’exportation excel des rapports qu’a reçu une organisation.
+Le rôle « Export » permet d’accéder aux fonctionnalités d’exportation Excel des rapports qu’a reçu une organisation.
 
 Note : Un utilisateur peut avoir le rôle « Export » pour plusieurs organisations et une organisation peut avoir plusieurs utilisateurs avec le rôle « Export ».
-
-.. _members-example:
-
-Exemple de ressource utilisateur
---------------------------------
-
-*Déprécié: La section suivante doit être mise à jour pour prendre en considération la nouvelle gestion matricielle des rôles.*
-
-
-La lecture d'une ressource Utilisateur permet de découvrir les rôles de cet utilisateur, et éventuellement l'organisation dont il est administrateur et/ou l'application dont il est administrateur.
-
-.. code-block:: bash
-
-    GET /people/{user}
-
-.. code-block:: json
-
-    {
-      "username": "test@gmail.com",
-      "email": "test@gmail.com",
-      "type": "Person",
-      "roles": [
-        "APPLICATION:ADMIN",
-        "ORGANIZATION:ADMIN",
-        "ROLE_USER"
-      ],
-      "id": "5020c6ea-ca07-42d1-994f-d90b86703b1a",
-      "createdAt": "2017-02-20T17:52:39+01:00",
-      "updatedAt": "2017-02-27T14:48:39+01:00",
-      "_links": {
-        "self": {
-          "href": "/people/5020c6ea-ca07-42d1-994f-d90b86703b1a",
-          "iriTemplate": {
-            "mapping": {
-              "person": "5020c6ea-ca07-42d1-994f-d90b86703b1a"
-            }
-          }
-        },
-        "memberOf": {
-          "href": "https://api.sandbox.keyclic.com/organizations/84d36093-b8bc-47ad-bc8a-a043b3e301a9",
-          "iriTemplate": {
-            "mapping": {
-              "organization": "84d36093-b8bc-47ad-bc8a-a043b3e301a9"
-            }
-          }
-        }
-      }
-    }
-
-Ce retour indique que :
-
-1. Cet utilisateur possède le rôle ROLE_USER, comme tous les utilisateurs.
-2. Il est membre de l'organisation 84d36093-b8bc-47ad-bc8a-a043b3e301a9
-3. Il possède le rôle ORGANIZATION:ADMIN, il est donc administrateur de l'organisation 84d36093-b8bc-47ad-bc8a-a043b3e301a9
-4. Il possède le rôle APPLICATION:ADMIN, il est donc administrateur de l'application à laquelle est rattachée l'organisation 84d36093-b8bc-47ad-bc8a-a043b3e301a9
 
 .. _members-retrieving:
 
@@ -172,3 +113,89 @@ Pour filtrer les membres d'une organisation :
 
     GET /people?organization={organization}
 
+.. _members-example:
+
+Exemple de récupération des rôles d'un utilisateur
+--------------------------------------------------
+
+La lecture d'une ressource utilisateur permet de découvrir si la personne appartient à une organisation et quel(s) rôle(s) il y tient.
+
+.. code-block:: bash
+
+    GET /people/5020c6ea-ca07-42d1-994f-d90b86703b1a/memberships
+
+.. code-block:: json
+
+    {
+        "page": 1,
+        "limit": 10,
+        "pages": 1,
+        "total": 1,
+        "_links": {
+            "self": {
+                "href": "/people/5020c6ea-ca07-42d1-994f-d90b86703b1a/memberships?page=1&limit=10"
+            },
+            "first": {
+                "href": "/people/5020c6ea-ca07-42d1-994f-d90b86703b1a/memberships?page=1&limit=10"
+            },
+            "last": {
+                "href": "/people/5020c6ea-ca07-42d1-994f-d90b86703b1a/memberships?page=1&limit=10"
+            }
+        },
+        "_embedded": {
+            "items": [
+                {
+                    "id": "b0e7e28f-5b91-4c73-875e-8f34aa03553a",
+                    "roles": [
+                        "ORGANIZATION:ADMIN",
+                        "ORGANIZATION:AGENT"
+                    ],
+                    "createdAt": "2018-02-27T10:00:00+02:00",
+                    "_links": {
+                        "self": {
+                            "href": "/organizations/84d36093-b8bc-47ad-bc8a-a043b3e301a9/members/b0e7e28f-5b91-4c73-875e-8f34aa03553a",
+                            "iriTemplate": {
+                                "mapping": {
+                                    "organization": "84d36093-b8bc-47ad-bc8a-a043b3e301a9",
+                                    "member": "b0e7e28f-5b91-4c73-875e-8f34aa03553a"
+                                }
+                            }
+                        },
+                        "person": {
+                            "href": "/people/5020c6ea-ca07-42d1-994f-d90b86703b1a",
+                            "iriTemplate": {
+                                "mapping": {
+                                    "person": "5020c6ea-ca07-42d1-994f-d90b86703b1a"
+                                }
+                            }
+                        },
+                        "organization": {
+                            "href": "/organizations/84d36093-b8bc-47ad-bc8a-a043b3e301a9",
+                            "iriTemplate": {
+                                "mapping": {
+                                    "organization": "84d36093-b8bc-47ad-bc8a-a043b3e301a9"
+                                }
+                            }
+                        }
+                    },
+                    "_embedded": {
+                        "availableRoles": [
+                            "ORGANIZATION:ADMIN",
+                            "ORGANIZATION:ANALYTICS",
+                            "ORGANIZATION:EXPORT",
+                            "ORGANIZATION:READ_ONLY"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+
+Ce retour indique que :
+
+1. Il est membre de l'organisation 84d36093-b8bc-47ad-bc8a-a043b3e301a9
+2. Il possède le rôle ORGANIZATION:ADMIN, il est donc administrateur de l'organisation 84d36093-b8bc-47ad-bc8a-a043b3e301a9
+3. Il possède le rôle ORGANIZATION:AGENT, il est donc agent de l'organisation 84d36093-b8bc-47ad-bc8a-a043b3e301a9
+4. L'id d'utilisateur (5020c6ea-ca07-42d1-994f-d90b86703b1a) est différent de l'id de membre (b0e7e28f-5b91-4c73-875e-8f34aa03553a)
+5. Il est affilié avec une seule organisation
+6. Il a rejoint l'organisation le 27 février 2018.

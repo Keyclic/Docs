@@ -23,7 +23,5 @@ Type des notifications émises suivant les actions
 +------------------------------+-------------------------+------------------------------------------------------------------------+
 | Exportation des rapports     | Email                   | L'administrateur courant de la session                                 |
 +------------------------------+-------------------------+------------------------------------------------------------------------+
-| Modération d'une observation | Push smartphone         | Les administrateurs de l'application                                   |
+| Modération d'une observation | Push smartphone         | Les modérateurs                                                        |
 +------------------------------+-------------------------+------------------------------------------------------------------------+
-
-

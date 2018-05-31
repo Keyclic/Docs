@@ -54,9 +54,6 @@ L'utilisateur peut ensuite ajouter une ou plusieurs images à son observation :
 .. code-block:: bash
 
     POST /feedbacks/{feedback}/images
-
-Exemple :
-
 .. code-block:: json
 
     {
@@ -68,40 +65,33 @@ Pour plus d'informations sur l'envoi d'images, voir :ref:`technical-files`.
 Rattachement d'une observation à une organisation
 -------------------------------------------------
 
-Le service Keyclic ne se contente pas de recueillir des observations : elle les fait ensuite remonter, sous la forme de :ref:`reports`, aux organisations concernées, qui en assureront le traitement. Toute observation doit donc être, dans la mesure du possible, remontée à une organisation sous la forme d'un rapport. Pour cela, quatre cas de figure peuvent se présenter :
+Le service Keyclic ne se contente pas de recueillir des observations : elle les fait ensuite remonter, sous la forme de :ref:`reports`, aux organisations concernées, qui en assureront le traitement. Toute observation doit donc être, dans la mesure du possible, remontée à une organisation sous la forme d'un rapport. Pour cela, trois cas de figure peuvent se présenter :
 
-- Si la position géographique de l'observation ne correspond à aucune zone de responsabilité, alors l'API retournera une erreur 409 et aucune organisation ne recevra de rapport sur cette observation.
+- Si la position géographique de l'observation ne correspond à aucune zone de responsabilité, alors aucune organisation ne recevra de rapport sur cette observation.
 
 - Si la position géographique de l'observation se trouve dans une zone de responsabilité définie par une organisation, alors le rapport de l'observation est automatiquement remonté à l'organisation en question.
 
 - Si la position géographique de l'observation se trouve sur deux (ou plus) zones de responsabilité appartenant à deux (ou plus) organisations différentes, mais que l'utilisateur n'a pas précisé de catégorie, alors plusieurs rapports sont générés et remontés à toutes les organisations concernées. La première organisation qui acceptera le rapport pourra en effectuer le traitement.
 
-.. _feedbacks-lifecyle:
+.. _feedbacks-lifecycle:
 
 Modération et cycle de vie d'une observation
 --------------------------------------------
 
-Après qu'un utilisateur a créé une nouvelle observation, celle-ci possède le statut PENDING_REVIEW : en attente de modération. Elle devra être validée par un *administrateur d'application* (sauf cas particulier d'une :ref:`feedbacks-organization-member`).
+Après qu'un utilisateur a créé une nouvelle observation, celle-ci possède le statut PENDING_REVIEW : en attente de modération. Elle devra être validée par un *modérateur* (sauf cas particulier d'une :ref:`feedbacks-organization-member`).
 
 Voir : :ref:`technical-states`
 
-Un *administrateur d'application* valide une observation avec le endpoint :
+Un *modérateur* valide une observation avec le endpoint :
 
 .. code-block:: bash
 
-    POST /feedbacks/{feedback}/state
-
-Exemple :
-
+    PATCH /feedbacks/{feedback}/state
 .. code-block:: json
 
-    [
-        {
-            "op":"replace",
-            "path":"transition",
-            "value":"accept"
-        }
-    ]
+    {
+        "transition": "accept"
+    }
 
 L'observation prend alors le statut DELIVERED et un rapport est créé sur cette observation.
 
@@ -111,26 +101,22 @@ Pour refuser une observation :
 
 .. code-block:: bash
 
-    [
-        {
-            "op":"replace",
-            "path":"transition",
-            "value":"refuse"
-        }
-    ]
+    {
+            "transition":"refuse"
+    }
 
 L'observation prend alors le statut REFUSED.
 
 .. _feedbacks-organization-member:
 
-Observation postée par un membre d'organisation
------------------------------------------------
+Observation postée par un agent
+-------------------------------
 
-Les membres (:ref:`members`) peuvent poster des observations de la même façon que tous les utilisateurs. Cependant, si un membre d'organisation fournit, dans sa requête, l'identifiant de son organisation, il entre dans le mode de fonctionnement que nous avons appelé le "mode pro", et son observation pourra être traitée différemment :
+Les agents (:ref:`agents`) peuvent poster des observations de la même façon que tous les utilisateurs. Cependant, un agent peut entrer dans le mode de fonctionnement que nous avons appelé le "mode pro". Pour cela, il suffit de mettre dans le body de la requête, le champ "proMode" avec comme valeur "true". Ainsi, son observation pourra être traitée différemment :
 
 - Si son observation est positionnée dans une zone de responsabilité régie par son organisation, alors cette observation est automatiquement validée (sans passer par l'étape de modération) et le rapport créé qui en découle est automatiquement accepté.
 
-- Si son observation n'est pas positionnée dans une zone de responsabilité régie par son organisation, alors son observation est refusée et une erreur 409 est retournée.
+- Si son observation n'est pas positionnée dans une zone de responsabilité régie par son organisation, alors son observation est refusée.
 
 .. _feedbacks-normal-mode-vs-pro-mode:
 
@@ -141,12 +127,12 @@ Sur la figure ci-dessous, le rectangle A représente une zone de responsabilité
 
 Chaque point représente une observation effectuée **par un utilisateur membre de l'organisation B**.
 
-En bleu : observations effectuées en passant l'identifiant de son organisation (correspond au "mode pro").
-En rouge : observations effectuées sans passer l'identifiant de son organisation. Ces observations sont donc identiques à celle d'un utilisateur lambda.
+En bleu : observations effectuées en "mode pro".
+En rouge : observations effectuées sans "mode pro". Ces observations sont donc identiques à celle d'un utilisateur lambda.
 
 .. image:: images/feedback_by_place.png
 
-.. _feedbacks-lifecyle-overview:
+.. _feedbacks-lifecycle-overview:
 
 Résumé du cycle de vie d'une observation
 ----------------------------------------
@@ -170,7 +156,7 @@ Plusieurs critères permettent de filtrer les observations.
 
 **Par statut : paramètre state**
 
-Par exemple, pour filtrer les observations en attente de validation, un administrateur d'application effectuera la requête :
+Par exemple, pour filtrer les observations en attente de validation, un modérateur effectuera la requête :
 
 .. code-block:: bash
 
@@ -231,10 +217,6 @@ Les utilisateurs de la communauté peuvent commenter une observation :
 .. code-block:: bash
 
     POST /feedbacks/{feedback}/comments
-
-
-Exemple :
-
 .. code-block:: json
 
     {
