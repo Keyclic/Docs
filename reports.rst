@@ -3,9 +3,9 @@
 Rapports
 ========
 
-Chaque fois qu'une observation est acceptée, après validation par un administrateur de l'application sauf dans certains cas où la modération est automatique (voir : :ref:`feedbacks-lifecyle`), un rapport est créé.
+Chaque fois qu'une observation est acceptée, après validation par un administrateur de l'application sauf dans certains cas où la modération est automatique (voir : :ref:`feedbacks-lifecycle`), un rapport est créé.
 
-Un administrateur d'organisation récupère les rapports concernant son organisation avec :
+Un administrateur récupère les rapports concernant son organisation avec :
 
 .. code-block:: bash
 
@@ -38,13 +38,9 @@ Par exemple, pour passer du statut NEW au statut ACCEPTED, l'administrateur de l
 
 .. code-block:: json
 
-    [
-      {
-        "op":"replace",
-        "path":"/transition",
-        "value":"accept"
-      }
-    ]
+    {
+        "transition":"accept"
+    }
 
 Un rapport ne peut être clôturé (statut CLOSED) que si :
 
@@ -66,14 +62,11 @@ Pour récupérer l'ensemble des interventions associées à un rapport :
 
 **Création et modification d'une intervention**
 
-Un administrateur d'organisation crée une intervention sur un rapport en effectuant la requête :
+Un administrateur crée une intervention sur un rapport en effectuant la requête :
 
 .. code-block:: bash
 
     POST /operations
-
-Exemple :
-
 .. code-block:: json
 
     {
@@ -89,9 +82,6 @@ Une ou plusieurs images peuvent être ajoutées à l'intervention :
 .. code-block:: bash
 
     POST /operations/{operation}/images
-
-Exemple :
-
 .. code-block:: json
 
     {
@@ -103,18 +93,11 @@ La description d'une intervention peut être modifiée avec la requête :
 .. code-block:: bash
 
     PATCH /operations/{operation}
-
-dont le body est :
-
 .. code-block:: json
 
-    [
-      {
-        "op":"replace",
-        "path":"/description",
-        "value":"Nouvelle description"
-      }
-    ]
+    {
+        "description":"Nouvelle description"
+    }
 
 **Assignation**
 
@@ -123,9 +106,6 @@ Pour assigner une intervention à un membre de l'organisation, l'administrateur 
 .. code-block:: bash
 
     POST /operations/{operation}/assign
-
-dont le body est :
-
 .. code-block:: bash
 
     {
@@ -141,18 +121,11 @@ Une fois assignée, l'intervention peut être acceptée ou refusée, soit par la
 .. code-block:: bash
 
     PATCH /operations/{operation}/state
-
-dont le body est :
-
 .. code-block:: json
 
-    [
-      {
-        "op":"replace",
-        "path":"/transition",
-        "value":"accept"
-      }
-    ]
+    {
+        "transition":"accept"
+    }
 
 **Intervention en cours et clôture**
 
@@ -169,9 +142,6 @@ Il est possible de commenter une intervention :
 .. code-block:: bash
 
     POST /operations/{operation}/comments
-
-dont le body est :
-
 .. code-block:: json
 
     {
@@ -186,7 +156,7 @@ Pour récupérer tous les commentaires d'une intervention :
 
 **Logs d'une intervention**
 
-Un administrateur d'organisation peut consulter l'historique d'une intervention avec :
+Un administrateur peut consulter l'historique d'une intervention avec :
 
 .. code-block:: bash
 
@@ -206,11 +176,6 @@ Pour déléguer un rapport, un administrateur de l'organisation effectue la requ
 .. code-block:: bash
 
     POST /organizations/{organization}/delegates
-
-où {organization} est l'identifiant de l'organisation **courante** (dont le membre est administrateur).
-
-Exemple :
-
 .. code-block:: json
 
     {
@@ -218,7 +183,7 @@ Exemple :
       "organization":"a31d9ab7-9476-45f2-8cc7-033bf40bbcfa"
     }
 
-où a31d9ab7-9476-45f2-8cc7-033bf40bbcfa est l'identifiant de l'organisation à laquelle le rapport est délégué.
+où {organization} est l'identifiant de l'organisation **courante** (dont le membre est administrateur), et a31d9ab7-9476-45f2-8cc7-033bf40bbcfa est l'identifiant de l'organisation à laquelle le rapport est délégué.
 
 Déléguer un rapport ne signifie pas que ce rapport est simplement transmis. En effet, le rapport initial n'est pas modifié ni transféré, mais un nouveau rapport "enfant" est créé et attribué à l'organisation partenaire. Ce rapport enfant sera traité par l'organisation partenaire de la même façon que le rapport initial : changements de statuts, interventions, assignations des interventions, etc, jusqu'à sa clôture.
 
@@ -229,7 +194,7 @@ L'organisation partenaire peut elle-même déléguer le rapport à l'une de ses 
 Export des rapports
 -------------------
 
-Un administrateur d'organisation peut exporter tous les rapports de son organisation au format Excel :
+Un administrateur peut exporter tous les rapports de son organisation au format Excel :
 
 .. code-block:: bash
 

@@ -49,7 +49,7 @@ Exemple :
 
     GET /feedbacks
 
-Le endpoint ci-dessus retourne toutes les observations. Son url véritable est 
+Le endpoint ci-dessus retourne toutes les observations. Son URL véritable est
 
 .. code-block:: bash
 
@@ -57,7 +57,7 @@ Le endpoint ci-dessus retourne toutes les observations. Son url véritable est
 
 mais pour des raisons de concision, dans cette documentation, nous ne préciserons jamais le protocole ni le nom de domaine.
 
-Paramètres d'url
+Paramètres d'URL
 ~~~~~~~~~~~~~~~~
 
 Dans cette documentation, les variables d'URI (exemples : identifiant d'une ressource, numéro de page, etc) seront exprimés entre accolades. Par exemple, pour récupérer une observation (feedback) donnée :
@@ -72,7 +72,7 @@ Dans l'API Keyclic, conformément aux principes d'architecture REST, les paramè
 
     GET /feedbacks?page={page}
 
-Par ailleurs, pour une meilleure lisibilité, les paramètres d'uri seront écrits tels quels dans cette documentation, et non sous leur forme url encodée :
+Par ailleurs, pour une meilleure lisibilité, les paramètres d'URI seront écrits tels quels dans cette documentation, et non sous leur forme URL encodée :
 
 .. code-block:: bash
 
@@ -132,7 +132,7 @@ Tous les endpoints permettant de récupérer une collection de ressources peuven
 
     POST /feedbacks?page=2&limit=5
 
-Par défaut, *page* a la valeur 1 et *limit* a la valeur 10. Ainsi le endpoint 
+Par défaut, *page* a la valeur 1 et *limit* a la valeur 10. Ainsi le endpoint
 
 .. code-block:: bash
 
@@ -175,9 +175,9 @@ Dans cette documentation, nous ne rappellerons pas systématiquement qu'il est p
 Modification de ressources avec la méthode PATCH
 ------------------------------------------------
 
-Dans l'API Keyclic, la modification des ressources s'effectue avec la méthode `PATCH <https://tools.ietf.org/html/rfc5789>`_. Contrairement à la méthode `PUT <https://tools.ietf.org/html/rfc7231#section-4.3.4>`_, la méthode `PATCH <https://tools.ietf.org/html/rfc5789>`_ permet de modifier une seule propriété, ou une partie seulement des propriétés, d'une ressource, sans qu'il soit nécessaire d'en envoyer une représentation complète. Le format utilisé pour la description du patch est `JSON Patch <https://tools.ietf.org/html/rfc6902>`_. La seule opération acceptée par l'API lors d'un `PATCH <https://tools.ietf.org/html/rfc5789>`_ est l'opération *replace*. 
+Dans l'API Keyclic, la modification des ressources s'effectue avec la méthode `PATCH <https://tools.ietf.org/html/rfc5789>`_. Contrairement à la méthode `PUT <https://tools.ietf.org/html/rfc7231#section-4.3.4>`_, la méthode `PATCH <https://tools.ietf.org/html/rfc5789>`_ permet de modifier une seule propriété, ou une partie seulement des propriétés, d'une ressource, sans qu'il soit nécessaire d'en envoyer une représentation complète. Le format utilisé pour la description du patch est `JSON Patch <https://tools.ietf.org/html/rfc6902>`_.
 
-À titre d'exemple, voici la modification de la popriété *billingEmailAddress* d'une organisation :
+À titre d'exemple, voici la modification de la propriété *billingEmailAddress* d'une organisation :
 
 .. code-block:: bash
 
@@ -185,13 +185,9 @@ Dans l'API Keyclic, la modification des ressources s'effectue avec la méthode `
 
 .. code-block:: json
 
-    [
-	    {
-		    "op":"replace",
-		    "path":"/billingEmailAddress",
-		    "value":"test@test.com"
-	    }
-    ]
+    {
+		    "billingEmailAddress":"test@test.com"
+	  }
 
 .. _technical-errors:
 
@@ -209,14 +205,14 @@ L'exemple suivant montre un retour d'erreur de validation. Le champ *path* indiq
 .. code-block:: json
 
         {
-           "@context":"https:\/\/github.com\/blongden\/vnd.error",
+           "@context":"https://github.com/blongden/vnd.error",
            "@type":"ValidationError",
            "message":"Validation failed.",
            "total":1,
            "_embedded":{
               "errors":[
                  {
-                    "@context":"https:\/\/github.com\/blongden\/vnd.error",
+                    "@context":"https://github.com/blongden/vnd.error",
                     "@type":"Error",
                     "message":"Cette valeur ne doit pas \u00eatre vide.",
                     "path":"reporter"
@@ -266,16 +262,11 @@ Par exemple, pour accepter le rapport ci-dessus :
 
 .. code-block:: json
 
-    [
-	    {
-		    "op":"replace",
-		    "path":"transition",
-		    "value":"accept"
-		
-	    }
-    ]
+    {
+		    "transition":"accept"
+	  }
 
-La réponse nous informe que le rapport possède désormais le statut ACCEPTED, et que les actions possibes sont désormais *refuse*, *hold* et *progress* :
+La réponse nous informe que le rapport possède désormais le statut ACCEPTED, et que les actions possibles sont désormais *refuse*, *hold* et *progress* :
 
 .. code-block:: json
 
@@ -293,4 +284,3 @@ La réponse nous informe que le rapport possède désormais le statut ACCEPTED, 
     }
 
 Les actions et status possibles pour chaque type de ressources sont décrits dans les sections idoines de cette documentation.
-

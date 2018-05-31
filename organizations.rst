@@ -6,7 +6,7 @@ Organisations
 Dans l'application Keyclic, une organisation est une entité telle que corporation, entreprise, département d'entreprise, association, école, institution, etc à laquelle peuvent être rattachées les observations faites par les utilisateurs.
 
 Les :ref:`members-no-roles` sont des utilisateurs du service Keyclic rattachés à une organisation.
-Un ou plusieurs membres d'une organisation peuvent en être les administrateurs (voir : :ref:`members-organization-admin`). Une organisation possède au minimum un administrateur d'organisation.
+Un ou plusieurs membres d'une organisation peuvent en être les administrateurs (voir : :ref:`members-organization-admin`). Une organisation possède au minimum un administrateur.
 
 Les :ref:`members-organization-admin` peuvent définir les champs d'intervention de leur organisation en créant des catégories (exemple : voirie, transports, etc) et des zones de responsabilité.
 Quand un utilisateur crée une nouvelle observation, les coordonnées géographiques de cette observation sont toujours automatiquement précisées.
@@ -23,9 +23,6 @@ Tout utilisateur peut créer une nouvelle organisation :
 .. code-block:: bash
 
     POST /organizations
-
-Exemple :
-
 .. code-block:: json
 
     {
@@ -58,9 +55,6 @@ Pour ajouter un nouveau membre à une organisation :
 .. code-block:: bash
 
     POST /organizations/{organization}/members
-
-Exemple :
-
 .. code-block:: json
 
     {
@@ -81,21 +75,18 @@ Pour retirer un membre d'une organisation, un administrateur de cette organisati
 
     DELETE /organizations/{organization}/members/{member}
 
-Pour plus d'informations sur le rôle ORGANIZATION:ADMIN et ses privilèges, voir :ref:`users-organization-admin`.
+Pour plus d'informations sur le rôle ORGANIZATION:ADMIN et ses privilèges, voir :ref:`members-organization-admin`.
 
 .. _organizations-places:
 
 Gestion des zones de responsabilité
 -----------------------------------
 
-Un administrateur d'organisation peut créer des zones de responsabilité, correspondant aux lieux sur lesquels cette organisation intervient :
+Un administrateur peut créer des zones de responsabilité, correspondant aux lieux sur lesquels cette organisation intervient :
 
 .. code-block:: bash
 
     POST /organizations/{organization}/places
-
-body :
-
 .. code-block:: json
 
     {
@@ -156,15 +147,12 @@ La requête ci-dessus peut-être filtrée sur une organisation donnée et/ou sur
 Gestion des catégories
 ----------------------
 
-Les catégories sont les secteurs d'activité d'une organisation. Un administrateur d'organisation peut créer une nouvelle catégorie en lui donnant un nom, une couleur et une icône. L'icône sera choisie dans  `le jeu d'icônes de Font Awesome <http://fontawesome.io/icons/>`_.
+Les catégories sont les secteurs d'activité d'une organisation. Un administrateur peut créer une nouvelle catégorie en lui donnant un nom, une couleur et une icône. L'icône sera choisie dans  `le jeu d'icônes de Font Awesome <http://fontawesome.io/icons/>`_.
 
 
 .. code-block:: bash
 
     POST /organizations/{organization}/categories
-
-Exemple :
-
 .. code-block:: json
 
     {
@@ -199,9 +187,6 @@ Pour ajouter un nouveau partenaire à l'organisation, un administrateur de l'org
 .. code-block:: bash
 
     POST /organizations/{organization}/relationships
-
-Exemple :
-
 .. code-block:: json
 
     {
@@ -215,4 +200,3 @@ Pour récupérer les partenaires d'une organisation :
     GET /organizations/{organization}/relationships
 
 Cette requête ne peut être exécutée que par un administrateur de l'organisation.
-

@@ -17,9 +17,6 @@ Un nouveau compte utilisateur est créé avec la requête :
 .. code-block:: bash
 
     POST /security/register
-
-Exemple :
-
 .. code-block:: json
 
     {
@@ -41,9 +38,6 @@ La connexion s'effectue avec la requête :
 .. code-block:: bash
 
     POST /security/login
-
-Exemple :
-
 .. code-block:: json
 
     {
@@ -77,7 +71,7 @@ Toutes les requêtes à l'API Keyclic nécessitent l'envoi d'un accessToken dans
 
 - création d'un compte (POST /security/register)
 - login (POST /security/login)
-- demande de changement de mot de passe
+- demande de changement de mot de passe (POST /security/password/change-request)
 - changement de mot de passe (POST /security/password/change/{changePasswordToken})
 
 .. _authentication-password-change:
@@ -92,9 +86,6 @@ Il effectue d'abord une demande de changement de mot passe :
 .. code-block:: bash
 
     POST /security/password/change-request
-
-Exemple :
-
 .. code-block:: json
 
     {
@@ -107,16 +98,13 @@ Cette requête envoie un email à l'utilisateur contenant un lien se terminant p
 
     https://domain.com/#/password-reset/jrtVqBLxxoSA0c2hpsOBN-JQGQHGN3YXsKPMG1PWWWA
 
-Dans le lien ci-dessus, jrtVqBLxxoSA0c2hpsOBN-JQGQHGN3YXsKPMG1PWWWA est le jeton de changement de mot de passe. La portion d'url *https://domain.com/#/password-reset/* dépend de la configuration de l'application.
+Dans le lien ci-dessus, jrtVqBLxxoSA0c2hpsOBN-JQGQHGN3YXsKPMG1PWWWA est le jeton de changement de mot de passe. La portion d'URL *https://domain.com/#/password-reset/* dépend de la configuration de l'application.
 
 L'utilisateur peut ensuite changer son mot de passe avec :
 
 .. code-block:: bash
 
-    POST /security/password/change/-VtYMG0VnU8vHJdKUC_AqA_XpypI9kd8OmOvWj4NYMw
-
-Exemple :
-
+    POST /security/password/change/jrtVqBLxxoSA0c2hpsOBN-JQGQHGN3YXsKPMG1PWWWA
 .. code-block:: json
 
     {
@@ -128,7 +116,7 @@ Exemple :
 Modification des données utilisateur
 ------------------------------------
 
-Pour les données autres que le mot de passe, l'utilisateur requêtera sur le endpoint :
+Pour les données autres que le mot de passe, l'utilisateur enverra une requête sur le endpoint :
 
 .. code-block:: bash
 
@@ -140,12 +128,8 @@ Par exemple, pour modifier son nom :
 
 .. code-block:: json
 
-    [
-      {
-        "op":"replace",
-        "path":"/familyName",
-        "value":"Nom de famille"
-      }
-    ]
+    {
+        "familyName": "Nom de famille"
+    }
 
 Les champs qu'un utilisateur peut modifier sont : son nom (familyName), son prénom (givenName), sa photo (image), son travail (job), son adresse email (email).
