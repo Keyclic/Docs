@@ -23,6 +23,7 @@ Tout utilisateur peut créer une nouvelle organisation :
 .. code-block:: bash
 
     POST /organizations
+
 .. code-block:: json
 
     {
@@ -55,6 +56,7 @@ Pour ajouter un nouveau membre à une organisation :
 .. code-block:: bash
 
     POST /organizations/{organization}/members
+
 .. code-block:: json
 
     {
@@ -87,6 +89,7 @@ Un administrateur peut créer des zones de responsabilité, correspondant aux li
 .. code-block:: bash
 
     POST /organizations/{organization}/places
+
 .. code-block:: json
 
     {
@@ -153,6 +156,7 @@ Les catégories sont les secteurs d'activité d'une organisation. Un administrat
 .. code-block:: bash
 
     POST /organizations/{organization}/categories
+
 .. code-block:: json
 
     {
@@ -187,6 +191,7 @@ Pour ajouter un nouveau partenaire à l'organisation, un administrateur de l'org
 .. code-block:: bash
 
     POST /organizations/{organization}/relationships
+    
 .. code-block:: json
 
     {

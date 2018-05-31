@@ -41,6 +41,7 @@ L’utilisateur qui crée une nouvelle organisation en devient automatiquement m
 Aux permissions et aux droits des « Membres d’organisation » s’ajoute les suivants :
 
 - Ajouter de nouveaux membres à une organisation
+- Modifier les roles des membres
 - Gérer les catégories d’une organisation
 - Gérer les zones de responsabilité d’une organisation
 - Gérer les partenaires d’une organisation
@@ -62,7 +63,6 @@ Agent
 Aux permissions et aux droits des « Membres d’organisation » s’ajoute les suivants :
 
 - Activer le Mode Pro (cf infra: Observation postée en Mode Pro)
-- De remonter par défaut des observations privées
 
 **Note : Un utilisateur ne peut être « Agent » que d’une seule organisation et une organisation peut avoir plusieurs « Agents ».**
 

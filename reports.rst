@@ -67,6 +67,7 @@ Un administrateur crée une intervention sur un rapport en effectuant la requêt
 .. code-block:: bash
 
     POST /operations
+
 .. code-block:: json
 
     {
@@ -82,6 +83,7 @@ Une ou plusieurs images peuvent être ajoutées à l'intervention :
 .. code-block:: bash
 
     POST /operations/{operation}/images
+
 .. code-block:: json
 
     {
@@ -93,6 +95,7 @@ La description d'une intervention peut être modifiée avec la requête :
 .. code-block:: bash
 
     PATCH /operations/{operation}
+
 .. code-block:: json
 
     {
@@ -121,6 +124,7 @@ Une fois assignée, l'intervention peut être acceptée ou refusée, soit par la
 .. code-block:: bash
 
     PATCH /operations/{operation}/state
+
 .. code-block:: json
 
     {
@@ -142,6 +146,7 @@ Il est possible de commenter une intervention :
 .. code-block:: bash
 
     POST /operations/{operation}/comments
+
 .. code-block:: json
 
     {
@@ -176,6 +181,7 @@ Pour déléguer un rapport, un administrateur de l'organisation effectue la requ
 .. code-block:: bash
 
     POST /organizations/{organization}/delegates
+
 .. code-block:: json
 
     {

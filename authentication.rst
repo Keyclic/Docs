@@ -17,6 +17,7 @@ Un nouveau compte utilisateur est créé avec la requête :
 .. code-block:: bash
 
     POST /security/register
+
 .. code-block:: json
 
     {
@@ -38,6 +39,7 @@ La connexion s'effectue avec la requête :
 .. code-block:: bash
 
     POST /security/login
+
 .. code-block:: json
 
     {
@@ -86,6 +88,7 @@ Il effectue d'abord une demande de changement de mot passe :
 .. code-block:: bash
 
     POST /security/password/change-request
+
 .. code-block:: json
 
     {
@@ -105,6 +108,7 @@ L'utilisateur peut ensuite changer son mot de passe avec :
 .. code-block:: bash
 
     POST /security/password/change/jrtVqBLxxoSA0c2hpsOBN-JQGQHGN3YXsKPMG1PWWWA
+
 .. code-block:: json
 
     {

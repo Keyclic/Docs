@@ -54,6 +54,7 @@ L'utilisateur peut ensuite ajouter une ou plusieurs images à son observation :
 .. code-block:: bash
 
     POST /feedbacks/{feedback}/images
+
 .. code-block:: json
 
     {
@@ -87,6 +88,7 @@ Un *modérateur* valide une observation avec le endpoint :
 .. code-block:: bash
 
     PATCH /feedbacks/{feedback}/state
+
 .. code-block:: json
 
     {
@@ -217,6 +219,7 @@ Les utilisateurs de la communauté peuvent commenter une observation :
 .. code-block:: bash
 
     POST /feedbacks/{feedback}/comments
+    
 .. code-block:: json
 
     {
