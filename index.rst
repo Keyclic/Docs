@@ -7,6 +7,8 @@ Documentation du service Keyclic
 
 Keyclic est une application de remontée et de traitement d'observations. Elle permet à ses utilisateurs de signaler des dysfonctionnements, des problèmes techniques ou tout autre type d'information, et de remonter ces signalements aux organisations concernées.
 
+`Documentation is available in english language <http://docs.keyclic.com/en/master>`_
+
 Sommaire
 --------
 
