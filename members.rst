@@ -40,11 +40,11 @@ L’utilisateur qui crée une nouvelle organisation en devient automatiquement m
 
 Aux permissions et aux droits des « Membres d’organisation » s’ajoute les suivants :
 
-- Ajouter de nouveaux membres à une organisation
+- Ajouter de nouveaux membres à son organisation
 - Modifier les roles des membres
-- Gérer les catégories d’une organisation
-- Gérer les zones de responsabilité d’une organisation
-- Gérer les partenaires d’une organisation
+- Gérer les catégories de son organisation
+- Gérer les zones de responsabilité de son organisation
+- Gérer les partenaires de son organisation
 - Consulter et gérer les rapports reçus et les opérations liées à ces rapports
 
 Voir : :ref:`organizations`
