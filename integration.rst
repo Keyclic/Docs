@@ -20,7 +20,7 @@ Les Webhooks peuvent avoir de nombreuses applications, telles que :
 Création et configuration de webhooks
 -----------------------------------------
 
-Les webhooks peuvent être crée sur demande auprès de notre service. Il est possible de créer autant de
+Les webhooks peuvent être crées sur demande auprès de notre service. Il est possible de créer autant de
 webhooks que nécessaire pour une organisation (un webhook par événement et/ou plusieurs webhooks pour un même événement).
 
 Un webhook est composé de l'événement pour lequel vous souhaitez être notifié et d'une URL à
@@ -29,7 +29,7 @@ laquelle sera envoyée la notification.
 Types d'événements
 ------------------
 
-Ceci est une liste de tous les types d'événements pouvant être configuré :
+Ceci est une liste de tous les types d'événements pouvant être configurés :
 
 +------------------------------+-----------------------------------------------------------+
 | Événement                    | Description                                               |
@@ -49,10 +49,10 @@ Ceci est une liste de tous les types d'événements pouvant être configuré :
 Recevoir une notification de webhook
 ------------------------------------
 
-Une notification de webhook est envoyée en tant que JSON dans le corps d'une requête HTTP POST sur l'url configurée dans le webhook,
-elle est composé du nom de l'événement (event) et de l'object concerné par l'événement (payload), l'object pouvant varier en fonction de l'événement.
+Une notification de webhook est envoyée au format JSON dans le corps d'une requête HTTP POST sur l'url configurée dans le webhook,
+elle est composée du nom de l'événement (event) et de l'object concerné par l'événement (payload), l'object pouvant varier en fonction de l'événement.
 
-*Exemple de notification de webhook pouvant être recu lors de la création d'un nouveau rapport (Exemple partiel).*
+*Exemple de notification de webhook pouvant être reçue lors de la création d'un nouveau rapport (Exemple partiel).*
 
 .. code-block:: json
 
