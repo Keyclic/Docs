@@ -24,3 +24,4 @@ Sommaire
     reports
     applications
     notifications
+    integration
