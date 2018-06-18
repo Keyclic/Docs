@@ -145,27 +145,27 @@ Le retour d'une collection contient les informations et liens nécessaires pour 
 .. code-block:: json
 
     {
-      "page": 2,
-      "limit": 10,
-      "pages": 8,
-      "total": 72,
-      "_links": {
-        "self": {
-          "href": "/feedbacks?page=2&limit=10"
-        },
-        "first": {
-          "href": "/feedbacks?page=1&limit=10"
-        },
-        "last": {
-          "href": "/feedbacks?page=8&limit=10"
-        },
-        "next": {
-          "href": "/feedbacks?page=3&limit=10"
-        },
-        "previous": {
-          "href": "/feedbacks?page=1&limit=10"
+        "page": 2,
+        "limit": 10,
+        "pages": 8,
+        "total": 72,
+        "_links": {
+            "self": {
+                "href": "/feedbacks?page=2&limit=10"
+            },
+            "first": {
+                "href": "/feedbacks?page=1&limit=10"
+            },
+            "last": {
+                "href": "/feedbacks?page=8&limit=10"
+            },
+            "next": {
+                "href": "/feedbacks?page=3&limit=10"
+            },
+            "previous": {
+                "href": "/feedbacks?page=1&limit=10"
+            }
         }
-      }
     }
 
 Dans cette documentation, nous ne rappellerons pas systématiquement qu'il est possible de paginer avec les filtres *page* et *limit*, ceux-ci étant communs à tous les endpoints retournant une collection.
@@ -186,8 +186,8 @@ Dans l'API Keyclic, la modification des ressources s'effectue avec la méthode `
 .. code-block:: json
 
     {
-		    "billingEmailAddress":"test@test.com"
-	  }
+        "billingEmailAddress":"test@test.com"
+    }
 
 .. _technical-errors:
 
@@ -204,22 +204,22 @@ L'exemple suivant montre un retour d'erreur de validation. Le champ *path* indiq
 
 .. code-block:: json
 
-        {
-           "@context":"https://github.com/blongden/vnd.error",
-           "@type":"ValidationError",
-           "message":"Validation failed.",
-           "total":1,
-           "_embedded":{
-              "errors":[
-                 {
-                    "@context":"https://github.com/blongden/vnd.error",
-                    "@type":"Error",
-                    "message":"Cette valeur ne doit pas \u00eatre vide.",
-                    "path":"reporter"
-                 }
-              ]
-           }
+    {
+        "@context": "https://github.com/blongden/vnd.error",
+        "@type": "ValidationError",
+        "message": "Validation failed.",
+        "total": 1,
+        "_embedded": {
+            "errors": [
+                {
+                    "@context": "https://github.com/blongden/vnd.error",
+                    "@type": "Error",
+                    "message": "Cette valeur ne doit pas \u00eatre vide.",
+                    "path": "reporter"
+                }
+            ]
         }
+    }
 
 .. _technical-states:
 
@@ -239,15 +239,15 @@ Réponse (partielle) :
 .. code-block:: json
 
     {
-      "type": "Report",
-      "id": "cb7118b5-a821-4cf2-9475-0c0d0efdb8d0",
-      "state": "NEW",
-      "_embedded": {
-        "stateTransitions": [
-          "accept",
-          "refuse"
-        ]
-      }
+        "type": "Report",
+        "id": "cb7118b5-a821-4cf2-9475-0c0d0efdb8d0",
+        "state": "NEW",
+        "_embedded": {
+            "stateTransitions": [
+                "accept",
+                "refuse"
+            ]
+        }
     }
 
 Dans l'exemple ci-dessus, le rapport est en statut NEW et les actions possibles sur son statut sont *accept* et *refuse*.
@@ -263,24 +263,24 @@ Par exemple, pour accepter le rapport ci-dessus :
 .. code-block:: json
 
     {
-		    "transition":"accept"
-	  }
+        "transition": "accept"
+    }
 
 La réponse nous informe que le rapport possède désormais le statut ACCEPTED, et que les actions possibles sont désormais *refuse*, *hold* et *progress* :
 
 .. code-block:: json
 
     {
-      "type": "Report",
-      "id": "32219286-528a-4f97-b81e-fe7a8cb85707",
-      "state": "ACCEPTED",
-      "_embedded": {
-        "stateTransitions": [
-          "refuse",
-          "hold",
-          "progress"
-        ]
-      }
+        "type": "Report",
+        "id": "32219286-528a-4f97-b81e-fe7a8cb85707",
+        "state": "ACCEPTED",
+        "_embedded": {
+            "stateTransitions": [
+                "refuse",
+                "hold",
+                "progress"
+            ]
+        }
     }
 
 Les actions et status possibles pour chaque type de ressources sont décrits dans les sections idoines de cette documentation.
