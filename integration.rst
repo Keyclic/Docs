@@ -6,30 +6,31 @@ Intégration
 Webhooks
 --------
 
-Au contraire d’une API qui requiert que vous l’interrogiez en continu, les Webhooks sont un moyen d’appeler
-une application tierce (un service web) lorsqu’un événement défini se produit dans le service Keyclic.
+À la différence d'une API qui requiert des interrogations en continu, le service Keyclic propose des webhooks
+lorsque certains événements se produisent (voir la liste plus bas).
 
-C’est un moyen très efficace de recevoir des notifications en s’affranchissant d’une vérification continuelle.
+C’est un moyen simple et efficace d'appeler un service ou une application tierce afin de recevoir des notifications
+et de s’affranchir d’une vérification continuelle.
 
-Les Webhooks peuvent avoir de nombreuses applications, telles que :
+Les Webhooks peuvent avoir de nombreux usages, telles que :
 
-    - collecter les rapports créés pour votre data-warehouse
-    - synchroniser les rapports et opérations pour votre GMAO
-    - envoyer des notifications
+    - collecter les rapports créés pour votre data-warehouse,
+    - synchroniser les rapports et opérations avec votre SI (ex: GMAO, ...),
+    - envoyer des notifications.
 
 Création et configuration de webhooks
 -----------------------------------------
 
-Les webhooks peuvent être crées sur demande auprès de notre service. Il est possible de créer autant de
-webhooks que nécessaire pour une organisation (un webhook par événement et/ou plusieurs webhooks pour un même événement).
+Les webhooks peuvent être crées sur demande auprès de notre service.
 
 Un webhook est composé de l'événement pour lequel vous souhaitez être notifié et d'une URL à
 laquelle sera envoyée la notification.
 
+Plusieurs webhooks pour chaque type d'événements peuvent être créés de façon illimitée
+(plusieurs webhooks peuvent être créés pour un type d'événement particulier).
+
 Types d'événements
 ------------------
-
-Ceci est une liste de tous les types d'événements pouvant être configurés :
 
 +------------------------------+-----------------------------------------------------------+
 | Événement                    | Description                                               |
@@ -45,14 +46,11 @@ Ceci est une liste de tous les types d'événements pouvant être configurés :
 | **operation_removed**        | Suppression d'une intervention                            |
 +------------------------------+-----------------------------------------------------------+
 
+Réception d'une notification de webhook
+---------------------------------------
 
-Recevoir une notification de webhook
-------------------------------------
-
-Une notification de webhook est envoyée au format JSON dans le corps d'une requête HTTP POST sur l'url configurée dans le webhook,
-elle est composée du nom de l'événement (event) et de l'object concerné par l'événement (payload), l'object pouvant varier en fonction de l'événement.
-
-*Exemple de notification de webhook pouvant être reçue lors de la création d'un nouveau rapport (Exemple partiel).*
+Une notification de webhook est envoyée au format JSON dans le corps d'une requête HTTP POST sur l'url configurée dans le webhook.
+Elle est composée du nom de l'événement (event) et de l'object concerné par l'événement (payload), l'object pouvant varier en fonction de l'événement.
 
 .. code-block:: json
 
@@ -77,3 +75,4 @@ elle est composée du nom de l'événement (event) et de l'object concerné par 
         }
     }
 
+*Exemple de notification de webhook pouvant être reçue lors de la création d'un nouveau rapport (Exemple partiel).*
