@@ -50,9 +50,10 @@ Réception d'une notification de webhook
 ---------------------------------------
 
 Une notification de webhook est envoyée au format JSON dans le corps d'une requête HTTP POST sur l'url configurée dans le webhook.
-Elle est composée du nom de l'évènement (event) et de l'objet concerné par l'évènement (payload), l'objet pouvant varier en fonction de l'évènement.
+Elle est composée du nom de l'événement (event) et de la ressource concernée par l'événement (payload), la ressource pouvant varier en fonction de l'événement.
 
-note : L'objet concerné possède la même sérialisation que ce soit via une requête d'API ou lors d'une notification d'un webhook.
+note : La ressource possède la même sérialisation que ce soit via une requête d'API ou lors d'une notification d'un webhook,
+il est donc possible de parcourir les ressources liées ou les propriétés embarquées grâce à la représentation HAL de notre API.
 
 .. code-block:: json
 
