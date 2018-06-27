@@ -172,8 +172,8 @@ Dans cette documentation, nous ne rappellerons pas systématiquement qu'il est p
 
 .. _technical-patch:
 
-Modification de ressources avec la méthode PATCH
-------------------------------------------------
+Modification de ressources
+--------------------------
 
 Dans l'API Keyclic, la modification des ressources s'effectue avec la méthode `PATCH <https://tools.ietf.org/html/rfc5789>`_. Contrairement à la méthode `PUT <https://tools.ietf.org/html/rfc7231#section-4.3.4>`_, la méthode `PATCH <https://tools.ietf.org/html/rfc5789>`_ permet de modifier une seule propriété, ou une partie seulement des propriétés, d'une ressource, sans qu'il soit nécessaire d'en envoyer une représentation complète. Le format utilisé pour la description du patch est `JSON Patch <https://tools.ietf.org/html/rfc6902>`_.
 
