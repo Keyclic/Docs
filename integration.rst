@@ -26,8 +26,7 @@ Les webhooks peuvent être créés sur demande auprès de notre service.
 Un webhook est composé de l'évènement pour lequel vous souhaitez être notifié et d'une URL à
 laquelle sera envoyée la notification.
 
-Plusieurs webhooks pour chaque type d'évènements peuvent être créés de façon illimitée
-(plusieurs webhooks peuvent être créés pour un type d'événement particulier).
+Plusieurs webhooks peuvent être créés de façon illimitée pour chaque type d'évènements.
 
 Types d'évènements
 ------------------
