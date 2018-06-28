@@ -34,15 +34,15 @@ Types d'évènements
 +------------------------------+-----------------------------------------------------------+
 | Évènement                    | Description                                               |
 +==============================+===========================================================+
-| **reportCreated**           | Création d'un nouveau rapport                             |
+| **reportCreated**            | Création d'un nouveau rapport                             |
 +------------------------------+-----------------------------------------------------------+
-| **reportStateChanged**     | Changement de statut d'un rapport                         |
+| **reportStateChanged**       | Changement de statut d'un rapport                         |
 +------------------------------+-----------------------------------------------------------+
-| **operationCreated**        | Création d'une nouvelle intervention                      |
+| **operationCreated**         | Création d'une nouvelle intervention                      |
 +------------------------------+-----------------------------------------------------------+
-| **operationStateChanged**  | Changement de statut d'une intervention                   |
+| **operationStateChanged**    | Changement de statut d'une intervention                   |
 +------------------------------+-----------------------------------------------------------+
-| **operationRemoved**        | Suppression d'une intervention                            |
+| **operationRemoved**         | Suppression d'une intervention                            |
 +------------------------------+-----------------------------------------------------------+
 
 Réception d'une notification de webhook
