@@ -57,7 +57,7 @@ il est donc possible de parcourir les ressources liées ou les propriétés emba
 .. code-block:: json
 
     {
-        "event":"report_created",
+        "event": "reportCreated",
         "payload": {
             "type": "Report",
             "id": "b0e7e28f-5b91-4c73-875e-8f34aa03553a",
