@@ -34,15 +34,15 @@ Types d'évènements
 +------------------------------+-----------------------------------------------------------+
 | Évènement                    | Description                                               |
 +==============================+===========================================================+
-| **report_created**           | Création d'un nouveau rapport                             |
+| **reportCreated**           | Création d'un nouveau rapport                             |
 +------------------------------+-----------------------------------------------------------+
-| **report_state_changed**     | Changement de statut d'un rapport                         |
+| **reportStateChanged**     | Changement de statut d'un rapport                         |
 +------------------------------+-----------------------------------------------------------+
-| **operation_created**        | Création d'une nouvelle intervention                      |
+| **operationCreated**        | Création d'une nouvelle intervention                      |
 +------------------------------+-----------------------------------------------------------+
-| **operation_state_changed**  | Changement de statut d'une intervention                   |
+| **operationStateChanged**  | Changement de statut d'une intervention                   |
 +------------------------------+-----------------------------------------------------------+
-| **operation_removed**        | Suppression d'une intervention                            |
+| **operationRemoved**        | Suppression d'une intervention                            |
 +------------------------------+-----------------------------------------------------------+
 
 Réception d'une notification de webhook
@@ -57,7 +57,7 @@ il est donc possible de parcourir les ressources liées ou les propriétés emba
 .. code-block:: json
 
     {
-        "event":"report_created",
+        "event": "reportCreated",
         "payload": {
             "type": "Report",
             "id": "b0e7e28f-5b91-4c73-875e-8f34aa03553a",
