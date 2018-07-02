@@ -117,20 +117,6 @@ Pour assigner une intervention à un membre de l'organisation, l'administrateur 
 
 où {member} est l'identifiant du membre à qui est assignée l'intervention.
 
-**Acceptation ou refus**
-
-Une fois assignée, l'intervention peut être acceptée ou refusée, soit par la personne à qui l'intervention a été assignée, soit par un administrateur de l'organisation. Pour accepter l'intervention :
-
-.. code-block:: bash
-
-    PATCH /operations/{operation}/state
-
-.. code-block:: json
-
-    {
-        "transition":"accept"
-    }
-
 **Intervention en cours et clôture**
 
 Une fois acceptée, l'intervention peut-être passée "en cours" puis "clôturée", soit par la personne à qui l'intervention a été assignée, soit par un administrateur de l'organisation.
