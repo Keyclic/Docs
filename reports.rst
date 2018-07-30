@@ -119,7 +119,7 @@ où {member} est l'identifiant du membre à qui est assignée l'intervention.
 
 **Intervention en cours et clôture**
 
-Une fois acceptée, l'intervention peut-être passée "en cours" puis "clôturée", soit par la personne à qui l'intervention a été assignée, soit par un administrateur de l'organisation.
+Une fois assignée, l'intervention peut-être passée "en cours" puis "clôturée", soit par la personne à qui l'intervention a été assignée, soit par un administrateur de l'organisation.
 
 **Résumé du cycle de vie d'une intervention**
 
