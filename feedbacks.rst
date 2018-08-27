@@ -114,7 +114,7 @@ L'observation prend alors le statut REFUSED.
 Observation postée par un agent
 -------------------------------
 
-Les agents (:ref:`agents`) peuvent poster des observations de la même façon que tous les utilisateurs. Cependant, un agent peut entrer dans le mode de fonctionnement que nous avons appelé le "mode pro". Pour cela, il suffit de mettre dans le body de la requête, le champ "proMode" avec comme valeur "true". Ainsi, son observation pourra être traitée différemment :
+Les agents (:ref:`members-agent`) peuvent poster des observations de la même façon que tous les utilisateurs. Cependant, un agent peut entrer dans le mode de fonctionnement que nous avons appelé le "mode pro". Pour cela, il suffit de mettre dans le body de la requête, le champ "proMode" avec comme valeur "true". Ainsi, son observation pourra être traitée différemment :
 
 - Si son observation est positionnée dans une zone de responsabilité régie par son organisation, alors cette observation est automatiquement validée (sans passer par l'étape de modération) et le rapport créé qui en découle est automatiquement accepté.
 
@@ -219,7 +219,7 @@ Les utilisateurs de la communauté peuvent commenter une observation :
 .. code-block:: bash
 
     POST /feedbacks/{feedback}/comments
-    
+
 .. code-block:: json
 
     {

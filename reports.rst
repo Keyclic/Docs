@@ -47,7 +47,7 @@ Un rapport ne peut être clôturé (statut CLOSED) que si :
 - Toutes les interventions associées à ce rapport ont été clôturées ou refusées (voir ci-dessous le paragraphe :ref:`reports-interventions`).
 - Tous les rapports délégués à d'autres organisations à partir de ce rapport ont été clôturés (voir ci-dessous le paragraphe :ref:`reports-delegation`).
 
-.. _reports-interventions:
+.. _reports-operations:
 
 Interventions
 ----------

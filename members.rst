@@ -62,7 +62,7 @@ Agent
 
 Aux permissions et aux droits des « Membres d’organisation » s’ajoute les suivants :
 
-- Activer le Mode Pro (cf infra: Observation postée en Mode Pro)
+- Activer le Mode Pro (cf :ref:`feedbacks-organization-member`)
 
 **Note : Un utilisateur ne peut être « Agent » que d’une seule organisation et une organisation peut avoir plusieurs « Agents ».**
 
