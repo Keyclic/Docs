@@ -226,7 +226,7 @@ L'exemple suivant montre un retour d'erreur de validation. Le champ *path* indiq
 Changements de statut
 ---------------------
 
-Plusieurs ressources manipulées par l'API ont un cycle de vie et possèdent un certain statut à un instant donné. C'est le cas des observations, des rapports et des opérations.
+Plusieurs ressources manipulées par l'API ont un cycle de vie et possèdent un certain statut à un instant donné. C'est le cas des observations, des rapports et des interventions.
 
 Pour ces ressources, l'état est toujours indiqué dans la réponse avec le paramètre *state*, et les actions possibles pour faire évoluer ce statut sont toujours indiquées sous le paramètre *stateTransitions*. Exemple :
 

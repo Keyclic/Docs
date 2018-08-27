@@ -15,7 +15,7 @@ et de s’affranchir d’une vérification continuelle.
 Les Webhooks peuvent avoir de nombreux usages, tels que :
 
     - collecter les rapports créés pour votre data-warehouse,
-    - synchroniser les rapports et opérations avec votre SI (ex: GMAO, ...),
+    - synchroniser les rapports et interventions avec votre SI (ex: GMAO, ...),
     - envoyer des notifications.
 
 Création et configuration de webhooks

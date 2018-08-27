@@ -84,10 +84,10 @@ Terme technique : contribution.
 
 Voir la section :ref:`feedbacks-contributions`.
 
-Opération
+Intervention
 ~~~~~~~~~
 
-Une opération est une tâche créée par un administrateur sur un rapport donné. Cette tâche est assignée à un membre de l'organisation. Un rapport ne peut être clôturé que si toutes les opérations qui lui sont liées ont été accomplies (ou refusées).
+Une intervention est une tâche créée par un administrateur sur un rapport donné. Cette tâche est assignée à un membre de l'organisation. Un rapport ne peut être clôturé que si toutes les interventions qui lui sont liées ont été accomplies (ou refusées).
 
 Terme technique : operation.
 

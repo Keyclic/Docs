@@ -45,7 +45,7 @@ Aux permissions et aux droits des « Membres d’organisation » s’ajoute le
 - Gérer les catégories de son organisation
 - Gérer les zones de responsabilité de son organisation
 - Gérer les partenaires de son organisation
-- Consulter et gérer les rapports reçus et les opérations liées à ces rapports
+- Consulter et gérer les rapports reçus et les interventions liées à ces rapports
 
 Voir : :ref:`organizations`
 
