@@ -94,8 +94,8 @@ Sur la figure ci-dessous, le rectangle A représente une zone de responsabilité
 
 Chaque point représente une observation effectuée **par un utilisateur membre de l'organisation B**.
 
-- En bleu : observations effectuées en "mode pro".
-- En rouge : observations effectuées sans "mode pro". Ces observations sont donc identiques à celle d'un utilisateur lambda.
+- En bleu : observations effectuées sans "mode pro". Ces observations sont donc identiques à celle d'un utilisateur lambda.
+- En rouge : observations effectuées en "mode pro".
 
 .. image:: images/feedback_by_place.png
 
