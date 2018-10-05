@@ -14,8 +14,7 @@ Les administrateurs définissent des zones de responsabilité sur lesquelles leu
 
 Quand un utilisateur crée une observation, celui-ci a le choix de la rendre publique ou privée. Si publique, l'observation est visible par la communauté : ainsi, les autres utilisateurs peuvent la commenter et/ou la soutenir.
 
-De plus, au moment où l'observation est créée, celle-ci doit tout d'abord être modérée par un administrateur de l'application, sauf dans certains cas où la modération est automatique (voir : :ref:`feedbacks-lifecycle`).
-L'observation validée, un rapport est généré et transmis à l'organisation concernée.
+L'observation envoyée, un rapport est généré et transmis à l'organisation concernée.
 
 Un administrateur a donc accès à l'ensemble des rapports concernant son organisation, chaque rapport correspondant à une observation. Pour chaque rapport, il peut créer une ou plusieurs interventions, et affecter ces interventions aux membres de son organisation. Une autre possibilité est de déléguer ce rapport à une organisation partenaire, le partenaire aura alors la charge de créer des interventions. Une fois que toutes les interventions ont été accomplies, il pourra considérer que le traitement est terminé et clôturer le rapport.
 
@@ -41,7 +40,7 @@ Voir la page :ref:`feedbacks`.
 Rapport
 ~~~~~~~
 
-Toute observation, une fois validée par un administrateur de l'application, entraîne la génération d'un rapport. Un rapport reprend donc toutes les informations de l'observation dont il est issu, et n'est visible et manipulable que par l'organisation concernée. Le rapport peut donc être vu comme le pendant « professionnel » de l'observation. C'est sur ce rapport que l'organisation travaille : création d'interventions, suivi, délégation, etc.
+Toute observation peut entraîner la génération d'un rapport. Un rapport reprend donc toutes les informations de l'observation dont il est issu, et n'est visible et manipulable que par l'organisation concernée. Le rapport peut donc être vu comme le pendant « professionnel » de l'observation. C'est sur ce rapport que l'organisation travaille : création d'interventions, suivi, délégation, etc.
 
 Terme technique : report.
 

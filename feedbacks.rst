@@ -72,42 +72,7 @@ Le service Keyclic ne se contente pas de recueillir des observations : elle les 
 
 - Si la position géographique de l'observation se trouve dans une zone de responsabilité définie par une organisation, alors le rapport de l'observation est automatiquement remonté à l'organisation en question.
 
-- Si la position géographique de l'observation se trouve sur deux (ou plus) zones de responsabilité appartenant à deux (ou plus) organisations différentes, mais que l'utilisateur n'a pas précisé de catégorie, alors plusieurs rapports sont générés et remontés à toutes les organisations concernées. La première organisation qui acceptera le rapport pourra en effectuer le traitement.
-
-.. _feedbacks-lifecycle:
-
-Modération et cycle de vie d'une observation
---------------------------------------------
-
-Après qu'un utilisateur a créé une nouvelle observation, celle-ci possède le statut PENDING_REVIEW : en attente de modération. Elle devra être validée par un *modérateur* (sauf cas particulier d'une :ref:`feedbacks-organization-member`).
-
-Voir : :ref:`technical-states`
-
-Un *modérateur* valide une observation avec le endpoint :
-
-.. code-block:: bash
-
-    PATCH /feedbacks/{feedback}/state
-
-.. code-block:: json
-
-    {
-        "transition": "accept"
-    }
-
-L'observation prend alors le statut DELIVERED et un rapport est créé sur cette observation.
-
-Voir : :ref:`reports`
-
-Pour refuser une observation :
-
-.. code-block:: bash
-
-    {
-            "transition":"refuse"
-    }
-
-L'observation prend alors le statut REFUSED.
+- Si la position géographique de l'observation se trouve sur deux (ou plus) zones de responsabilité appartenant à deux (ou plus) organisations différentes, mais que l'utilisateur n'a pas précisé de catégorie ou de secteur d'activité particuliers, alors plusieurs rapports sont générés et remontés à toutes les organisations concernées. La première organisation qui acceptera le rapport pourra en effectuer le traitement.
 
 .. _feedbacks-organization-member:
 
@@ -116,7 +81,7 @@ Observation postée par un agent
 
 Les agents (:ref:`members-agent`) peuvent poster des observations de la même façon que tous les utilisateurs. Cependant, un agent peut entrer dans le mode de fonctionnement que nous avons appelé le "mode pro". Pour cela, il suffit de mettre dans le body de la requête, le champ "proMode" avec comme valeur "true". Ainsi, son observation pourra être traitée différemment :
 
-- Si son observation est positionnée dans une zone de responsabilité régie par son organisation, alors cette observation est automatiquement validée (sans passer par l'étape de modération) et le rapport créé qui en découle est automatiquement accepté.
+- Si son observation est positionnée dans une zone de responsabilité régie par son organisation, le rapport créé qui en découle est automatiquement accepté.
 
 - Si son observation n'est pas positionnée dans une zone de responsabilité régie par son organisation, alors son observation est refusée.
 
@@ -134,7 +99,7 @@ Chaque point représente une observation effectuée **par un utilisateur membre 
 
 .. image:: images/feedback_by_place.png
 
-.. _feedbacks-lifecycle-overview:
+.. _feedbacks-lifecycle:
 
 Résumé du cycle de vie d'une observation
 ----------------------------------------
@@ -158,11 +123,11 @@ Plusieurs critères permettent de filtrer les observations.
 
 **Par statut : paramètre state**
 
-Par exemple, pour filtrer les observations en attente de validation, un modérateur effectuera la requête :
+Par exemple, pour filtrer les observations délivrées, un utilisateur effectuera la requête :
 
 .. code-block:: bash
 
-    GET /feedbacks?state=PENDING_REVIEW
+    GET /feedbacks?state=DELIVERED
 
 **Autour d'un point : paramètre geo_near**
 
