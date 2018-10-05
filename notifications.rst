@@ -13,8 +13,6 @@ Type des notifications émises suivant les actions
 +--------------------------------+-------------------------+------------------------------------------------------------------------+
 | Action                         | Notification Type       | Target                                                                 |
 +================================+=========================+========================================================================+
-| Observation à modérer          | Push smartphone         | Les modérateurs                                                        |
-+--------------------------------+-------------------------+------------------------------------------------------------------------+
 | Commentaire d'une observation  | Push smartphone         | L'émetteur de l'observation                                            |
 |                                |                         |                                                                        |
 |                                |                         | Les personnes qui ont commenté ou soutenu l'observation                |
