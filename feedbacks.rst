@@ -49,6 +49,8 @@ Exemple plus complet, une catégorie et une description sont précisées :
         "visibility": "VISIBILITY_PUBLIC"
     }
 
+**La visibilité de l'observation est par défaut VISIBILITY_PRIVATE si celle-ci n'est pas renseignée.**
+
 L'utilisateur peut ensuite ajouter une ou plusieurs images à son observation :
 
 .. code-block:: bash
