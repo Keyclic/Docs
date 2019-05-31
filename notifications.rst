@@ -11,7 +11,7 @@ Type des notifications émises suivant les actions
 -------------------------------------------------
 
 +--------------------------------+-------------------------+------------------------------------------------------------------------+
-| Action                         | Notification Type       | Target                                                                 |
+| Action                         | Type de notification    | Cible                                                                  |
 +================================+=========================+========================================================================+
 | Commentaire d'une observation  | Push smartphone         | L'émetteur de l'observation                                            |
 |                                |                         |                                                                        |
