@@ -128,9 +128,8 @@ Un administrateur peut créer des zones de responsabilité, correspondant aux li
                     ]
                 }
             ],
-            "srid": 5555
-        },
-        "elevation": 1
+            "srid": 4326
+        }
     }
 
 Pour récupérer toutes les zones de responsabilité de l'application :
