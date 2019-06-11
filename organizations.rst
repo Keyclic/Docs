@@ -31,7 +31,7 @@ Tout utilisateur peut créer une nouvelle organisation :
         "notificationEmailAddress":"test@test.com"
     }
 
-L'utilisateur devient automatiquement membre et admininstrateur de cette nouvelle organisation.
+L'utilisateur devient automatiquement membre et administrateur de cette nouvelle organisation.
 
 Pour récupérer toutes les organisations de l'application :
 
@@ -182,7 +182,7 @@ Gestion des partenariats
 
 Une organisation peut avoir des partenaires, c'est-à-dire des organisations qui lui sont rattachées et à qui l':ref:`members-organization-admin` de l'organisation pourra déléguer des rapports. La relation de partenariat est unilatérale : si une organisation A est partenaire d'une organisation B, B n'est pas forcément partenaire de A.
 
-Pour ajouter un nouveau partenaire à l'organisation, un :ref:`members-organization-admin` de l'organisation requêtera sur le endpoint :
+Pour ajouter un nouveau partenaire à l'organisation, un administrateur de l'organisation requêtera sur le endpoint :
 
 .. code-block:: bash
 
@@ -200,4 +200,4 @@ Pour récupérer les partenaires d'une organisation :
 
     GET /organizations/{organization}/relationships
 
-Cette requête ne peut être exécutée que par un :ref:`members-organization-admin` de l'organisation.
+Cette requête ne peut être exécutée que par un administrateur de l'organisation.
