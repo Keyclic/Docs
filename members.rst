@@ -56,7 +56,6 @@ Intervenant
 
 Un « Membre d’organisation » possédant ce rôle peut  :
 
-- Être listé par les administrateurs de l’organisation
 - Recevoir une assignation à une intervention
 - Éditer une intervention (changement des libellés, ajout de photos de constatation, etc)
 - Changer le statut d’une intervention
