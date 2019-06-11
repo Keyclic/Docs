@@ -28,7 +28,7 @@ Type des notifications émises suivant les actions
 |                                |                                                         |       |       |       |
 |                                | Les personnes qui ont commenté ou soutenu l'observation |       |       |       |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
-| Rapport fermé                  | L'émetteur de l'observation                             |   O   |   O   |   N   |
+| Rapport clôturé                | L'émetteur de l'observation                             |   O   |   O   |   N   |
 |                                |                                                         |       |       |       |
 |                                | Les personnes qui ont commenté ou soutenu l'observation |       |       |       |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
@@ -42,13 +42,17 @@ Type des notifications émises suivant les actions
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
 | Intervention assignée          | Le membre assigné à l'intervention                      |   O   |   O   |   O   |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
-| Intervention résolue           | Les administrateurs                                     |   O   |   O   |   N   |
+| Intervention terminée          | L'administrateur ayant assigné l'intervention           |   O   |   O   |   N   |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
 | Rappel d'intervention          | Les administrateurs                                     |   O   |   O   |   N   |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
 | Commentaire d'une intervention | Le membre assigné à l'intervention                      |   O   |   O   |   N   |
+|                                | L'administrateur ayant assigné l'intervention           |       |       |       |
 |                                |                                                         |       |       |       |
 |                                | Les members qui ont commenté l'intervention             |       |       |       |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
 | Observation à évaluer          | L'évaluateur                                            |   O   |   O   |   N   |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
+
+Lorsqu'une des cibles fait une action déclenchant une notification, il est n'est pas notifié.
+Par exemple, si l'émetteur d'une observation commente son observation, il ne recevra pas de notification lui disant qu'il a commenté l'observation.

@@ -175,7 +175,7 @@ Dans cette documentation, nous ne rappellerons pas systématiquement qu'il est p
 Modification de ressources
 --------------------------
 
-Dans l'API Keyclic, la modification des ressources s'effectue avec la méthode `PATCH <https://tools.ietf.org/html/rfc5789>`_. Contrairement à la méthode `PUT <https://tools.ietf.org/html/rfc7231#section-4.3.4>`_, la méthode `PATCH <https://tools.ietf.org/html/rfc5789>`_ permet de modifier une seule propriété, ou une partie seulement des propriétés, d'une ressource, sans qu'il soit nécessaire d'en envoyer une représentation complète. Le format utilisé pour la description du patch est `JSON Patch <https://tools.ietf.org/html/rfc6902>`_.
+Dans l'API Keyclic, la modification des ressources s'effectue avec la méthode `PATCH <https://tools.ietf.org/html/rfc5789>`_. Contrairement à la méthode `PUT <https://tools.ietf.org/html/rfc7231#section-4.3.4>`_, la méthode `PATCH <https://tools.ietf.org/html/rfc5789>`_ permet de modifier une seule propriété ou une partie seulement des propriétés d'une ressource, sans qu'il soit nécessaire d'en envoyer une représentation complète. Le format utilisé pour la description du patch est `JSON Patch <https://tools.ietf.org/html/rfc6902>`_.
 
 À titre d'exemple, voici la modification de la propriété *billingEmailAddress* d'une organisation :
 
@@ -252,7 +252,7 @@ Réponse (partielle) :
 
 Dans l'exemple ci-dessus, le rapport est en statut NEW et les actions possibles sur son statut sont *accept* et *refuse*.
 
-Tout changement de statut est effectué avec la méthode PATCH et l'opération *replace*, en précisant *transition* pour le path, et l'action à effectuer pour la valeur.
+Tout changement de statut est effectué avec la méthode PATCH en passant le nom de la transition dans le body.
 
 Par exemple, pour accepter le rapport ci-dessus :
 
