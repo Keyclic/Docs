@@ -64,10 +64,10 @@ Note : Un utilisateur peut être « ORGANIZATION:OPERATOR » de plusieurs org
 
 .. _members-analytics:
 
-Statistiques
-------------
+Analyste
+--------
 
-Le rôle « Statistiques » permet d’accéder aux statistiques d’une organisation.
+Le rôle « Analyste » permet d’accéder aux statistiques d’une organisation.
 
 Note : Un utilisateur peut avoir le rôle « ORGANIZATION:ANALYTICS » pour plusieurs organisations et une organisation peut avoir plusieurs utilisateurs avec le rôle « ORGANIZATION:ANALYTICS ».
 
