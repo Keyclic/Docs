@@ -5,7 +5,7 @@ Rapports
 
 Chaque fois qu'une observation est délivrée (voir : :ref:`feedbacks-lifecycle`), un rapport est créé.
 
-Un administrateur récupère les rapports concernant son organisation avec :
+Un :ref:`members-organization-admin` récupère les rapports concernant son organisation avec :
 
 .. code-block:: bash
 
@@ -45,7 +45,6 @@ Par exemple, pour passer du statut NEW au statut ACCEPTED, l'administrateur de l
 Un rapport ne peut être clôturé (statut CLOSED) que si :
 
 - Toutes les interventions associées à ce rapport ont été clôturées ou refusées (voir ci-dessous le paragraphe :ref:`reports-interventions`).
-- Tous les rapports délégués à d'autres organisations à partir de ce rapport ont été clôturés (voir ci-dessous le paragraphe :ref:`reports-delegation`).
 
 .. _reports-operations:
 
@@ -117,9 +116,9 @@ Pour assigner une intervention à un membre de l'organisation, l'administrateur 
 
 où {member} est l'identifiant du membre à qui est assignée l'intervention.
 
-**Intervention en cours et clôture**
+**Intervention en cours et terminée**
 
-Une fois assignée, l'intervention peut-être passée "en cours" puis "clôturée", soit par la personne à qui l'intervention a été assignée, soit par un administrateur de l'organisation.
+Une fois assignée, l'intervention peut-être passée "en cours" puis "terminée", soit par la personne à qui l'intervention a été assignée, soit par un administrateur de l'organisation.
 
 **Résumé du cycle de vie d'une intervention**
 
@@ -177,9 +176,9 @@ Pour déléguer un rapport, un administrateur de l'organisation effectue la requ
 
 où {organization} est l'identifiant de l'organisation **courante** (dont le membre est administrateur), et a31d9ab7-9476-45f2-8cc7-033bf40bbcfa est l'identifiant de l'organisation à laquelle le rapport est délégué.
 
-Déléguer un rapport ne signifie pas que ce rapport est simplement transmis. En effet, le rapport initial n'est pas modifié ni transféré, mais un nouveau rapport "enfant" est créé et attribué à l'organisation partenaire. Ce rapport enfant sera traité par l'organisation partenaire de la même façon que le rapport initial : changements de statuts, interventions, assignations des interventions, etc, jusqu'à sa clôture.
+Ce rapport est alors partagé entre l'organisation courante et l'organisation partenaire. Cette dernière pourra effectuer les mếmes actions que l'organisation délégante sur ce rapport.
 
-L'organisation partenaire peut elle-même déléguer le rapport à l'une de ses partenaires et ainsi de suite. Pour qu'un rapport puisse être clôturé, il est obligatoire que le rapport enfant, s'il existe, ait été préalablement clôturé par l'organisation partenaire.
+L'organisation partenaire peut elle-même déléguer le rapport à l'un de ses partenaires et ainsi de suite.
 
 .. _reports-export:
 

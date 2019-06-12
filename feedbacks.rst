@@ -81,7 +81,7 @@ Le service Keyclic ne se contente pas de recueillir des observations : elle les 
 Observation postée par un agent
 -------------------------------
 
-Les agents (:ref:`members-agent`) peuvent poster des observations de la même façon que tous les utilisateurs. Cependant, un agent peut entrer dans le mode de fonctionnement que nous avons appelé le "mode pro". Pour cela, il suffit de mettre dans le body de la requête, le champ "proMode" avec comme valeur "true". Ainsi, son observation pourra être traitée différemment :
+Les :ref:`members-agent` peuvent poster des observations de la même façon que tous les utilisateurs. Cependant, un agent peut entrer dans le mode de fonctionnement que nous avons appelé le "mode pro". Pour cela, il suffit de mettre dans le body de la requête, le champ "proMode" avec comme valeur "true". Ainsi, son observation pourra être traitée différemment :
 
 - Si son observation est positionnée dans une zone de responsabilité régie par son organisation, le rapport créé qui en découle est automatiquement accepté.
 
