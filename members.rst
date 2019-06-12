@@ -5,29 +5,14 @@ Membres d'organisation et rôles
 
 Quand un utilisateur est membre d’une organisation, il peut bénéficier d'aucun, d'un ou plusieurs rôles définissant un ensemble de permissions et de possibilités d’actions. Ces rôles peuvent être cumulés pour un même utilisateur et sont au nombre de cinq :
 
-- Aucun rôle - Membre d’organisation
 - Administrateur
 - Agent
+- Intervenant
 - Statistiques
 - Export
 
-Un utilisateur pouvant être membre de plusieurs organisations, les rôles qu’il possède sont indépendants et peuvent être différent d’une organisation à une autre.
-
-.. _members-no-roles:
-
-Aucun rôle - Membre d’organisation
-----------------------------------
-
+Un utilisateur pouvant être membre de plusieurs organisations, les rôles qu’il possède sont indépendants et peuvent être différents d’une organisation à une autre.
 Tout utilisateur nouvellement attaché à une organisation devient « Membre d’organisation ». Un « Membre d’organisation » possède les mêmes droits qu’un utilisateur de base sans attachement à une organisation.
-
-Ce rôle permet en plus de pouvoir :
-
-- Être listé par les administrateurs de l’organisation
-- Recevoir une assignation à une intervention
-- Éditer une intervention (changement des libellés, ajout de photos de constatation, etc)
-- Changer le statut d’une intervention
-
-Note : Un utilisateur peut être membre d’organisation de plusieurs organisations et une organisation peut avoir plusieurs membres d’organisation.
 
 .. _members-organization-admin:
 
@@ -38,10 +23,10 @@ Tout utilisateur a la possibilité de créer une nouvelle organisation.
 
 L’utilisateur qui crée une nouvelle organisation en devient automatiquement membre et administrateur, c’est-à-dire qu’il se voit attribuer le rôle « Administrateur ».
 
-Aux permissions et aux droits des « Membres d’organisation » s’ajoute les suivants :
+Il obtient les permissions et droits suivants :
 
 - Ajouter de nouveaux membres à son organisation
-- Modifier les roles des membres
+- Modifier les rôles des membres
 - Gérer les catégories de son organisation
 - Gérer les zones de responsabilité de son organisation
 - Gérer les partenaires de son organisation
@@ -51,7 +36,7 @@ Voir : :ref:`organizations`
 
 Voir : :ref:`reports`
 
-Note : Un utilisateur peut être « Administrateur » de plusieurs organisations et une organisation peut avoir plusieurs « Administrateurs ».
+Note : Un utilisateur peut être « ORGANIZATION:ADMIN » de plusieurs organisations et une organisation peut avoir plusieurs « ORGANIZATION:ADMIN ».
 
 .. _members-agent:
 
@@ -60,20 +45,31 @@ Agent
 
 « Agent » est un rôle particulier adapté aux personnels de terrain qui effectuent des remontées d’observation uniquement dédiées à leur organisation.
 
-Aux permissions et aux droits des « Membres d’organisation » s’ajoute les suivants :
+Il peut activer le Mode Pro (cf :ref:`feedbacks-organization-member`)
 
-- Activer le Mode Pro (cf :ref:`feedbacks-organization-member`)
+**Note : Un utilisateur ne peut être « ORGANIZATION:AGENT » que d’une seule organisation et une organisation peut avoir plusieurs « ORGANIZATION:AGENT ».**
 
-**Note : Un utilisateur ne peut être « Agent » que d’une seule organisation et une organisation peut avoir plusieurs « Agents ».**
+.. _members-operator:
 
-.. _members-stat:
+Intervenant
+-----------
 
-Statistiques
-------------
+Un « Membre d’organisation » possédant ce rôle peut  :
 
-Le rôle « Statistique » permet d’accéder aux statistiques d’une organisation.
+- Recevoir une assignation à une intervention
+- Éditer une intervention (changement des libellés, ajout de photos de constatation, etc)
+- Changer le statut d’une intervention
 
-Note : Un utilisateur peut avoir le rôle « Statistique » pour plusieurs organisations et une organisation peut avoir plusieurs utilisateurs avec le rôle « Statistique ».
+Note : Un utilisateur peut être « ORGANIZATION:OPERATOR » de plusieurs organisations et une organisation peut avoir plusieurs « ORGANIZATION:OPERATOR ».
+
+.. _members-analytics:
+
+Analyste
+--------
+
+Le rôle « Analyste » permet d’accéder aux statistiques d’une organisation.
+
+Note : Un utilisateur peut avoir le rôle « ORGANIZATION:ANALYTICS » pour plusieurs organisations et une organisation peut avoir plusieurs utilisateurs avec le rôle « ORGANIZATION:ANALYTICS ».
 
 .. _members-export:
 
@@ -82,7 +78,7 @@ Export
 
 Le rôle « Export » permet d’accéder aux fonctionnalités d’exportation Excel des rapports qu’a reçu une organisation.
 
-Note : Un utilisateur peut avoir le rôle « Export » pour plusieurs organisations et une organisation peut avoir plusieurs utilisateurs avec le rôle « Export ».
+Note : Un utilisateur peut avoir le rôle « ORGANIZATION:EXPORT » pour plusieurs organisations et une organisation peut avoir plusieurs utilisateurs avec le rôle « ORGANIZATION:EXPORT ».
 
 .. _members-retrieving:
 
@@ -101,17 +97,11 @@ Pour récupérer un utilisateur :
 
     GET /people/{user}
 
-Pour rechercher les membres dont l'adresse email match un mot donné :
+Pour rechercher les utilisateurs dont l'adresse email match un mot donné :
 
 .. code-block:: bash
 
     GET /people?search[email]=martin
-
-Pour filtrer les membres d'une organisation :
-
-.. code-block:: bash
-
-    GET /people?organization={organization}
 
 .. _members-example:
 
@@ -191,11 +181,14 @@ La lecture d'une ressource utilisateur permet de découvrir si la personne appar
         }
     }
 
-Ce retour indique que :
+Ce retour indique que l'utilisateur :
 
-1. Il est membre de l'organisation 84d36093-b8bc-47ad-bc8a-a043b3e301a9
-2. Il possède le rôle ORGANIZATION:ADMIN, il est donc administrateur de l'organisation 84d36093-b8bc-47ad-bc8a-a043b3e301a9
-3. Il possède le rôle ORGANIZATION:AGENT, il est donc agent de l'organisation 84d36093-b8bc-47ad-bc8a-a043b3e301a9
-4. L'id d'utilisateur (5020c6ea-ca07-42d1-994f-d90b86703b1a) est différent de l'id de membre (b0e7e28f-5b91-4c73-875e-8f34aa03553a)
-5. Il est affilié avec une seule organisation
-6. Il a rejoint l'organisation le 27 février 2018.
+- Est membre de l'organisation 84d36093-b8bc-47ad-bc8a-a043b3e301a9
+- Possède le rôle ORGANIZATION:ADMIN, il est donc administrateur de l'organisation 84d36093-b8bc-47ad-bc8a-a043b3e301a9
+- Possède le rôle ORGANIZATION:AGENT, il est donc agent de l'organisation 84d36093-b8bc-47ad-bc8a-a043b3e301a9
+- Est affilié avec une seule organisation
+- A rejoint l'organisation le 27 février 2018.
+
+Aussi, un membre possède deux id différents, un id membre et un id utilisateur.
+Ainsi, dans le retour précédent on voit que son id utilisateur (5020c6ea-ca07-42d1-994f-d90b86703b1a) est différent de son id membre (b0e7e28f-5b91-4c73-875e-8f34aa03553a).
+L'API distingue les actions effectuées en tant que membre et celles effectuées en tant qu'utilisateur simple.

@@ -5,13 +5,12 @@ Organisations
 
 Dans l'application Keyclic, une organisation est une entité telle que corporation, entreprise, département d'entreprise, association, école, institution, etc à laquelle peuvent être rattachées les observations faites par les utilisateurs.
 
-Les :ref:`members-no-roles` sont des utilisateurs du service Keyclic rattachés à une organisation.
-Un ou plusieurs membres d'une organisation peuvent en être les administrateurs (voir : :ref:`members-organization-admin`). Une organisation possède au minimum un administrateur.
+Un ou plusieurs membres d'une organisation peuvent en être les :ref:`members-organization-admin`. Une organisation possède au minimum un administrateur.
 
 Les :ref:`members-organization-admin` peuvent définir les champs d'intervention de leur organisation en créant des catégories (exemple : voirie, transports, etc) et des zones de responsabilité.
 Quand un utilisateur crée une nouvelle observation, les coordonnées géographiques de cette observation sont toujours automatiquement précisées.
-Ainsi, l'application est en mesure de lui retourner l'ensemble des organisations et catégories qui ont une zone de responsabilité sur cette position.
-Ce qui lui permet de choisir la catégorie la plus adéquate à son observation.
+Ainsi, l'application est en mesure de lui retourner l'ensemble des organisations qui ont une zone de responsabilité sur cette position.
+L'utilisateur a alors accès à des informations lui permettant de l'aiguiller vers l'organisation la plus adéquate.
 
 .. _organizations-creation:
 
@@ -63,28 +62,26 @@ Pour ajouter un nouveau membre à une organisation :
         "person":"63d07fc5-f4e6-471c-a8cc-3c3f227c8c2d"
     }
 
-Ce endpoint est réservé à un utilisateur possédant le rôle ORGANIZATION:ADMIN et membre de l'organisation {organization}.
+Ce endpoint est réservé à un utilisateur possédant le rôle :ref:`members-organization-admin` et membre de l'organisation {organization}.
 
 Pour récupérer les membres d'une organisation :
 
 .. code-block:: bash
 
-    GET /people?organization={organization}
+    GET /organizations/{organization}/members
 
-Pour retirer un membre d'une organisation, un administrateur de cette organisation exécutera la requête :
+Pour retirer un membre d'une organisation, un :ref:`members-organization-admin` de cette organisation exécutera la requête :
 
 .. code-block:: bash
 
     DELETE /organizations/{organization}/members/{member}
-
-Pour plus d'informations sur le rôle ORGANIZATION:ADMIN et ses privilèges, voir :ref:`members-organization-admin`.
 
 .. _organizations-places:
 
 Gestion des zones de responsabilité
 -----------------------------------
 
-Un administrateur peut créer des zones de responsabilité, correspondant aux lieux sur lesquels cette organisation intervient :
+Un :ref:`members-organization-admin` peut créer des zones de responsabilité, correspondant aux lieux sur lesquels cette organisation intervient :
 
 .. code-block:: bash
 
@@ -149,7 +146,7 @@ La requête ci-dessus peut-être filtrée sur une organisation donnée et/ou sur
 Gestion des catégories
 ----------------------
 
-Les catégories sont les secteurs d'activité d'une organisation. Un administrateur peut créer une nouvelle catégorie en lui donnant un nom, une couleur et une icône. L'icône sera choisie dans  `le jeu d'icônes de Font Awesome <http://fontawesome.io/icons/>`_.
+Les catégories sont les secteurs d'activité d'une organisation. Un :ref:`members-organization-admin` peut créer une nouvelle catégorie en lui donnant un nom, une couleur et une icône. L'icône sera choisie dans  `le jeu d'icônes de Font Awesome <http://fontawesome.io/icons/>`_.
 
 
 .. code-block:: bash
@@ -183,9 +180,9 @@ La requête ci-dessus peut-être filtrée sur une organisation donnée et/ou sur
 Gestion des partenariats
 ------------------------
 
-Une organisation peut avoir des partenaires, c'est-à-dire des organisations qui lui sont rattachées et à qui l'administrateur de l'organisation pourra déléguer des rapports. La relation de partenariat est unilatérale : si une organisation A est partenaire d'une organisation B, B n'est pas forcément partenaire de A.
+Une organisation peut avoir des partenaires, c'est-à-dire des organisations qui lui sont rattachées et à qui l':ref:`members-organization-admin` de l'organisation pourra déléguer des rapports. La relation de partenariat est unilatérale : si une organisation A est partenaire d'une organisation B, B n'est pas forcément partenaire de A.
 
-Pour ajouter un nouveau partenaire à l'organisation, un administrateur de l'organisation exécutera le endpoint :
+Pour ajouter un nouveau partenaire à l'organisation, un administrateur de l'organisation requêtera sur le endpoint :
 
 .. code-block:: bash
 
