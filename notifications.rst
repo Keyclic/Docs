@@ -13,45 +13,47 @@ Type des notifications émises suivant les actions
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
 | Action                         | Cible                                                   | Push  | Mur   | Email |
 +================================+=========================================================+=======+=======+=======+
-| Création de compte             | L'utilisateur                                           |   N   |   N   |   O   |
+| Création de compte             | L'utilisateur                                           |   ⨯   |   ⨯   |   ✓   |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
-| Demande de changement          | L'utilisateur                                           |   N   |   N   |   O   |
+| Demande de changement          | L'utilisateur                                           |   ⨯   |   ⨯   |   ✓   |
 | de mot de passe                |                                                         |       |       |       |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
-| Commentaire d'une observation  | L'émetteur de l'observation                             |   O   |   O   |   N   |
+| Commentaire d'une observation  | L'émetteur de l'observation                             |   ✓   |   ✓   |   ⨯   |
 |                                |                                                         |       |       |       |
 |                                | Les personnes qui ont commenté ou soutenu l'observation |       |       |       |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
-| Rapport créé                   | Les administrateurs                                     |   O   |   O   |   O   |
+| Rapport créé                   | Les administrateurs                                     |   ✓   |   ✓   |   ✓   |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
-| Rapport accepté                | L'émetteur de l'observation                             |   O   |   O   |   N   |
+| Rapport accepté                | L'émetteur de l'observation                             |   ✓   |   ✓   |   ⨯   |
 |                                |                                                         |       |       |       |
 |                                | Les personnes qui ont commenté ou soutenu l'observation |       |       |       |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
-| Rapport clôturé                | L'émetteur de l'observation                             |   O   |   O   |   N   |
+| Rapport clôturé                | L'émetteur de l'observation                             |   ✓   |   ✓   |   ⨯   |
 |                                |                                                         |       |       |       |
 |                                | Les personnes qui ont commenté ou soutenu l'observation |       |       |       |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
-| Rapport refusé                 | L'émetteur de l'observation                             |   O   |   O   |   N   |
+| Rapport refusé                 | L'émetteur de l'observation                             |   ✓   |   ✓   |   ⨯   |
 |                                |                                                         |       |       |       |
 |                                | Les personnes qui ont commenté ou soutenu l'observation |       |       |       |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
-| Rapport delégué                | Les administrateurs                                     |   O   |   O   |   O   |
+| Rapport delégué                | Les administrateurs                                     |   ✓   |   ✓   |   ✓   |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
-| Ajout d'un document au rapport | Les administrateurs                                     |   O   |   O   |   N   |
+| Ajout d'un document au rapport | Les administrateurs                                     |   ✓   |   ✓   |   ⨯   |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
-| Intervention assignée          | Le membre assigné à l'intervention                      |   O   |   O   |   O   |
+| Intervention assignée          | Le membre assigné à l'intervention                      |   ✓   |   ✓   |   ✓   |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
-| Intervention terminée          | L'administrateur ayant assigné l'intervention           |   O   |   O   |   N   |
+| Intervention terminée          | L'administrateur ayant assigné l'intervention           |   ✓   |   ✓   |   ⨯   |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
-| Rappel d'intervention          | Les administrateurs                                     |   O   |   O   |   N   |
+| Rappel d'intervention          | Les intervenants                                        |   ✓   |   ✓   |   ⨯   |
+|                                |                                                         |       |       |       |
+|                                | L'émetteur de l'observation                             |       |       |       |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
-| Commentaire d'une intervention | Le membre assigné à l'intervention                      |   O   |   O   |   N   |
+| Commentaire d'une intervention | Le membre assigné à l'intervention                      |   ✓   |   ✓   |   ⨯   |
 |                                | L'administrateur ayant assigné l'intervention           |       |       |       |
 |                                |                                                         |       |       |       |
 |                                | Les members qui ont commenté l'intervention             |       |       |       |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
-| Observation à évaluer          | L'évaluateur                                            |   O   |   O   |   N   |
+| Observation à évaluer          | L'évaluateur                                            |   ✓   |   ✓   |   ⨯   |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
 
 Lorsqu'une des cibles fait une action déclenchant une notification, il est n'est pas notifié.
