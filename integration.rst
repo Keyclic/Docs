@@ -14,8 +14,8 @@ et de s’affranchir d’une vérification continuelle.
 
 Les Webhooks peuvent avoir de nombreux usages, tels que :
 
-    - collecter les rapports créés pour votre data-warehouse,
-    - synchroniser les rapports et interventions avec votre SI (ex: GMAO, ...),
+    - collecter les demandes créés pour votre data-warehouse,
+    - synchroniser les demandes et interventions avec votre SI (ex: GMAO, ...),
     - envoyer des notifications.
 
 Création et configuration de webhooks
@@ -34,9 +34,9 @@ Types d'évènements
 +------------------------------+-----------------------------------------------------------+
 | Évènement                    | Description                                               |
 +==============================+===========================================================+
-| **reportCreated**            | Création d'un nouveau rapport                             |
+| **reportCreated**            | Création d'une nouvelle demande                           |
 +------------------------------+-----------------------------------------------------------+
-| **reportStateChanged**       | Changement de statut d'un rapport                         |
+| **reportStateChanged**       | Changement de statut d'une demand                         |
 +------------------------------+-----------------------------------------------------------+
 | **operationCreated**         | Création d'une nouvelle intervention                      |
 +------------------------------+-----------------------------------------------------------+
@@ -77,4 +77,4 @@ il est donc possible de parcourir les ressources liées ou les propriétés emba
         }
     }
 
-*Exemple de notification de webhook pouvant être reçue lors de la création d'un nouveau rapport (Exemple partiel).*
+*Exemple de notification de webhook pouvant être reçue lors de la création d'une nouvelle demande (Exemple partiel).*

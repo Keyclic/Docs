@@ -3,7 +3,7 @@
 Membres d'organisation et rôles
 ===============================
 
-Quand un utilisateur est membre d’une organisation, il peut bénéficier d'aucun, d'un ou plusieurs rôles définissant un ensemble de permissions et de possibilités d’actions. Ces rôles peuvent être cumulés pour un même utilisateur et sont au nombre de cinq :
+Quand un utilisateur est collaborateur d’une organisation, il peut bénéficier d'aucun, d'un ou plusieurs rôles définissant un ensemble de permissions et de possibilités d’actions. Ces rôles peuvent être cumulés pour un même utilisateur et sont au nombre de cinq :
 
 - Administrateur
 - Agent
@@ -12,7 +12,7 @@ Quand un utilisateur est membre d’une organisation, il peut bénéficier d'auc
 - Export
 
 Un utilisateur pouvant être membre de plusieurs organisations, les rôles qu’il possède sont indépendants et peuvent être différents d’une organisation à une autre.
-Tout utilisateur nouvellement attaché à une organisation devient « Membre d’organisation ». Un « Membre d’organisation » possède les mêmes droits qu’un utilisateur de base sans attachement à une organisation.
+Tout utilisateur nouvellement attaché à une organisation devient « Collaborateur d’organisation ». Un « Collaborateur d’organisation » possède les mêmes droits qu’un utilisateur de base sans attachement à une organisation.
 
 .. _members-organization-admin:
 
@@ -21,16 +21,16 @@ Administrateur
 
 Tout utilisateur a la possibilité de créer une nouvelle organisation.
 
-L’utilisateur qui crée une nouvelle organisation en devient automatiquement membre et administrateur, c’est-à-dire qu’il se voit attribuer le rôle « Administrateur ».
+L’utilisateur qui crée une nouvelle organisation en devient automatiquement collaborateur et administrateur, c’est-à-dire qu’il se voit attribuer le rôle « Administrateur ».
 
 Il obtient les permissions et droits suivants :
 
-- Ajouter de nouveaux membres à son organisation
-- Modifier les rôles des membres
+- Ajouter de nouveaux collaborateurs à son organisation
+- Modifier les rôles des collaborateurs
 - Gérer les catégories de son organisation
 - Gérer les zones de responsabilité de son organisation
 - Gérer les partenaires de son organisation
-- Consulter et gérer les rapports reçus et les interventions liées à ces rapports
+- Consulter et gérer les demanes reçues et les interventions liées à ces demandes
 
 Voir : :ref:`organizations`
 
@@ -38,12 +38,12 @@ Voir : :ref:`reports`
 
 Note : Un utilisateur peut être « ORGANIZATION:ADMIN » de plusieurs organisations et une organisation peut avoir plusieurs « ORGANIZATION:ADMIN ».
 
-.. _members-agent:
+.. _members-collaborator:
 
 Agent
 -----
 
-« Agent » est un rôle particulier adapté aux personnels de terrain qui effectuent des remontées d’observation uniquement dédiées à leur organisation.
+« Agent » est un rôle particulier adapté aux personnels de terrain qui effectuent des demandes uniquement dédiées à leur organisation.
 
 Il peut activer le Mode Pro (cf :ref:`feedbacks-organization-member`)
 
@@ -54,7 +54,7 @@ Il peut activer le Mode Pro (cf :ref:`feedbacks-organization-member`)
 Intervenant
 -----------
 
-Un « Membre d’organisation » possédant ce rôle peut  :
+Un « Collaborateur d’organisation » possédant ce rôle peut  :
 
 - Recevoir une assignation à une intervention
 - Éditer une intervention (changement des libellés, ajout de photos de constatation, etc)
@@ -76,7 +76,7 @@ Note : Un utilisateur peut avoir le rôle « ORGANIZATION:ANALYTICS » pour pl
 Export
 ------
 
-Le rôle « Export » permet d’accéder aux fonctionnalités d’exportation Excel des rapports qu’a reçu une organisation.
+Le rôle « Export » permet d’accéder aux fonctionnalités d’exportation Excel des demandes qu’a reçu une organisation.
 
 Note : Un utilisateur peut avoir le rôle « ORGANIZATION:EXPORT » pour plusieurs organisations et une organisation peut avoir plusieurs utilisateurs avec le rôle « ORGANIZATION:EXPORT ».
 

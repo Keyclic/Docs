@@ -18,27 +18,27 @@ Type des notifications émises suivant les actions
 | Demande de changement          | L'utilisateur                                           |       |       |   ✓   |
 | de mot de passe                |                                                         |       |       |       |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
-| Commentaire d'une observation  | L'émetteur de l'observation                             |   ✓   |   ✓   |       |
+| Commentaire d'une demande      | L'émetteur de la demande                                |   ✓   |   ✓   |       |
 |                                |                                                         |       |       |       |
-|                                | Les personnes qui ont commenté ou soutenu l'observation |       |       |       |
+|                                | Les personnes qui ont commenté ou soutenu la demande    |       |       |       |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
-| Rapport créé                   | Les administrateurs                                     |   ✓   |   ✓   |   ✓   |
+| Demande créée                   | Les administrateurs                                    |   ✓   |   ✓   |   ✓   |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
-| Rapport accepté                | L'émetteur de l'observation                             |   ✓   |   ✓   |       |
+| Demande acceptée               | L'émetteur de la demande                                |   ✓   |   ✓   |       |
 |                                |                                                         |       |       |       |
-|                                | Les personnes qui ont commenté ou soutenu l'observation |       |       |       |
+|                                | Les personnes qui ont commenté ou soutenu la demande    |       |       |       |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
-| Rapport clôturé                | L'émetteur de l'observation                             |   ✓   |   ✓   |       |
+| Demande clôturée               | L'émetteur de la demande                                |   ✓   |   ✓   |       |
 |                                |                                                         |       |       |       |
-|                                | Les personnes qui ont commenté ou soutenu l'observation |       |       |       |
+|                                | Les personnes qui ont commenté ou soutenu la demande    |       |       |       |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
-| Rapport refusé                 | L'émetteur de l'observation                             |   ✓   |   ✓   |       |
+| Demande refusée                | L'émetteur de la demande                                |   ✓   |   ✓   |       |
 |                                |                                                         |       |       |       |
-|                                | Les personnes qui ont commenté ou soutenu l'observation |       |       |       |
+|                                | Les personnes qui ont commenté ou soutenu la demande    |       |       |       |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
-| Rapport delégué                | Les administrateurs                                     |   ✓   |   ✓   |   ✓   |
+| Demande deléguée               | Les administrateurs                                     |   ✓   |   ✓   |   ✓   |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
-| Ajout d'un document au rapport | Les administrateurs                                     |   ✓   |   ✓   |       |
+| Ajout d'un document            | Les administrateurs                                     |   ✓   |   ✓   |       |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
 | Intervention assignée          | Le membre assigné à l'intervention                      |   ✓   |   ✓   |   ✓   |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
@@ -46,7 +46,7 @@ Type des notifications émises suivant les actions
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
 | Rappel d'intervention          | Les intervenants                                        |   ✓   |   ✓   |       |
 |                                |                                                         |       |       |       |
-|                                | L'émetteur de l'observation                             |       |       |       |
+|                                | L'émetteur de la demande                                |       |       |       |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
 | Commentaire d'une intervention | Le membre assigné à l'intervention                      |   ✓   |   ✓   |       |
 |                                | L'administrateur ayant assigné l'intervention           |       |       |       |
@@ -57,4 +57,4 @@ Type des notifications émises suivant les actions
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
 
 Lorsqu'une des cibles fait une action déclenchant une notification, il est n'est pas notifié.
-Par exemple, si l'émetteur d'une observation commente son observation, il ne recevra pas de notification lui disant qu'il a commenté l'observation.
+Par exemple, si l'émetteur d'une demande commente sa demande, il ne recevra pas de notification lui disant qu'il a commenté la demande.
