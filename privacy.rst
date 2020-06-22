@@ -19,15 +19,15 @@ Cependant les données représentées dans les tableaux suivants sont correctes.
 
 
 
-+--------------------+--------------------------------------------------------+---------------------------------------------------------+
-|                    | Organisation publique                                  | Organisation privée                                     |
-+====================+========================================================+=========================================================+
-| Demandes publiques | Envoi                                                  | Envoi                                                   |
-|                    | possible par tous les utilisateurs                     | uniquement par l'organisation réceptrice et ses membres |
-+--------------------+--------------------------------------------------------+---------------------------------------------------------+
-| Demandes privées   | Envoi                                                  | Envoi                                                   |
-|                    | possible par tous les utilisateurs                     | uniquement par l'organisation réceptrice et l'emetteur  |
-+--------------------+--------------------------------------------------------+---------------------------------------------------------+
++--------------------+------------------------------------+-----------------------------------------------+
+|                    | Organisation publique              | Organisation privée                           |
++====================+====================================+===============================================+
+| Demandes publiques | Envoi                              | Envoi                                         |
+|                    | possible par tous les utilisateurs | uniquement par les membres d'une organisation |
++--------------------+------------------------------------+-----------------------------------------------+
+| Demandes privées   | Envoi                              | Envoi                                         |
+|                    | possible par tous les utilisateurs | uniquement par les membres d'une organisation |
++--------------------+------------------------------------+-----------------------------------------------+
 
 
 
