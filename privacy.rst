@@ -8,14 +8,14 @@ Cependant les données représentées dans les tableaux suivants sont correctes.
 
 
 
-+--------------------+------------------------+--------------------------+----------------------------+
-|                    | Zone de responsabilité | Zone de responsabilité   | Zone de responsabilité     |
-|                    | sans forcement         | forcer en demande privée | forcer en demande publique |
-+====================+========================+==========================+============================+
-| Demandes publiques | Demandes publiques     | Demandes privées         | Demandes publiques         |
-+--------------------+------------------------+--------------------------+----------------------------+
-| Demandes privées   | Demandes privées       | Demandes privées         | Demandes publiques         |
-+--------------------+------------------------+--------------------------+----------------------------+
++--------------------+--------------------------+----------------------------+------------------------+
+|                    | Zone de responsabilité   | Zone de responsabilité     | Zone de responsabilité |
+|                    | forcer en demande privée | forcer en demande publique | sans forcement         |
++====================+==========================+============================+========================+
+| Demandes publiques | Demandes privées         | Demandes publiques         | Demandes publiques     |
++--------------------+--------------------------+----------------------------+------------------------+
+| Demandes privées   | Demandes privées         | Demandes publiques         | Demandes privées       |
++--------------------+--------------------------+----------------------------+------------------------+
 
 
 
