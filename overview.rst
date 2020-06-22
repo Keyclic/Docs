@@ -6,13 +6,14 @@ Aperçu
 Fonctionnement général
 ----------------------
 
-L'application Keyclic est librement ouverte aux inscriptions. Une fois inscrit, tout utilisateur peut créer des demandes. Une demande est toujours liée à une position géographique et comporte éventuellement une ou plusieurs photos.
+L'application Keyclic est librement ouverte aux inscriptions. Une fois inscrit, tout utilisateur peut créer des demandes. Une demande est toujours liée à une zone de responsabilité et comporte éventuellement une position géographiqe et des données complémentaires photos, description, métadonnées, etc.
 
 Certains utilisateurs peuvent également être regroupés au sein d'organisations. Une organisation est donc un groupe d'utilisateurs membres de la même entreprise, association, corporation, école, etc. Tout utilisateur est libre de créer sa propre organisation et d'inviter d'autres utilisateurs à en devenir membres.
 
-Les administrateurs définissent des zones de responsabilité sur lesquelles leur organisation peut intervenir, et des catégories d'intervention (exemples : voirie, animal perdu, propreté, etc) Ainsi, quand un utilisateur crée une demande, la position géographique de cette demande permet de lui proposer les catégories et organisations qui sont en mesure de traiter celle-ci et de le laisser choisir celle qui lui semble la plus adaptée.
+Les administrateurs définissent des zones de responsabilité sur lesquelles leur organisation peut intervenir, des catégories d'intervention (exemple : plomberie, peinture, climatisation), un cycle de vie de la demande (exemple : Nouveau, En cours, Terminé) et un ensemble de paramètres concernant la confidentialité des demandes reçues.
 
-Quand un utilisateur crée une demande, celui-ci a le choix de la rendre publique ou privée. Si publique, la demande est visible par la communauté : ainsi, les autres utilisateurs peuvent la commenter et/ou la soutenir.
+Ainsi, quand un utilisateur crée une demande, la zone de responsabilité de cette demande permet de lui proposer les catégories et de le laisser choisir celle qui lui semble la plus adaptée.
+Aussi, quand un utilisateur crée une demande, suivant les paramètres de confidentialité de l'organisation, celui-ci peut avoir le choix de la rendre publique ou privée. Si publique, la demande est visible par la communauté : ainsi, les autres utilisateurs peuvent la commenter et/ou la soutenir (Voir la page :ref:`privacy`).
 
 La demande envoyée, elle est transmise à l'organisation concernée.
 
