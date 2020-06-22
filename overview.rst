@@ -6,7 +6,13 @@ Aperçu
 Fonctionnement général
 ----------------------
 
-L'application Keyclic est librement ouverte aux inscriptions. Une fois inscrit, tout utilisateur peut créer des demandes. Une demande est toujours liée à une zone de responsabilité et comporte éventuellement une position géographiqe et des données complémentaires photos, description, métadonnées, etc.
+L'application Keyclic est librement ouverte aux inscriptions. Une fois inscrit, tout utilisateur peut créer des demandes. Une demande est toujours liée à une zone de responsabilité et comporte éventuellement une position géographique et des données complémentaires photos, description, métadonnées, etc.
+
+La demande envoyée :
+
+- elle est transmise à l'organisation concernée, si les paramètres de confidentialité de cette organisation autorise l'utlisateur,
+- elle n'est pas transmise à l'organisation concernée, si les paramètres de confidentialité de cette organisation n'autorise pas l'utlisateur.
+
 
 Certains utilisateurs peuvent également être regroupés au sein d'organisations. Une organisation est donc un groupe d'utilisateurs membres de la même entreprise, association, corporation, école, etc. Tout utilisateur est libre de créer sa propre organisation et d'inviter d'autres utilisateurs à en devenir membres.
 
@@ -14,8 +20,6 @@ Les administrateurs définissent des zones de responsabilité sur lesquelles leu
 
 Ainsi, quand un utilisateur crée une demande, la zone de responsabilité de cette demande permet de lui proposer les catégories et de le laisser choisir celle qui lui semble la plus adaptée.
 Aussi, quand un utilisateur crée une demande, suivant les paramètres de confidentialité de l'organisation, celui-ci peut avoir le choix de la rendre publique ou privée. Si publique, la demande est visible par la communauté : ainsi, les autres utilisateurs peuvent la commenter et/ou la soutenir (Voir la page :ref:`privacy`).
-
-La demande envoyée, elle est transmise à l'organisation concernée.
 
 Un administrateur a donc accès à l'ensemble des demandes concernant son organisation. Pour chaque demande, il peut créer une ou plusieurs interventions, et affecter ces interventions aux membres de son organisation. Une autre possibilité est de déléguer cette demande à une organisation partenaire, le partenaire aura alors la charge de créer des interventions. Une fois que toutes les interventions ont été accomplies, il pourra considérer que le traitement est terminé et clôturer la demande.
 

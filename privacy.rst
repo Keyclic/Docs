@@ -6,6 +6,8 @@ Confidentialité des demandes
 Cette page est en cours de rédaction.
 Cependant les données représentées dans les tableaux suivants sont correctes.
 
+
+
 +--------------------+------------------------+--------------------------+----------------------------+
 |                    | Zone de responsabilité | Zone de responsabilité   | Zone de responsabilité     |
 |                    | sans forcement         | forcer en demande privée | forcer en demande publique |
@@ -14,6 +16,20 @@ Cependant les données représentées dans les tableaux suivants sont correctes.
 +--------------------+------------------------+--------------------------+----------------------------+
 | Demandes privées   | Demandes privées       | Demandes privées         | Demandes publiques         |
 +--------------------+------------------------+--------------------------+----------------------------+
+
+
+
++--------------------+--------------------------------------------------------+---------------------------------------------------------+
+|                    | Organisation publique                                  | Organisation privée                                     |
++====================+========================================================+=========================================================+
+| Demandes publiques | Envoi                                                  | Envoi                                                   |
+|                    | possible par tous les utilisateurs                     | uniquement par l'organisation réceptrice et ses membres |
++--------------------+--------------------------------------------------------+---------------------------------------------------------+
+| Demandes privées   | Envoi                                                  | Envoi                                                   |
+|                    | possible par tous les utilisateurs                     | uniquement par l'organisation réceptrice et l'emetteur  |
++--------------------+--------------------------------------------------------+---------------------------------------------------------+
+
+
 
 +--------------------+--------------------------------------------------------+---------------------------------------------------------+
 |                    | Organisation publique                                  | Organisation privée                                     |
