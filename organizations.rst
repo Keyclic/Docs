@@ -8,8 +8,7 @@ Dans l'application Keyclic, une organisation est une entité telle que corporati
 Un ou plusieurs membres d'une organisation peuvent en être les :ref:`members-organization-admin`. Une organisation possède au minimum un administrateur.
 
 Les :ref:`members-organization-admin` peuvent définir les champs d'intervention de leur organisation en créant des catégories (exemple : voirie, transports, etc) et des zones de responsabilité.
-Quand un utilisateur crée une nouvelle demande, les coordonnées géographiques de cette demande sont toujours automatiquement précisées.
-Ainsi, l'application est en mesure de lui retourner l'ensemble des organisations qui ont une zone de responsabilité sur cette position.
+
 L'utilisateur a alors accès à des informations lui permettant de l'aiguiller vers l'organisation la plus adéquate.
 
 .. _organizations-creation:

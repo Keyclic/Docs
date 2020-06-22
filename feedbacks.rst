@@ -1,16 +1,21 @@
 .. _feedbacks:
 
 Demandes
-============
+========
 
-Une demande est toujours faite en une position géographique donnée. La position géographique est la composante la plus importante, et la seule obligatoire, d'une observation. Les paramètres optionnels étant la description, la catégorie, et éventuellement une ou plusieurs photos.
+Une demande est toujours faite en une zone de responsabilité donnée.
+Cette zone de responsabilité peut être renseignée directement ou peut être déterminée grâce à une position géographique.
+Si les 2 sont spécifiés alors la position géographique permettra de préciser le lieu (par exemple : au sein d'une grande zone de responsabilité).
+
+Les paramètres optionnels étant la description, la catégorie, une ou plusieurs photos et des métadonnées.
+
 
 Tous les utilisateurs peuvent créer des demandes.
 
 .. _feedbacks-creation:
 
 Création d'une demande
---------------------------
+----------------------
 
 .. code-block:: bash
 
@@ -66,7 +71,7 @@ L'utilisateur peut ensuite ajouter une ou plusieurs images à sa demande :
 Pour plus d'informations sur l'envoi d'images, voir :ref:`technical-files`.
 
 Rattachement d'une demande à une organisation
--------------------------------------------------
+---------------------------------------------
 
 Le service Keyclic ne se contente pas de recueillir des demandes : elle sont transmises aux organisations concernées, qui en assureront le traitement. Pour cela, trois cas de figure peuvent se présenter :
 
@@ -79,25 +84,25 @@ Le service Keyclic ne se contente pas de recueillir des demandes : elle sont tra
 .. _feedbacks-organization-member:
 
 Demande postée par un collaborateur
--------------------------------
+-----------------------------------
 
-Les :ref:`members-collaborator` peuvent poster des demandes de la même façon que tous les utilisateurs. Cependant si la demande est réalisée par un collaborateur cette pourra être traitée différemment :
+Les :ref:`members-collaborator` peuvent poster des demandes de la même façon que tous les utilisateurs. Cependant si la demande est réalisée par un collaborateur celle-ci pourra être traitée différemment :
 
 - Si sa demande est positionnée dans une zone de responsabilité régie par son organisation, la demande créée qui en découle est automatiquement acceptée.
 
 - Si sa demande n'est pas positionnée dans une zone de responsabilité régie par son organisation, alors sa demande n'est pas automatiquement acceptée.
 
-.. _feedbacks-normal-mode-vs-pro-mode:
+.. _feedbacks-lifecycle:
 
 Résumé du cycle de vie d'une demande
-----------------------------------------
+------------------------------------
 
 .. image:: images/feedback_workflow.png
 
 .. _feedbacks-retrieving:
 
 Récupération des demandes
------------------------------
+-------------------------
 
 Pour récupérer les demandes :
 

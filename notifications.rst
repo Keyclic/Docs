@@ -53,8 +53,8 @@ Type des notifications émises suivant les actions
 |                                |                                                         |       |       |       |
 |                                | Les members qui ont commenté l'intervention             |       |       |       |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
-| Observation à évaluer          | L'évaluateur                                            |   ✓   |   ✓   |       |
+| Demande à évaluer              | L'évaluateur                                            |   ✓   |   ✓   |       |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
 
-Lorsqu'une des cibles fait une action déclenchant une notification, il est n'est pas notifié.
-Par exemple, si l'émetteur d'une demande commente sa demande, il ne recevra pas de notification lui disant qu'il a commenté la demande.
+Lorsqu'une des cibles fait une action déclenchant une notification, il n'est lui-même pas notifié.
+Par exemple, si l'émetteur d'une demande commente sa demande, il ne recevra pas de notification lui disant qu'il a commenté sa propre demande.
