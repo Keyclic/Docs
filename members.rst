@@ -38,17 +38,6 @@ Voir : :ref:`reports`
 
 Note : Un utilisateur peut être « ORGANIZATION:ADMIN » de plusieurs organisations et une organisation peut avoir plusieurs « ORGANIZATION:ADMIN ».
 
-.. _members-collaborator:
-
-Agent
------
-
-« Agent » est un rôle particulier adapté aux personnels de terrain qui effectuent des demandes uniquement dédiées à leur organisation.
-
-Il peut activer le Mode Pro (cf :ref:`feedbacks-organization-member`)
-
-**Note : Un utilisateur ne peut être « ORGANIZATION:AGENT » que d’une seule organisation et une organisation peut avoir plusieurs « ORGANIZATION:AGENT ».**
-
 .. _members-operator:
 
 Intervenant
