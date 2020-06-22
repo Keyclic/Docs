@@ -1,22 +1,22 @@
 .. _feedbacks:
 
-Observations
+Demandes
 ============
 
-Une observation est toujours faite en une position géographique donnée. La position géographique est la composante la plus importante, et la seule obligatoire, d'une observation. Les paramètres optionnels étant la description, la catégorie, et éventuellement une ou plusieurs photos.
+Une demande est toujours faite en une position géographique donnée. La position géographique est la composante la plus importante, et la seule obligatoire, d'une observation. Les paramètres optionnels étant la description, la catégorie, et éventuellement une ou plusieurs photos.
 
-Tous les utilisateurs peuvent créer des observations.
+Tous les utilisateurs peuvent créer des demandes.
 
 .. _feedbacks-creation:
 
-Création d'une observation
+Création d'une demande
 --------------------------
 
 .. code-block:: bash
 
     POST /feedbacks/issues
 
-Exemple du minimum requis pour effectuer une observation, une observation est créée sans catégorie et sans description. L'utilisateur émettant cette observation est détecté automatiquement grâce à l'authentification.
+Exemple du minimum requis pour effectuer une demande, une demande est créée sans catégorie et sans description. L'utilisateur émettant cette demande est détecté automatiquement grâce à l'authentification.
 
 .. code-block:: json
 
@@ -49,9 +49,9 @@ Exemple plus complet, une catégorie et une description sont précisées :
         "visibility": "VISIBILITY_PUBLIC"
     }
 
-**La visibilité de l'observation est par défaut VISIBILITY_PRIVATE si celle-ci n'est pas renseignée.**
+**La visibilité de la demande est par défaut VISIBILITY_PRIVATE si celle-ci n'est pas renseignée.**
 
-L'utilisateur peut ensuite ajouter une ou plusieurs images à son observation :
+L'utilisateur peut ensuite ajouter une ou plusieurs images à sa demande :
 
 .. code-block:: bash
 
@@ -65,67 +65,53 @@ L'utilisateur peut ensuite ajouter une ou plusieurs images à son observation :
 
 Pour plus d'informations sur l'envoi d'images, voir :ref:`technical-files`.
 
-Rattachement d'une observation à une organisation
+Rattachement d'une demande à une organisation
 -------------------------------------------------
 
-Le service Keyclic ne se contente pas de recueillir des observations : elle les fait ensuite remonter, sous la forme de :ref:`reports`, aux organisations concernées, qui en assureront le traitement. Toute observation doit donc être, dans la mesure du possible, remontée à une organisation sous la forme d'un rapport. Pour cela, trois cas de figure peuvent se présenter :
+Le service Keyclic ne se contente pas de recueillir des demandes : elle sont transmises aux organisations concernées, qui en assureront le traitement. Pour cela, trois cas de figure peuvent se présenter :
 
-- Si la position géographique de l'observation ne correspond à aucune zone de responsabilité, alors aucune organisation ne recevra de rapport sur cette observation.
+- Si la position géographique de la demande ne correspond à aucune zone de responsabilité, alors aucune organisation ne recevra cette demande.
 
-- Si la position géographique de l'observation se trouve dans une zone de responsabilité définie par une organisation, alors le rapport de l'observation est automatiquement remonté à l'organisation en question.
+- Si la position géographique de la demande se trouve dans une zone de responsabilité définie par une organisation, la demande est automatiquement remonté à l'organisation en question.
 
-- Si la position géographique de l'observation se trouve sur deux (ou plus) zones de responsabilité appartenant à deux (ou plus) organisations différentes, mais que l'utilisateur n'a pas précisé de secteur d'activité particulier, alors plusieurs rapports sont générés et remontés à toutes les organisations concernées. La première organisation qui acceptera le rapport pourra en effectuer le traitement.
+- Si la position géographique de la demande se trouve sur deux (ou plus) zones de responsabilité appartenant à deux (ou plus) organisations différentes, mais que l'utilisateur n'a pas précisé de secteur d'activité particulier, alors plusieurs demandes sont générées et remontées à toutes les organisations concernées. La première organisation qui acceptera la demande pourra en effectuer le traitement.
 
 .. _feedbacks-organization-member:
 
-Observation postée par un agent
+Demande postée par un collaborateur
 -------------------------------
 
-Les :ref:`members-agent` peuvent poster des observations de la même façon que tous les utilisateurs. Cependant, un agent peut entrer dans le mode de fonctionnement que nous avons appelé le "mode pro". Pour cela, il suffit de mettre dans le body de la requête, le champ "proMode" avec comme valeur "true". Ainsi, son observation pourra être traitée différemment :
+Les :ref:`members-collaborator` peuvent poster des demandes de la même façon que tous les utilisateurs. Cependant si la demande est réalisée par un collaborateur cette pourra être traitée différemment :
 
-- Si son observation est positionnée dans une zone de responsabilité régie par son organisation, le rapport créé qui en découle est automatiquement accepté.
+- Si sa demande est positionnée dans une zone de responsabilité régie par son organisation, la demande créée qui en découle est automatiquement acceptée.
 
-- Si son observation n'est pas positionnée dans une zone de responsabilité régie par son organisation, alors son observation est refusée.
+- Si sa demande n'est pas positionnée dans une zone de responsabilité régie par son organisation, alors sa demande n'est pas automatiquement acceptée.
 
 .. _feedbacks-normal-mode-vs-pro-mode:
 
-Mode normal vs "Mode pro"
--------------------------
-
-Sur la figure ci-dessous, le rectangle A représente une zone de responsabilité appartenant à une organisation A, et le rectangle B représente une zone de responsabilité appartenant à une organisation B.
-
-Chaque point représente une observation effectuée **par un utilisateur membre de l'organisation B**.
-
-- En bleu : observations effectuées sans "mode pro". Ces observations sont donc identiques à celle d'un utilisateur lambda.
-- En rouge : observations effectuées en "mode pro".
-
-.. image:: images/feedback_by_place.png
-
-.. _feedbacks-lifecycle:
-
-Résumé du cycle de vie d'une observation
+Résumé du cycle de vie d'une demande
 ----------------------------------------
 
 .. image:: images/feedback_workflow.png
 
 .. _feedbacks-retrieving:
 
-Récupération des observations
+Récupération des demandes
 -----------------------------
 
-Pour récupérer les observations :
+Pour récupérer les demandes :
 
 .. code-block:: bash
 
     GET /feedbacks
 
-Cette requête retourne uniquement les observations dont le statut est DELIVERED.
+Cette requête retourne uniquement les demandes dont le statut est DELIVERED.
 
-Plusieurs critères permettent de filtrer les observations.
+Plusieurs critères permettent de filtrer les demandes.
 
 **Par statut : paramètre state**
 
-Par exemple, pour filtrer les observations délivrées, un utilisateur effectuera la requête :
+Par exemple, pour filtrer les demandes délivrées, un utilisateur effectuera la requête :
 
 .. code-block:: bash
 
@@ -139,7 +125,7 @@ Exemple :
 
     GET /feedbacks?geo_near[radius]=1000&geo_near[geo_coordinates]=+44.8-0.5
 
-retournera les observations situées dans un rayon de 1000 mètres autour du point de latitude +44.8 et de longitude 0.5.
+retournera les demandes situées dans un rayon de 1000 mètres autour du point de latitude +44.8 et de longitude 0.5.
 
 **Dans un GeoHash : paramètre geo_hash**
 
@@ -150,13 +136,13 @@ Pour plus d'informations sur GeoHash, voir :
 - `Site officiel de GeoHash <http://geohash.org/>`_
 - `GeoHash explorer <http://geohash.gofreerange.com/>`_
 
-Les observations peuvent être filtrées par GeoHash de la façon suivante :
+Les demandes peuvent être filtrées par GeoHash de la façon suivante :
 
 .. code-block:: bash
 
     GET /feedbacks?geo_hash[]=ezzx&geo_hash[]=ezzz
 
-retournera les observations comprises dans les geo hash ezzx et ezzz.
+retournera les demandes comprises dans les geo hash ezzx et ezzz.
 
 **Sur une période donnée : paramètres before et after**
 
@@ -166,7 +152,7 @@ Exemple :
 
     GET /feedbacks?after=2017-01-10T00:00:00+05:00&before=2017-02-22T23:59:59+05:00
 
-retournera les observations effectuées entre le 10/01/2017 et le 22/02/2017.
+retournera les demandes effectuées entre le 10/01/2017 et le 22/02/2017.
 
 Les dates sont écrites au format  : `ISO 8601 <https://www.iso.org/iso-8601-date-and-time-format.html>`_.
 
@@ -181,7 +167,7 @@ Les dates sont écrites au format  : `ISO 8601 <https://www.iso.org/iso-8601-dat
 Commentaires
 ------------
 
-Les utilisateurs de la communauté peuvent commenter une observation :
+Les utilisateurs de la communauté peuvent commenter une demande :
 
 .. code-block:: bash
 
@@ -193,7 +179,7 @@ Les utilisateurs de la communauté peuvent commenter une observation :
         "text":"Mon commentaire"
     }
 
-Pour récupérer les commentaires d'une observation :
+Pour récupérer les commentaires d'une demande :
 
 .. code-block:: bash
 
@@ -210,7 +196,7 @@ Un utilisateur peut soutenir une contribution en effectuant la requête suivante
 
     POST /feedbacks/{feedback}/contributions
 
-Pour récupérer tous les soutiens effectués sur une observation :
+Pour récupérer tous les soutiens effectués sur une demande :
 
 .. code-block:: bash
 

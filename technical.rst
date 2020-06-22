@@ -49,7 +49,7 @@ Exemple :
 
     GET /feedbacks
 
-Le endpoint ci-dessus retourne toutes les observations. Son URL véritable est
+Le endpoint ci-dessus retourne toutes les demandes. Son URL véritable est
 
 .. code-block:: bash
 
@@ -60,7 +60,7 @@ mais pour des raisons de concision, dans cette documentation, nous ne précisero
 Paramètres d'URL
 ~~~~~~~~~~~~~~~~
 
-Dans cette documentation, les variables d'URI (exemples : identifiant d'une ressource, numéro de page, etc) seront exprimés entre accolades. Par exemple, pour récupérer une observation (feedback) donnée :
+Dans cette documentation, les variables d'URI (exemples : identifiant d'une ressource, numéro de page, etc) seront exprimés entre accolades. Par exemple, pour récupérer une demande (feedback) donnée :
 
 .. code-block:: bash
 
@@ -81,7 +81,7 @@ Par ailleurs, pour une meilleure lisibilité, les paramètres d'URI seront écri
 Headers
 ~~~~~~~
 
-En plus des `headers conventionnels de HTTP/1.1 <https://tools.ietf.org/html/rfc7231#section-5>`_, l'API Keyclic accepte, et même exige dans la plupart des cas, le header **X-Keyclic-App**, correspondant à l'application utilisée (voir ci-dessus : :ref:`technical-applications`). Par exemple, pour récupérer toutes les observations sur l'application com.keyclic.app, la requête comportera le header :
+En plus des `headers conventionnels de HTTP/1.1 <https://tools.ietf.org/html/rfc7231#section-5>`_, l'API Keyclic accepte, et même exige dans la plupart des cas, le header **X-Keyclic-App**, correspondant à l'application utilisée (voir ci-dessus : :ref:`technical-applications`). Par exemple, pour récupérer toutes les demandes sur l'application com.keyclic.app, la requête comportera le header :
 
 .. code-block:: bash
 
@@ -109,7 +109,7 @@ et le corps des requêtes devra toujours être formaté en JSON. Les réponses s
 Envoi de fichiers
 -----------------
 
-Tous les fichiers sont envoyés en base 64 à l'API. Voici par exemple l'ajout d'une image représentant un carré rouge d'1 pixel sur 1 sur une observation :
+Tous les fichiers sont envoyés en base 64 à l'API. Voici par exemple l'ajout d'une image représentant un carré rouge d'1 pixel sur 1 sur une demande :
 
 .. code-block:: bash
 
@@ -126,7 +126,7 @@ Tous les fichiers sont envoyés en base 64 à l'API. Voici par exemple l'ajout d
 Pagination
 ----------
 
-Tous les endpoints permettant de récupérer une collection de ressources peuvent être paginés avec les filtres **page** et **limit**. Par exemple, pour récupérer la deuxième page des observations à raison de 5 observations par page :
+Tous les endpoints permettant de récupérer une collection de ressources peuvent être paginés avec les filtres **page** et **limit**. Par exemple, pour récupérer la deuxième page des demandes à raison de 5 observations par page :
 
 .. code-block:: bash
 
@@ -138,9 +138,9 @@ Par défaut, *page* a la valeur 1 et *limit* a la valeur 10. Ainsi le endpoint
 
     POST /feedbacks
 
-retourne les 10 premières observations.
+retourne les 10 premières demandes.
 
-Le retour d'une collection contient les informations et liens nécessaires pour naviguer entre les pages de cette collection. Exemple de retour (partiel) de la liste des observations :
+Le retour d'une collection contient les informations et liens nécessaires pour naviguer entre les pages de cette collection. Exemple de retour (partiel) de la liste des demandes :
 
 .. code-block:: json
 
@@ -228,7 +228,7 @@ L'exemple suivant montre un retour d'erreur de validation. Le champ *path* indiq
 Changements de statut
 ---------------------
 
-Plusieurs ressources manipulées par l'API ont un cycle de vie et possèdent un certain statut à un instant donné. C'est le cas des observations, des rapports et des interventions.
+Plusieurs ressources manipulées par l'API ont un cycle de vie et possèdent un certain statut à un instant donné. C'est le cas des demandes et des interventions.
 
 Pour ces ressources, l'état est toujours indiqué dans la réponse avec le paramètre *state*, et les actions possibles pour faire évoluer ce statut sont toujours indiquées sous le paramètre *stateTransitions*.
 Exemple :
@@ -253,11 +253,11 @@ Réponse (partielle) :
         }
     }
 
-Dans l'exemple ci-dessus, le rapport est en statut NEW et les actions possibles sur son statut sont *accept* et *refuse*.
+Dans l'exemple ci-dessus, la demande est en statut NEW et les actions possibles sur son statut sont *accept* et *refuse*.
 
 Tout changement de statut est effectué avec la méthode POST en passant le nom de la transition dans le body.
 
-Par exemple, pour accepter le rapport ci-dessus :
+Par exemple, pour accepter la demande ci-dessus :
 
 .. code-block:: bash
 
@@ -269,7 +269,7 @@ Par exemple, pour accepter le rapport ci-dessus :
         "transition": "accept"
     }
 
-La réponse nous informe que le rapport possède désormais le statut ACCEPTED, et que les actions possibles sont désormais *refuse*, *hold* et *progress* :
+La réponse nous informe que la demande possède désormais le statut ACCEPTED, et que les actions possibles sont désormais *refuse*, *hold* et *progress* :
 
 .. code-block:: json
 

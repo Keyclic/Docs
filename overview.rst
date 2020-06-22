@@ -6,17 +6,17 @@ Aperçu
 Fonctionnement général
 ----------------------
 
-L'application Keyclic est librement ouverte aux inscriptions. Une fois inscrit, tout utilisateur peut créer des observations. Une observation est toujours liée à une position géographique et comporte éventuellement une ou plusieurs photos.
+L'application Keyclic est librement ouverte aux inscriptions. Une fois inscrit, tout utilisateur peut créer des demandes. Une demande est toujours liée à une position géographique et comporte éventuellement une ou plusieurs photos.
 
 Certains utilisateurs peuvent également être regroupés au sein d'organisations. Une organisation est donc un groupe d'utilisateurs membres de la même entreprise, association, corporation, école, etc. Tout utilisateur est libre de créer sa propre organisation et d'inviter d'autres utilisateurs à en devenir membres.
 
-Les administrateurs définissent des zones de responsabilité sur lesquelles leur organisation peut intervenir, et des catégories d'intervention (exemples : voirie, animal perdu, propreté, etc) Ainsi, quand un utilisateur crée une observation, la position géographique de cette observation permet de lui proposer les catégories et organisations qui sont en mesure de traiter son signalement et de le laisser choisir celle qui lui semble la plus adaptée.
+Les administrateurs définissent des zones de responsabilité sur lesquelles leur organisation peut intervenir, et des catégories d'intervention (exemples : voirie, animal perdu, propreté, etc) Ainsi, quand un utilisateur crée une demande, la position géographique de cette demande permet de lui proposer les catégories et organisations qui sont en mesure de traiter celle-ci et de le laisser choisir celle qui lui semble la plus adaptée.
 
-Quand un utilisateur crée une observation, celui-ci a le choix de la rendre publique ou privée. Si publique, l'observation est visible par la communauté : ainsi, les autres utilisateurs peuvent la commenter et/ou la soutenir.
+Quand un utilisateur crée une demande, celui-ci a le choix de la rendre publique ou privée. Si publique, la demande est visible par la communauté : ainsi, les autres utilisateurs peuvent la commenter et/ou la soutenir.
 
-L'observation envoyée, un rapport est généré et transmis à l'organisation concernée.
+La demande envoyée, elle est transmise à l'organisation concernée.
 
-Un administrateur a donc accès à l'ensemble des rapports concernant son organisation, chaque rapport correspondant à une observation. Pour chaque rapport, il peut créer une ou plusieurs interventions, et affecter ces interventions aux membres de son organisation. Une autre possibilité est de déléguer ce rapport à une organisation partenaire, le partenaire aura alors la charge de créer des interventions. Une fois que toutes les interventions ont été accomplies, il pourra considérer que le traitement est terminé et clôturer le rapport.
+Un administrateur a donc accès à l'ensemble des demandes concernant son organisation. Pour chaque demande, il peut créer une ou plusieurs interventions, et affecter ces interventions aux membres de son organisation. Une autre possibilité est de déléguer cette demande à une organisation partenaire, le partenaire aura alors la charge de créer des interventions. Une fois que toutes les interventions ont été accomplies, il pourra considérer que le traitement est terminé et clôturer la demande.
 
 Liens utiles
 ------------
@@ -28,19 +28,19 @@ Liens utiles
 Vocabulaire
 -----------
 
-Observation
+Demande
 ~~~~~~~~~~~
 
-Remarque effectuée sur le terrain par un utilisateur, pouvant porter sur un dysfonctionnement, un problème technique, une nuisance, etc. Toute observation est forcément faite en une position géographique donnée. Elle peut éventuellement comporter des photos, et être commentée et/ou soutenue par les autres utilisateurs.
+Remarque effectuée sur le terrain par un utilisateur, pouvant porter sur un dysfonctionnement, un problème technique, une nuisance, etc. Toute demande est forcément faite en une position géographique donnée. Elle peut éventuellement comporter des photos, et être commentée et/ou soutenue par les autres utilisateurs.
 
 Terme technique : feedback.
 
 Voir la page :ref:`feedbacks`.
 
-Rapport
+Demande (organisation)
 ~~~~~~~
 
-Toute observation peut entraîner la génération d'un rapport. Un rapport reprend donc toutes les informations de l'observation dont il est issu, et n'est visible et manipulable que par l'organisation concernée. Le rapport peut donc être vu comme le pendant « professionnel » de l'observation. C'est sur ce rapport que l'organisation travaille : création d'interventions, suivi, délégation, etc.
+Toute demande peut entraîner la génération d'une demande à une organisation. Une demande reprend donc toutes les informations de la demande dont elle est issu, et n'est visible et manipulable que par l'organisation concernée. C'est sur cette demande que l'organisation travaille : création d'interventions, suivi, délégation, etc.
 
 Terme technique : report.
 
@@ -77,7 +77,7 @@ Voir la section :ref:`organizations-categories`.
 Soutien
 ~~~~~~~
 
-Une observation peut être soutenue par les utilisateurs de la communauté, afin de leur donner plus de poids.
+Une demande peut être soutenue par les utilisateurs de la communauté, afin de leur donner plus de poids.
 
 Terme technique : contribution.
 
@@ -86,7 +86,7 @@ Voir la section :ref:`feedbacks-contributions`.
 Intervention
 ~~~~~~~~~
 
-Une intervention est une tâche créée par un administrateur sur un rapport donné. Cette tâche est assignée à un membre de l'organisation. Un rapport ne peut être clôturé que si toutes les interventions qui lui sont liées ont été accomplies (ou refusées).
+Une intervention est une tâche créée par un administrateur sur une demande donnée. Cette tâche est assignée à un membre de l'organisation. Un rapport ne peut être clôturé que si toutes les interventions qui lui sont liées ont été accomplies (ou refusées).
 
 Terme technique : operation.
 
@@ -95,7 +95,7 @@ Voir la section :ref:`reports-operations`.
 Partenaires
 ~~~~~~~~~~~
 
-Un administrateur peut définir des organisations partenaires, qui sont d'autres organisations auxquelles il pourra déléguer des rapports.
+Un administrateur peut définir des organisations partenaires, qui sont d'autres organisations auxquelles il pourra déléguer des demandes.
 
 Terme technique : relationship.
 

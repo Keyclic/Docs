@@ -3,15 +3,15 @@
 Rapports
 ========
 
-Chaque fois qu'une observation est délivrée (voir : :ref:`feedbacks-lifecycle`), un rapport est créé.
+Chaque fois qu'une demande est délivrée (voir : :ref:`feedbacks-lifecycle`), la demande est transmise à l'organisation concernée.
 
-Un :ref:`members-organization-admin` récupère les rapports concernant son organisation avec :
+Un :ref:`members-organization-admin` récupère les demandes concernant son organisation avec :
 
 .. code-block:: bash
 
     GET /organizations/{organization}/reports
 
-Et un rapport donné est récupéré avec :
+Et une demande donné est récupéré avec :
 
 .. code-block:: bash
 
@@ -19,16 +19,16 @@ Et un rapport donné est récupéré avec :
 
 .. _reports-lifecycle:
 
-Cycle de vie d'un rapport
+Cycle de vie d'une demande
 -------------------------
 
-Quand un nouveau rapport est généré à partir d'une observation, il possède le statut NEW.
+Quand une nouvelle demande est générée pour une organisation, elle possède le statut NEW.
 
-Le schéma ci-dessous montre l'évolution du statut d'un rapport en fonction des actions qui sont effectuées sur ce rapport.
+Le schéma ci-dessous montre l'évolution du statut d'une demande en fonction des actions qui sont effectuées sur cette demande.
 
 .. image:: images/report_workflow.png
 
-Un endpoint unique permet de changer le statut du rapport :
+Un endpoint unique permet de changer le statut d'une demande :
 
 .. code-block:: bash
 
@@ -42,18 +42,18 @@ Par exemple, pour passer du statut NEW au statut ACCEPTED, l'administrateur de l
         "transition":"accept"
     }
 
-Un rapport ne peut être clôturé (statut CLOSED) que si :
+Une demande ne peut être clôturée (statut CLOSED) que si :
 
-- Toutes les interventions associées à ce rapport ont été clôturées ou refusées (voir ci-dessous le paragraphe :ref:`reports-interventions`).
+- Toutes les interventions associées à cette demande ont été clôturées ou refusées (voir ci-dessous le paragraphe :ref:`reports-interventions`).
 
 .. _reports-operations:
 
 Interventions
 ----------
 
-Une intervention est une action à réaliser associée à un rapport et assignée à un membre de l'organisation.
+Une intervention est une action à réaliser associée à une demande et assignée à un membre de l'organisation.
 
-Pour récupérer l'ensemble des interventions associées à un rapport :
+Pour récupérer l'ensemble des interventions associées à une demande :
 
 .. code-block:: bash
 
@@ -61,7 +61,7 @@ Pour récupérer l'ensemble des interventions associées à un rapport :
 
 **Création et modification d'une intervention**
 
-Un administrateur crée une intervention sur un rapport en effectuant la requête :
+Un administrateur crée une intervention sur une demande en effectuant la requête :
 
 .. code-block:: bash
 
@@ -154,14 +154,14 @@ Un administrateur peut consulter l'historique d'une intervention avec :
 
 .. _reports-delegation:
 
-Délégation de rapports
+Délégation des demanes
 ----------------------
 
-Un administrateur d'une organisation peut déléguer un rapport à l'une des organisations partenaires.
+Un administrateur d'une organisation peut déléguer une demande à l'une des organisations partenaires.
 
 Voir : :ref:`organizations-relationships`
 
-Pour déléguer un rapport, un administrateur de l'organisation effectue la requête :
+Pour déléguer une demande, un administrateur de l'organisation effectue la requête :
 
 .. code-block:: bash
 
@@ -174,21 +174,21 @@ Pour déléguer un rapport, un administrateur de l'organisation effectue la requ
       "organization":"a31d9ab7-9476-45f2-8cc7-033bf40bbcfa"
     }
 
-où {organization} est l'identifiant de l'organisation **courante** (dont le membre est administrateur), et a31d9ab7-9476-45f2-8cc7-033bf40bbcfa est l'identifiant de l'organisation à laquelle le rapport est délégué.
+où {organization} est l'identifiant de l'organisation **courante** (dont le membre est administrateur), et a31d9ab7-9476-45f2-8cc7-033bf40bbcfa est l'identifiant de l'organisation à laquelle la demane est déléguée.
 
-Ce rapport est alors partagé entre l'organisation courante et l'organisation partenaire. Cette dernière pourra effectuer les mếmes actions que l'organisation délégante sur ce rapport.
+Cette demande est alors partagée entre l'organisation courante et l'organisation partenaire. Cette dernière pourra effectuer les mếmes actions que l'organisation délégante sur cette demande.
 
-L'organisation partenaire peut elle-même déléguer le rapport à l'un de ses partenaires et ainsi de suite.
+L'organisation partenaire peut elle-même déléguer la demande à l'un de ses partenaires et ainsi de suite.
 
 .. _reports-export:
 
-Export des rapports
+Export des demandes
 -------------------
 
-Un administrateur peut exporter tous les rapports de son organisation au format Excel :
+Un administrateur peut exporter toutes les demanes de son organisation au format Excel :
 
 .. code-block:: bash
 
     POST /organizations/{organization}/reports/exports
 
-Une archive contenant le fichier Excel listant tous les rapports et les images associées à ces rapports est alors envoyé par email à l'administrateur authentifié.
+Une archive contenant le fichier Excel listant tous les demandes et les images associées à ces demandes est alors envoyé par email à l'administrateur authentifié.
