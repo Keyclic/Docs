@@ -31,12 +31,12 @@ Cependant les données représentées dans les tableaux suivants sont correctes.
 
 
 
-+--------------------+--------------------------------------------------------+---------------------------------------------------------+
-|                    | Organisation publique                                  | Organisation privée                                     |
-+====================+========================================================+=========================================================+
-| Demandes publiques | Demande visible                                        | Demande visible                                         |
-|                    | par tous les utilisateurs                              | uniquement par l'organisation réceptrice et ses membres |
-+--------------------+--------------------------------------------------------+---------------------------------------------------------+
-| Demandes privées   | Demande visible                                        | Demande visible                                         |
-|                    | uniquement par l'organisation réceptrice et l'émetteur | uniquement par l'organisation réceptrice et l'emetteur  |
-+--------------------+--------------------------------------------------------+---------------------------------------------------------+
++--------------------+--------------------------------------------------------+---------------------------------------------------------------------+
+|                    | Organisation publique                                  | Organisation privée                                                 |
++====================+========================================================+=====================================================================+
+| Demandes publiques | Demande visible                                        | Demande visible                                                     |
+|                    | par tous les utilisateurs                              | uniquement par l'émetteur, l'organisation réceptrice et ses membres |
++--------------------+--------------------------------------------------------+---------------------------------------------------------------------+
+| Demandes privées   | Demande visible                                        | Demande visible                                                     |
+|                    | uniquement par l'émetteur et l'organisation réceptrice | uniquement par l'émetteur et l'organisation réceptrice              |
++--------------------+--------------------------------------------------------+---------------------------------------------------------------------+
