@@ -21,6 +21,7 @@ Sommaire
     members
     organizations
     feedbacks
+    privacy
     reports
     applications
     notifications
