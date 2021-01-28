@@ -22,7 +22,7 @@ Type des notifications émises suivant les actions
 |                                |                                                         |       |       |       |
 |                                | Les personnes qui ont commenté ou soutenu la demande    |       |       |       |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
-| Demande créée                   | Les administrateurs                                    |   ✓   |   ✓   |   ✓   |
+| Demande créée                  | Les administrateurs                                     |   ✓   |   ✓   |   ✓   |
 +--------------------------------+---------------------------------------------------------+-------+-------+-------+
 | Demande acceptée               | L'émetteur de la demande                                |   ✓   |   ✓   |       |
 |                                |                                                         |       |       |       |
